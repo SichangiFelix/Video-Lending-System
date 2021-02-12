@@ -46,6 +46,11 @@ public class Splashscreen extends javax.swing.JFrame {
 
         newMemberButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         newMemberButton.setText("New Member");
+        newMemberButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                newMemberButtonActionPerformed(evt);
+            }
+        });
 
         memberButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         memberButton.setText("Member");
@@ -111,6 +116,14 @@ public class Splashscreen extends javax.swing.JFrame {
         
         dispose();
     }//GEN-LAST:event_memberButtonActionPerformed
+
+    private void newMemberButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newMemberButtonActionPerformed
+        // TODO add your handling code here:
+        SignUp sign = new SignUp();
+        sign.show();
+        
+        dispose();
+    }//GEN-LAST:event_newMemberButtonActionPerformed
 
     /**
      * @param args the command line arguments
