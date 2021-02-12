@@ -34,9 +34,10 @@ public class Mainscreen extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         vidRecordsPanel = new javax.swing.JPanel();
         vidRecordsTabbedPane = new javax.swing.JTabbedPane();
-        jPanel3 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
-        jPanel5 = new javax.swing.JPanel();
+        owenedVidsPanel = new javax.swing.JPanel();
+        addVidPanel = new javax.swing.JPanel();
+        deleteVidPanel = new javax.swing.JPanel();
+        lentVidsPanel = new javax.swing.JPanel();
         revenuePanel = new javax.swing.JPanel();
         revenueTabbedPane = new javax.swing.JTabbedPane();
         jPanel6 = new javax.swing.JPanel();
@@ -106,50 +107,65 @@ public class Mainscreen extends javax.swing.JFrame {
 
         vidRecordsTabbedPane.setBackground(new java.awt.Color(143, 188, 143));
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 102));
+        owenedVidsPanel.setBackground(new java.awt.Color(245, 245, 220));
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout owenedVidsPanelLayout = new javax.swing.GroupLayout(owenedVidsPanel);
+        owenedVidsPanel.setLayout(owenedVidsPanelLayout);
+        owenedVidsPanelLayout.setHorizontalGroup(
+            owenedVidsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 1770, Short.MAX_VALUE)
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        owenedVidsPanelLayout.setVerticalGroup(
+            owenedVidsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 762, Short.MAX_VALUE)
         );
 
-        vidRecordsTabbedPane.addTab("tab1", jPanel3);
+        vidRecordsTabbedPane.addTab("Videos in house", owenedVidsPanel);
 
-        jPanel4.setBackground(new java.awt.Color(0, 153, 153));
+        addVidPanel.setBackground(new java.awt.Color(245, 245, 220));
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout addVidPanelLayout = new javax.swing.GroupLayout(addVidPanel);
+        addVidPanel.setLayout(addVidPanelLayout);
+        addVidPanelLayout.setHorizontalGroup(
+            addVidPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 1770, Short.MAX_VALUE)
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        addVidPanelLayout.setVerticalGroup(
+            addVidPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 762, Short.MAX_VALUE)
         );
 
-        vidRecordsTabbedPane.addTab("tab2", jPanel4);
+        vidRecordsTabbedPane.addTab("Add video", addVidPanel);
 
-        jPanel5.setBackground(new java.awt.Color(0, 153, 153));
+        deleteVidPanel.setBackground(new java.awt.Color(245, 245, 220));
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout deleteVidPanelLayout = new javax.swing.GroupLayout(deleteVidPanel);
+        deleteVidPanel.setLayout(deleteVidPanelLayout);
+        deleteVidPanelLayout.setHorizontalGroup(
+            deleteVidPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 1770, Short.MAX_VALUE)
         );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        deleteVidPanelLayout.setVerticalGroup(
+            deleteVidPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 762, Short.MAX_VALUE)
         );
 
-        vidRecordsTabbedPane.addTab("tab3", jPanel5);
+        vidRecordsTabbedPane.addTab("Delete video", deleteVidPanel);
+
+        lentVidsPanel.setBackground(new java.awt.Color(245, 245, 220));
+
+        javax.swing.GroupLayout lentVidsPanelLayout = new javax.swing.GroupLayout(lentVidsPanel);
+        lentVidsPanel.setLayout(lentVidsPanelLayout);
+        lentVidsPanelLayout.setHorizontalGroup(
+            lentVidsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1770, Short.MAX_VALUE)
+        );
+        lentVidsPanelLayout.setVerticalGroup(
+            lentVidsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 762, Short.MAX_VALUE)
+        );
+
+        vidRecordsTabbedPane.addTab("Videos lent", lentVidsPanel);
 
         javax.swing.GroupLayout vidRecordsPanelLayout = new javax.swing.GroupLayout(vidRecordsPanel);
         vidRecordsPanel.setLayout(vidRecordsPanelLayout);
@@ -354,22 +370,23 @@ public class Mainscreen extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel addVidPanel;
+    private javax.swing.JPanel deleteVidPanel;
     private javax.swing.JPanel exMembersPanel;
     private javax.swing.JPanel issuancePanel;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JPanel lentVidsPanel;
     private javax.swing.JTabbedPane mainTabbedPane;
     private javax.swing.JPanel membersPanel;
     private javax.swing.JPanel membershipPanel;
     private javax.swing.JPanel myProfilePanel;
     private javax.swing.JPanel newMembersPanel;
+    private javax.swing.JPanel owenedVidsPanel;
     private javax.swing.JPanel revenuePanel;
     private javax.swing.JTabbedPane revenueTabbedPane;
     private javax.swing.JTabbedPane vidIssuanceTabbedPane;
