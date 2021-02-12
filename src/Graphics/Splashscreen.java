@@ -29,10 +29,11 @@ public class Splashscreen extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        newMemberButton = new javax.swing.JButton();
+        memberButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Welcome");
         setLocation(new java.awt.Point(400, 100));
         setMaximumSize(new java.awt.Dimension(1050, 800));
         setPreferredSize(new java.awt.Dimension(1000, 800));
@@ -43,15 +44,15 @@ public class Splashscreen extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         jLabel1.setText("Upepeo Video Lending System");
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jButton1.setText("New Member");
+        newMemberButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        newMemberButton.setText("New Member");
 
-        jButton2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jButton2.setText("Member");
-        jButton2.setName(""); // NOI18N
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        memberButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        memberButton.setText("Member");
+        memberButton.setName(""); // NOI18N
+        memberButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                memberButtonActionPerformed(evt);
             }
         });
 
@@ -66,12 +67,12 @@ public class Splashscreen extends javax.swing.JFrame {
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 355, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(314, 314, 314))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(newMemberButton)
                         .addGap(299, 299, 299))))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(327, 327, 327)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(memberButton, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(507, Short.MAX_VALUE)))
         );
         jPanel1Layout.setVerticalGroup(
@@ -80,12 +81,12 @@ public class Splashscreen extends javax.swing.JFrame {
                 .addGap(57, 57, 57)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 538, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(newMemberButton)
                 .addGap(108, 108, 108))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                     .addContainerGap(655, Short.MAX_VALUE)
-                    .addComponent(jButton2)
+                    .addComponent(memberButton)
                     .addGap(108, 108, 108)))
         );
 
@@ -103,13 +104,13 @@ public class Splashscreen extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void memberButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_memberButtonActionPerformed
         // TODO add your handling code here:
         LogIn log = new LogIn();
         log.show();
         
         dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_memberButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -147,9 +148,9 @@ public class Splashscreen extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton memberButton;
+    private javax.swing.JButton newMemberButton;
     // End of variables declaration//GEN-END:variables
 }
