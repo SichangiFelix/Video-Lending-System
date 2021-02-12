@@ -30,8 +30,9 @@ public class Mainscreen extends javax.swing.JFrame {
         mainTabbedPane = new javax.swing.JTabbedPane();
         issuancePanel = new javax.swing.JPanel();
         vidIssuanceTabbedPane = new javax.swing.JTabbedPane();
+        borrowPanel = new javax.swing.JPanel();
+        returnPanel = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
         vidRecordsPanel = new javax.swing.JPanel();
         vidRecordsTabbedPane = new javax.swing.JTabbedPane();
         owenedVidsPanel = new javax.swing.JPanel();
@@ -47,20 +48,49 @@ public class Mainscreen extends javax.swing.JFrame {
         jTabbedPane1 = new javax.swing.JTabbedPane();
         myProfilePanel = new javax.swing.JPanel();
         membersPanel = new javax.swing.JPanel();
-        newMembersPanel = new javax.swing.JPanel();
         exMembersPanel = new javax.swing.JPanel();
+        newMembersPanel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Upepeo Video Lending system");
         setLocation(new java.awt.Point(60, 50));
         setMaximumSize(new java.awt.Dimension(1780, 800));
         setMinimumSize(new java.awt.Dimension(1700, 800));
-        setPreferredSize(new java.awt.Dimension(1780, 830));
         setSize(new java.awt.Dimension(1780, 830));
 
         issuancePanel.setBackground(new java.awt.Color(143, 188, 143));
 
-        jPanel1.setBackground(new java.awt.Color(0, 153, 204));
+        borrowPanel.setBackground(new java.awt.Color(119, 136, 153));
+
+        javax.swing.GroupLayout borrowPanelLayout = new javax.swing.GroupLayout(borrowPanel);
+        borrowPanel.setLayout(borrowPanelLayout);
+        borrowPanelLayout.setHorizontalGroup(
+            borrowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1770, Short.MAX_VALUE)
+        );
+        borrowPanelLayout.setVerticalGroup(
+            borrowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 762, Short.MAX_VALUE)
+        );
+
+        vidIssuanceTabbedPane.addTab("Video borrowing", borrowPanel);
+
+        returnPanel.setBackground(new java.awt.Color(119, 136, 153));
+
+        javax.swing.GroupLayout returnPanelLayout = new javax.swing.GroupLayout(returnPanel);
+        returnPanel.setLayout(returnPanelLayout);
+        returnPanelLayout.setHorizontalGroup(
+            returnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1770, Short.MAX_VALUE)
+        );
+        returnPanelLayout.setVerticalGroup(
+            returnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 762, Short.MAX_VALUE)
+        );
+
+        vidIssuanceTabbedPane.addTab("Video returns", returnPanel);
+
+        jPanel1.setBackground(new java.awt.Color(119, 136, 153));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -73,22 +103,7 @@ public class Mainscreen extends javax.swing.JFrame {
             .addGap(0, 762, Short.MAX_VALUE)
         );
 
-        vidIssuanceTabbedPane.addTab("hgfcgc", jPanel1);
-
-        jPanel2.setBackground(new java.awt.Color(255, 102, 102));
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1770, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 762, Short.MAX_VALUE)
-        );
-
-        vidIssuanceTabbedPane.addTab("kjbjhvj", jPanel2);
+        vidIssuanceTabbedPane.addTab("wdcd", jPanel1);
 
         javax.swing.GroupLayout issuancePanelLayout = new javax.swing.GroupLayout(issuancePanel);
         issuancePanel.setLayout(issuancePanelLayout);
@@ -275,21 +290,6 @@ public class Mainscreen extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Members", membersPanel);
 
-        newMembersPanel.setBackground(new java.awt.Color(176, 224, 230));
-
-        javax.swing.GroupLayout newMembersPanelLayout = new javax.swing.GroupLayout(newMembersPanel);
-        newMembersPanel.setLayout(newMembersPanelLayout);
-        newMembersPanelLayout.setHorizontalGroup(
-            newMembersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1770, Short.MAX_VALUE)
-        );
-        newMembersPanelLayout.setVerticalGroup(
-            newMembersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 762, Short.MAX_VALUE)
-        );
-
-        jTabbedPane1.addTab("New Members", newMembersPanel);
-
         exMembersPanel.setBackground(new java.awt.Color(176, 224, 230));
 
         javax.swing.GroupLayout exMembersPanelLayout = new javax.swing.GroupLayout(exMembersPanel);
@@ -304,6 +304,21 @@ public class Mainscreen extends javax.swing.JFrame {
         );
 
         jTabbedPane1.addTab("Ex Members", exMembersPanel);
+
+        newMembersPanel.setBackground(new java.awt.Color(176, 224, 230));
+
+        javax.swing.GroupLayout newMembersPanelLayout = new javax.swing.GroupLayout(newMembersPanel);
+        newMembersPanel.setLayout(newMembersPanelLayout);
+        newMembersPanelLayout.setHorizontalGroup(
+            newMembersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1770, Short.MAX_VALUE)
+        );
+        newMembersPanelLayout.setVerticalGroup(
+            newMembersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 762, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("New Members", newMembersPanel);
 
         javax.swing.GroupLayout membershipPanelLayout = new javax.swing.GroupLayout(membershipPanel);
         membershipPanel.setLayout(membershipPanelLayout);
@@ -371,11 +386,11 @@ public class Mainscreen extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel addVidPanel;
+    private javax.swing.JPanel borrowPanel;
     private javax.swing.JPanel deleteVidPanel;
     private javax.swing.JPanel exMembersPanel;
     private javax.swing.JPanel issuancePanel;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
@@ -387,6 +402,7 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JPanel myProfilePanel;
     private javax.swing.JPanel newMembersPanel;
     private javax.swing.JPanel owenedVidsPanel;
+    private javax.swing.JPanel returnPanel;
     private javax.swing.JPanel revenuePanel;
     private javax.swing.JTabbedPane revenueTabbedPane;
     private javax.swing.JTabbedPane vidIssuanceTabbedPane;
