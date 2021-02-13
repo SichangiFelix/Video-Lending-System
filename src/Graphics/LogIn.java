@@ -47,14 +47,14 @@ public class LogIn extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabel2.setText("Password");
 
-        passTextField.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        passTextField.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         passTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 passTextFieldActionPerformed(evt);
             }
         });
 
-        userTextField.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        userTextField.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         userTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 userTextFieldActionPerformed(evt);
@@ -98,7 +98,7 @@ public class LogIn extends javax.swing.JFrame {
                     .addComponent(passTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(67, 67, 67)
                 .addComponent(loginButton)
-                .addContainerGap(65, Short.MAX_VALUE))
+                .addContainerGap(59, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
