@@ -31,6 +31,7 @@ public class Mainscreen extends javax.swing.JFrame {
         issuancePanel = new javax.swing.JPanel();
         vidIssuanceTabbedPane = new javax.swing.JTabbedPane();
         borrowPanel = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
         returnPanel = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         vidRecordsPanel = new javax.swing.JPanel();
@@ -59,7 +60,6 @@ public class Mainscreen extends javax.swing.JFrame {
         setLocation(new java.awt.Point(60, 50));
         setMaximumSize(new java.awt.Dimension(1780, 900));
         setMinimumSize(new java.awt.Dimension(1700, 800));
-        setPreferredSize(new java.awt.Dimension(1700, 850));
         setSize(new java.awt.Dimension(1700, 850));
 
         mainTabbedPane.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(143, 188, 143), 3, true));
@@ -73,15 +73,28 @@ public class Mainscreen extends javax.swing.JFrame {
         borrowPanel.setBackground(new java.awt.Color(119, 136, 153));
         borrowPanel.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout borrowPanelLayout = new javax.swing.GroupLayout(borrowPanel);
         borrowPanel.setLayout(borrowPanelLayout);
         borrowPanelLayout.setHorizontalGroup(
             borrowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1678, Short.MAX_VALUE)
+            .addGroup(borrowPanelLayout.createSequentialGroup()
+                .addGap(41, 41, 41)
+                .addComponent(jButton1)
+                .addContainerGap(1544, Short.MAX_VALUE))
         );
         borrowPanelLayout.setVerticalGroup(
             borrowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 754, Short.MAX_VALUE)
+            .addGroup(borrowPanelLayout.createSequentialGroup()
+                .addGap(174, 174, 174)
+                .addComponent(jButton1)
+                .addContainerGap(551, Short.MAX_VALUE))
         );
 
         vidIssuanceTabbedPane.addTab("Video borrowing", borrowPanel);
@@ -403,6 +416,13 @@ public class Mainscreen extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        Splashscreen splash = new Splashscreen();
+        splash.show();
+        dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -447,6 +467,7 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JPanel finacialPanel;
     private javax.swing.JPanel incomePanel;
     private javax.swing.JPanel issuancePanel;
+    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTabbedPane jTabbedPane1;
