@@ -30,6 +30,9 @@ public class SignUp extends javax.swing.JFrame {
         buttonGroup1 = new javax.swing.ButtonGroup();
         buttonGroup2 = new javax.swing.ButtonGroup();
         jTextField8 = new javax.swing.JTextField();
+        buttonGroup3 = new javax.swing.ButtonGroup();
+        buttonGroup4 = new javax.swing.ButtonGroup();
+        buttonGroup5 = new javax.swing.ButtonGroup();
         signUpPanel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -42,9 +45,9 @@ public class SignUp extends javax.swing.JFrame {
         dateLabel = new javax.swing.JLabel();
         usernameLabel = new javax.swing.JLabel();
         passwordLabel = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
+        maleButton = new javax.swing.JRadioButton();
+        femaleButton = new javax.swing.JRadioButton();
+        otherGenderButton = new javax.swing.JRadioButton();
         fNameTextField = new javax.swing.JTextField();
         sNameTextField = new javax.swing.JTextField();
         idTextField = new javax.swing.JTextField();
@@ -112,25 +115,31 @@ public class SignUp extends javax.swing.JFrame {
         passwordLabel.setForeground(new java.awt.Color(51, 0, 102));
         passwordLabel.setText("Password");
 
-        jRadioButton1.setBackground(new java.awt.Color(143, 188, 143));
-        jRadioButton1.setForeground(new java.awt.Color(51, 0, 102));
-        jRadioButton1.setText("Male");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        maleButton.setBackground(new java.awt.Color(143, 188, 143));
+        buttonGroup1.add(maleButton);
+        maleButton.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        maleButton.setForeground(new java.awt.Color(51, 0, 102));
+        maleButton.setText("Male");
+        maleButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                maleButtonActionPerformed(evt);
             }
         });
 
-        jRadioButton2.setBackground(new java.awt.Color(143, 188, 143));
-        jRadioButton2.setForeground(new java.awt.Color(51, 0, 102));
-        jRadioButton2.setText("Female");
+        femaleButton.setBackground(new java.awt.Color(143, 188, 143));
+        buttonGroup1.add(femaleButton);
+        femaleButton.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        femaleButton.setForeground(new java.awt.Color(51, 0, 102));
+        femaleButton.setText("Female");
 
-        jRadioButton3.setBackground(new java.awt.Color(143, 188, 143));
-        jRadioButton3.setForeground(new java.awt.Color(51, 0, 102));
-        jRadioButton3.setText("Other");
-        jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
+        otherGenderButton.setBackground(new java.awt.Color(143, 188, 143));
+        buttonGroup1.add(otherGenderButton);
+        otherGenderButton.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        otherGenderButton.setForeground(new java.awt.Color(51, 0, 102));
+        otherGenderButton.setText("Other");
+        otherGenderButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton3ActionPerformed(evt);
+                otherGenderButtonActionPerformed(evt);
             }
         });
 
@@ -232,9 +241,9 @@ public class SignUp extends javax.swing.JFrame {
                             .addComponent(fNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(130, 130, 130)
                         .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButton1)
-                            .addComponent(jRadioButton2)
-                            .addComponent(jRadioButton3)
+                            .addComponent(maleButton)
+                            .addComponent(femaleButton)
+                            .addComponent(otherGenderButton)
                             .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(sNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(fNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -255,7 +264,7 @@ public class SignUp extends javax.swing.JFrame {
                     .addGroup(signUpPanelLayout.createSequentialGroup()
                         .addGap(306, 306, 306)
                         .addComponent(signUpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(172, Short.MAX_VALUE))
+                .addContainerGap(147, Short.MAX_VALUE))
         );
         signUpPanelLayout.setVerticalGroup(
             signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -295,11 +304,11 @@ public class SignUp extends javax.swing.JFrame {
                 .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(genderLabel)
                     .addGroup(signUpPanelLayout.createSequentialGroup()
-                        .addComponent(jRadioButton1)
+                        .addComponent(maleButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton2)
+                        .addComponent(femaleButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton3)))
+                        .addComponent(otherGenderButton)))
                 .addGap(23, 23, 23)
                 .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(usernameLabel)
@@ -312,7 +321,7 @@ public class SignUp extends javax.swing.JFrame {
                 .addComponent(infoLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(signUpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(151, Short.MAX_VALUE))
+                .addContainerGap(127, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -329,13 +338,13 @@ public class SignUp extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+    private void maleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maleButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    }//GEN-LAST:event_maleButtonActionPerformed
 
-    private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
+    private void otherGenderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_otherGenderButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton3ActionPerformed
+    }//GEN-LAST:event_otherGenderButtonActionPerformed
 
     private void fNameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fNameTextFieldActionPerformed
         // TODO add your handling code here:
@@ -420,10 +429,14 @@ public class SignUp extends javax.swing.JFrame {
     private javax.swing.JTextField adressTextField;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.ButtonGroup buttonGroup3;
+    private javax.swing.ButtonGroup buttonGroup4;
+    private javax.swing.ButtonGroup buttonGroup5;
     private javax.swing.JLabel dateLabel;
     private javax.swing.JTextField dateTextField;
     private javax.swing.JLabel fNameLabel;
     private javax.swing.JTextField fNameTextField;
+    private javax.swing.JRadioButton femaleButton;
     private javax.swing.JLabel genderLabel;
     private javax.swing.JLabel idLabel;
     private javax.swing.JTextField idTextField;
@@ -431,12 +444,11 @@ public class SignUp extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JTextField jTextField8;
+    private javax.swing.JRadioButton maleButton;
     private javax.swing.JLabel occupationLabel;
     private javax.swing.JTextField occupationTextField;
+    private javax.swing.JRadioButton otherGenderButton;
     private javax.swing.JLabel passwordLabel;
     private javax.swing.JTextField passwordTextField;
     private javax.swing.JLabel sNameLabel;
