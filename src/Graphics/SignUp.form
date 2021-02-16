@@ -126,9 +126,9 @@
                                       <Component id="maleButton" min="-2" max="-2" attributes="0"/>
                                       <Component id="femaleButton" min="-2" max="-2" attributes="0"/>
                                       <Component id="otherGenderButton" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="passField" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="usernameTextField" alignment="0" pref="304" max="32767" attributes="0"/>
-                                      <Component id="passConfirmField" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="signupPassField" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="signupUsernameTextField" alignment="0" pref="304" max="32767" attributes="0"/>
+                                      <Component id="signupPassConfirmField" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
@@ -205,17 +205,17 @@
                   <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="usernameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="usernameTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="signupUsernameTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="passField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="signupPassField" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="passwordLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="passConfirmField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="signupPassConfirmField" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="62" max="32767" attributes="0"/>
                   <Component id="infoLabel" min="-2" max="-2" attributes="0"/>
@@ -457,7 +457,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="adressTextFieldActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="usernameTextField">
+        <Component class="javax.swing.JTextField" name="signupUsernameTextField">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Times New Roman" size="24" style="0"/>
@@ -467,7 +467,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="usernameTextFieldActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="signupUsernameTextFieldActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="infoLabel">
@@ -498,7 +498,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="signUpButtonActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JPasswordField" name="passField">
+        <Component class="javax.swing.JPasswordField" name="signupPassField">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Times New Roman" size="24" style="0"/>
@@ -519,7 +519,7 @@
             <Property name="text" type="java.lang.String" value="Confirm Password"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JPasswordField" name="passConfirmField">
+        <Component class="javax.swing.JPasswordField" name="signupPassConfirmField">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Times New Roman" size="24" style="0"/>

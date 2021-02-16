@@ -53,12 +53,12 @@ public class SignUp extends javax.swing.JFrame {
         idTextField = new javax.swing.JTextField();
         occupationTextField = new javax.swing.JTextField();
         adressTextField = new javax.swing.JTextField();
-        usernameTextField = new javax.swing.JTextField();
+        signupUsernameTextField = new javax.swing.JTextField();
         infoLabel = new javax.swing.JLabel();
         signUpButton = new javax.swing.JButton();
-        passField = new javax.swing.JPasswordField();
+        signupPassField = new javax.swing.JPasswordField();
         jLabel3 = new javax.swing.JLabel();
-        passConfirmField = new javax.swing.JPasswordField();
+        signupPassConfirmField = new javax.swing.JPasswordField();
         jDateChooser1 = new com.toedter.calendar.JDateChooser();
 
         jTextField8.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
@@ -185,11 +185,11 @@ public class SignUp extends javax.swing.JFrame {
             }
         });
 
-        usernameTextField.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        usernameTextField.setForeground(new java.awt.Color(51, 0, 102));
-        usernameTextField.addActionListener(new java.awt.event.ActionListener() {
+        signupUsernameTextField.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        signupUsernameTextField.setForeground(new java.awt.Color(51, 0, 102));
+        signupUsernameTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                usernameTextFieldActionPerformed(evt);
+                signupUsernameTextFieldActionPerformed(evt);
             }
         });
 
@@ -207,15 +207,15 @@ public class SignUp extends javax.swing.JFrame {
             }
         });
 
-        passField.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        passField.setForeground(new java.awt.Color(51, 0, 102));
+        signupPassField.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        signupPassField.setForeground(new java.awt.Color(51, 0, 102));
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(51, 0, 102));
         jLabel3.setText("Confirm Password");
 
-        passConfirmField.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        passConfirmField.setForeground(new java.awt.Color(51, 0, 102));
+        signupPassConfirmField.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        signupPassConfirmField.setForeground(new java.awt.Color(51, 0, 102));
 
         jDateChooser1.setForeground(new java.awt.Color(51, 0, 102));
         jDateChooser1.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
@@ -261,9 +261,9 @@ public class SignUp extends javax.swing.JFrame {
                                     .addComponent(maleButton)
                                     .addComponent(femaleButton)
                                     .addComponent(otherGenderButton)
-                                    .addComponent(passField)
-                                    .addComponent(usernameTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 304, Short.MAX_VALUE)
-                                    .addComponent(passConfirmField)))
+                                    .addComponent(signupPassField)
+                                    .addComponent(signupUsernameTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 304, Short.MAX_VALUE)
+                                    .addComponent(signupPassConfirmField)))
                             .addGroup(signUpPanelLayout.createSequentialGroup()
                                 .addGap(89, 89, 89)
                                 .addComponent(infoLabel))
@@ -319,15 +319,15 @@ public class SignUp extends javax.swing.JFrame {
                 .addGap(23, 23, 23)
                 .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(usernameLabel)
-                    .addComponent(usernameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(signupUsernameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26)
                 .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(passField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(signupPassField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(passwordLabel))
                 .addGap(33, 33, 33)
                 .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(passConfirmField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(signupPassConfirmField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
                 .addComponent(infoLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -377,9 +377,9 @@ public class SignUp extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_adressTextFieldActionPerformed
 
-    private void usernameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameTextFieldActionPerformed
+    private void signupUsernameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signupUsernameTextFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_usernameTextFieldActionPerformed
+    }//GEN-LAST:event_signupUsernameTextFieldActionPerformed
 
     private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
         // TODO add your handling code here:
@@ -453,14 +453,14 @@ public class SignUp extends javax.swing.JFrame {
     private javax.swing.JLabel occupationLabel;
     private javax.swing.JTextField occupationTextField;
     private javax.swing.JRadioButton otherGenderButton;
-    private javax.swing.JPasswordField passConfirmField;
-    private javax.swing.JPasswordField passField;
     private javax.swing.JLabel passwordLabel;
     private javax.swing.JLabel sNameLabel;
     private javax.swing.JTextField sNameTextField;
     private javax.swing.JButton signUpButton;
     private javax.swing.JPanel signUpPanel;
+    private javax.swing.JPasswordField signupPassConfirmField;
+    private javax.swing.JPasswordField signupPassField;
+    private javax.swing.JTextField signupUsernameTextField;
     private javax.swing.JLabel usernameLabel;
-    private javax.swing.JTextField usernameTextField;
     // End of variables declaration//GEN-END:variables
 }
