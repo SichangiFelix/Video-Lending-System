@@ -37,6 +37,7 @@ public class LogIn extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login form");
         setLocation(new java.awt.Point(600, 300));
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(143, 188, 143));
         jPanel1.setPreferredSize(new java.awt.Dimension(600, 400));
