@@ -75,6 +75,7 @@ public class SignUp extends javax.swing.JFrame {
         setLocation(new java.awt.Point(400, 60));
         setMaximumSize(new java.awt.Dimension(950, 1000));
         setPreferredSize(new java.awt.Dimension(900, 950));
+        setResizable(false);
         setSize(new java.awt.Dimension(900, 950));
 
         signUpPanel.setBackground(new java.awt.Color(143, 188, 143));
@@ -270,7 +271,7 @@ public class SignUp extends javax.swing.JFrame {
                             .addGroup(signUpPanelLayout.createSequentialGroup()
                                 .addGap(159, 159, 159)
                                 .addComponent(signUpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(146, Short.MAX_VALUE))
+                .addContainerGap(145, Short.MAX_VALUE))
         );
         signUpPanelLayout.setVerticalGroup(
             signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
