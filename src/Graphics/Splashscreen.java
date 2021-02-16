@@ -39,6 +39,7 @@ public class Splashscreen extends javax.swing.JFrame {
         setLocation(new java.awt.Point(400, 100));
         setMaximumSize(new java.awt.Dimension(1050, 800));
         setPreferredSize(new java.awt.Dimension(1000, 800));
+        setResizable(false);
         setSize(new java.awt.Dimension(1000, 800));
 
         splashscreenPanel.setBackground(new java.awt.Color(143, 188, 143));
@@ -110,7 +111,7 @@ public class Splashscreen extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(splashscreenPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(splashscreenPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
