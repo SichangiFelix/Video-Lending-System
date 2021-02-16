@@ -30,9 +30,9 @@ public class LogIn extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        passTextField = new javax.swing.JTextField();
-        userTextField = new javax.swing.JTextField();
+        loginUsernameTextField = new javax.swing.JTextField();
         loginButton = new javax.swing.JButton();
+        loginPassField = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login form");
@@ -47,17 +47,10 @@ public class LogIn extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabel2.setText("Password");
 
-        passTextField.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        passTextField.addActionListener(new java.awt.event.ActionListener() {
+        loginUsernameTextField.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        loginUsernameTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                passTextFieldActionPerformed(evt);
-            }
-        });
-
-        userTextField.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        userTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                userTextFieldActionPerformed(evt);
+                loginUsernameTextFieldActionPerformed(evt);
             }
         });
 
@@ -68,6 +61,8 @@ public class LogIn extends javax.swing.JFrame {
                 loginButtonActionPerformed(evt);
             }
         });
+
+        loginPassField.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -80,10 +75,10 @@ public class LogIn extends javax.swing.JFrame {
                     .addComponent(jLabel2))
                 .addGap(52, 52, 52)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(userTextField)
-                    .addComponent(passTextField)
-                    .addComponent(loginButton, javax.swing.GroupLayout.DEFAULT_SIZE, 231, Short.MAX_VALUE))
-                .addContainerGap(146, Short.MAX_VALUE))
+                    .addComponent(loginButton)
+                    .addComponent(loginUsernameTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 257, Short.MAX_VALUE)
+                    .addComponent(loginPassField))
+                .addContainerGap(120, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -91,14 +86,14 @@ public class LogIn extends javax.swing.JFrame {
                 .addGap(116, 116, 116)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(userTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(53, 53, 53)
+                    .addComponent(loginUsernameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(55, 55, 55)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(passTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(67, 67, 67)
+                    .addComponent(loginPassField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(69, 69, 69)
                 .addComponent(loginButton)
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -117,9 +112,9 @@ public class LogIn extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void userTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userTextFieldActionPerformed
+    private void loginUsernameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginUsernameTextFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_userTextFieldActionPerformed
+    }//GEN-LAST:event_loginUsernameTextFieldActionPerformed
 
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
         // TODO add your handling code here:
@@ -128,10 +123,6 @@ public class LogIn extends javax.swing.JFrame {
         
         dispose();
     }//GEN-LAST:event_loginButtonActionPerformed
-
-    private void passTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_passTextFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -173,7 +164,7 @@ public class LogIn extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton loginButton;
-    private javax.swing.JTextField passTextField;
-    private javax.swing.JTextField userTextField;
+    private javax.swing.JPasswordField loginPassField;
+    private javax.swing.JTextField loginUsernameTextField;
     // End of variables declaration//GEN-END:variables
 }
