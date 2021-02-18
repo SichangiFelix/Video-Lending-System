@@ -17,7 +17,7 @@ public class Mainscreen extends javax.swing.JFrame {
     public Mainscreen() {
         initComponents();
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -49,6 +49,8 @@ public class Mainscreen extends javax.swing.JFrame {
         membershipTabbedPane = new javax.swing.JTabbedPane();
         myProfilePanel = new javax.swing.JPanel();
         membersPanel = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        membersTable = new javax.swing.JTable();
         exMembersPanel = new javax.swing.JPanel();
         newMembersPanel = new javax.swing.JPanel();
         reportsPanel = new javax.swing.JPanel();
@@ -309,15 +311,34 @@ public class Mainscreen extends javax.swing.JFrame {
 
         membersPanel.setBackground(new java.awt.Color(176, 224, 230));
 
+        membersTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(membersTable);
+
         javax.swing.GroupLayout membersPanelLayout = new javax.swing.GroupLayout(membersPanel);
         membersPanel.setLayout(membersPanelLayout);
         membersPanelLayout.setHorizontalGroup(
             membersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1678, Short.MAX_VALUE)
+            .addGroup(membersPanelLayout.createSequentialGroup()
+                .addGap(147, 147, 147)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1364, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(167, Short.MAX_VALUE))
         );
         membersPanelLayout.setVerticalGroup(
             membersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 754, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, membersPanelLayout.createSequentialGroup()
+                .addContainerGap(31, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 692, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31))
         );
 
         membershipTabbedPane.addTab("Members", membersPanel);
@@ -470,10 +491,12 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JPanel lentVidsPanel;
     private javax.swing.JTabbedPane mainTabbedPane;
     private javax.swing.JPanel membersPanel;
+    private javax.swing.JTable membersTable;
     private javax.swing.JPanel membershipPanel;
     private javax.swing.JTabbedPane membershipTabbedPane;
     private javax.swing.JPanel myProfilePanel;
