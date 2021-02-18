@@ -120,9 +120,8 @@ public class LogIn extends javax.swing.JFrame {
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
         // TODO add your handling code here:
         Mainscreen main = new Mainscreen();
-        main.show();
-        
-        dispose();
+        main.setVisible(true);
+        setVisible(false);
     }//GEN-LAST:event_loginButtonActionPerformed
 
     /**
