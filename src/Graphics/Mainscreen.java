@@ -52,7 +52,11 @@ public class Mainscreen extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         membersTable = new javax.swing.JTable();
         exMembersPanel = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        exMembersTable = new javax.swing.JTable();
         newMembersPanel = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        newMembersTable = new javax.swing.JTable();
         reportsPanel = new javax.swing.JPanel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
@@ -311,17 +315,42 @@ public class Mainscreen extends javax.swing.JFrame {
 
         membersPanel.setBackground(new java.awt.Color(176, 224, 230));
 
+        membersTable.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         membersTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Membership no", "First Name", "Second Name", "Occupation", "Date joinned", "Residential address"
             }
         ));
+        membersTable.setRequestFocusEnabled(false);
+        membersTable.setRowHeight(32);
+        membersTable.setRowMargin(2);
+        membersTable.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(membersTable);
 
         javax.swing.GroupLayout membersPanelLayout = new javax.swing.GroupLayout(membersPanel);
@@ -329,46 +358,134 @@ public class Mainscreen extends javax.swing.JFrame {
         membersPanelLayout.setHorizontalGroup(
             membersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(membersPanelLayout.createSequentialGroup()
-                .addGap(147, 147, 147)
+                .addGap(155, 155, 155)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1364, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(167, Short.MAX_VALUE))
+                .addContainerGap(159, Short.MAX_VALUE))
         );
         membersPanelLayout.setVerticalGroup(
             membersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, membersPanelLayout.createSequentialGroup()
-                .addContainerGap(31, Short.MAX_VALUE)
+                .addContainerGap(35, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 692, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31))
+                .addGap(27, 27, 27))
         );
 
         membershipTabbedPane.addTab("Members", membersPanel);
 
         exMembersPanel.setBackground(new java.awt.Color(176, 224, 230));
 
+        exMembersTable.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        exMembersTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "Membership no", "First Name", "Second Name", "Occupation", "Date joinned", "Residential address"
+            }
+        ));
+        exMembersTable.setRequestFocusEnabled(false);
+        exMembersTable.setRowHeight(32);
+        exMembersTable.setRowMargin(2);
+        exMembersTable.getTableHeader().setReorderingAllowed(false);
+        jScrollPane2.setViewportView(exMembersTable);
+
         javax.swing.GroupLayout exMembersPanelLayout = new javax.swing.GroupLayout(exMembersPanel);
         exMembersPanel.setLayout(exMembersPanelLayout);
         exMembersPanelLayout.setHorizontalGroup(
             exMembersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1678, Short.MAX_VALUE)
+            .addGroup(exMembersPanelLayout.createSequentialGroup()
+                .addGap(155, 155, 155)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1364, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(159, Short.MAX_VALUE))
         );
         exMembersPanelLayout.setVerticalGroup(
             exMembersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 754, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, exMembersPanelLayout.createSequentialGroup()
+                .addContainerGap(35, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 692, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27))
         );
 
         membershipTabbedPane.addTab("Ex Members", exMembersPanel);
 
         newMembersPanel.setBackground(new java.awt.Color(176, 224, 230));
 
+        newMembersTable.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        newMembersTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "Membership no", "First Name", "Second Name", "Occupation", "Date joinned", "Residential address"
+            }
+        ));
+        newMembersTable.setRequestFocusEnabled(false);
+        newMembersTable.setRowHeight(32);
+        newMembersTable.setRowMargin(2);
+        newMembersTable.getTableHeader().setReorderingAllowed(false);
+        jScrollPane3.setViewportView(newMembersTable);
+
         javax.swing.GroupLayout newMembersPanelLayout = new javax.swing.GroupLayout(newMembersPanel);
         newMembersPanel.setLayout(newMembersPanelLayout);
         newMembersPanelLayout.setHorizontalGroup(
             newMembersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1678, Short.MAX_VALUE)
+            .addGroup(newMembersPanelLayout.createSequentialGroup()
+                .addGap(155, 155, 155)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 1364, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(159, Short.MAX_VALUE))
         );
         newMembersPanelLayout.setVerticalGroup(
             newMembersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 754, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, newMembersPanelLayout.createSequentialGroup()
+                .addContainerGap(35, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 692, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27))
         );
 
         membershipTabbedPane.addTab("New Members", newMembersPanel);
@@ -484,6 +601,7 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JPanel borrowPanel;
     private javax.swing.JPanel deleteVidPanel;
     private javax.swing.JPanel exMembersPanel;
+    private javax.swing.JTable exMembersTable;
     private javax.swing.JPanel expencePanel;
     private javax.swing.JPanel finacialPanel;
     private javax.swing.JPanel incomePanel;
@@ -492,6 +610,8 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JPanel lentVidsPanel;
     private javax.swing.JTabbedPane mainTabbedPane;
@@ -501,6 +621,7 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JTabbedPane membershipTabbedPane;
     private javax.swing.JPanel myProfilePanel;
     private javax.swing.JPanel newMembersPanel;
+    private javax.swing.JTable newMembersTable;
     private javax.swing.JPanel owenedVidsPanel;
     private javax.swing.JPanel reportsPanel;
     private javax.swing.JPanel returnPanel;
