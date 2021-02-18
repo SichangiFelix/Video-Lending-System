@@ -37,7 +37,33 @@ public class Mainscreen extends javax.swing.JFrame {
         vidRecordsPanel = new javax.swing.JPanel();
         vidRecordsTabbedPane = new javax.swing.JTabbedPane();
         owenedVidsPanel = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        generalButton = new javax.swing.JRadioButton();
+        comedyButton = new javax.swing.JRadioButton();
+        thrillerButton = new javax.swing.JRadioButton();
+        horrorButton = new javax.swing.JRadioButton();
+        borrowedButton = new javax.swing.JRadioButton();
+        cartoonButton = new javax.swing.JRadioButton();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        vidRecordsTable = new javax.swing.JTable();
         addVidPanel = new javax.swing.JPanel();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
+        vidIdLabel = new javax.swing.JLabel();
+        newVidSaveButton = new javax.swing.JButton();
+        jPanel7 = new javax.swing.JPanel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        addedVidsTextArea = new javax.swing.JTextArea();
+        jLabel10 = new javax.swing.JLabel();
+        jPanel8 = new javax.swing.JPanel();
         deleteVidPanel = new javax.swing.JPanel();
         lentVidsPanel = new javax.swing.JPanel();
         revenuePanel = new javax.swing.JPanel();
@@ -107,7 +133,7 @@ public class Mainscreen extends javax.swing.JFrame {
             .addGroup(borrowPanelLayout.createSequentialGroup()
                 .addGap(41, 41, 41)
                 .addComponent(jButton1)
-                .addContainerGap(1544, Short.MAX_VALUE))
+                .addContainerGap(1692, Short.MAX_VALUE))
         );
         borrowPanelLayout.setVerticalGroup(
             borrowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -125,7 +151,7 @@ public class Mainscreen extends javax.swing.JFrame {
         returnPanel.setLayout(returnPanelLayout);
         returnPanelLayout.setHorizontalGroup(
             returnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1678, Short.MAX_VALUE)
+            .addGap(0, 1826, Short.MAX_VALUE)
         );
         returnPanelLayout.setVerticalGroup(
             returnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -140,7 +166,7 @@ public class Mainscreen extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1678, Short.MAX_VALUE)
+            .addGap(0, 1826, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -170,30 +196,343 @@ public class Mainscreen extends javax.swing.JFrame {
 
         owenedVidsPanel.setBackground(new java.awt.Color(245, 245, 220));
 
+        jPanel5.setBackground(new java.awt.Color(255, 255, 224));
+        jPanel5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
+        jLabel9.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        jLabel9.setText("Choose a category to display");
+
+        generalButton.setBackground(new java.awt.Color(255, 255, 224));
+        generalButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        generalButton.setText("General");
+        generalButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                generalButtonActionPerformed(evt);
+            }
+        });
+
+        comedyButton.setBackground(new java.awt.Color(255, 255, 224));
+        comedyButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        comedyButton.setText("Comedy");
+        comedyButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comedyButtonActionPerformed(evt);
+            }
+        });
+
+        thrillerButton.setBackground(new java.awt.Color(255, 255, 224));
+        thrillerButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        thrillerButton.setText("Thriller");
+        thrillerButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                thrillerButtonActionPerformed(evt);
+            }
+        });
+
+        horrorButton.setBackground(new java.awt.Color(255, 255, 224));
+        horrorButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        horrorButton.setText("Horror");
+        horrorButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                horrorButtonActionPerformed(evt);
+            }
+        });
+
+        borrowedButton.setBackground(new java.awt.Color(255, 255, 224));
+        borrowedButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        borrowedButton.setText("Borrowed videos");
+        borrowedButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                borrowedButtonActionPerformed(evt);
+            }
+        });
+
+        cartoonButton.setBackground(new java.awt.Color(255, 255, 224));
+        cartoonButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        cartoonButton.setText("Cartoon");
+        cartoonButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cartoonButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(118, 118, 118)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel9)
+                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(comedyButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(generalButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(horrorButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(thrillerButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(cartoonButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(borrowedButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)))
+                .addContainerGap(139, Short.MAX_VALUE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel9)
+                .addGap(58, 58, 58)
+                .addComponent(comedyButton)
+                .addGap(18, 18, 18)
+                .addComponent(generalButton)
+                .addGap(18, 18, 18)
+                .addComponent(horrorButton)
+                .addGap(18, 18, 18)
+                .addComponent(thrillerButton)
+                .addGap(18, 18, 18)
+                .addComponent(cartoonButton)
+                .addGap(18, 18, 18)
+                .addComponent(borrowedButton)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        vidRecordsTable.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        vidRecordsTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "Video Identofication Code", "Video Title", "Duration"
+            }
+        ));
+        vidRecordsTable.setRowHeight(32);
+        jScrollPane4.setViewportView(vidRecordsTable);
+
         javax.swing.GroupLayout owenedVidsPanelLayout = new javax.swing.GroupLayout(owenedVidsPanel);
         owenedVidsPanel.setLayout(owenedVidsPanelLayout);
         owenedVidsPanelLayout.setHorizontalGroup(
             owenedVidsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1678, Short.MAX_VALUE)
+            .addGroup(owenedVidsPanelLayout.createSequentialGroup()
+                .addGap(56, 56, 56)
+                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(49, 49, 49)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 1170, Short.MAX_VALUE)
+                .addContainerGap())
         );
         owenedVidsPanelLayout.setVerticalGroup(
             owenedVidsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 754, Short.MAX_VALUE)
+            .addGroup(owenedVidsPanelLayout.createSequentialGroup()
+                .addGap(57, 57, 57)
+                .addGroup(owenedVidsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 660, Short.MAX_VALUE)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
 
         vidRecordsTabbedPane.addTab("Videos in house", owenedVidsPanel);
 
         addVidPanel.setBackground(new java.awt.Color(245, 245, 220));
 
+        jPanel6.setBackground(new java.awt.Color(255, 239, 213));
+        jPanel6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
+        jLabel11.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        jLabel11.setText("Fill in the deatils for the new video");
+
+        jLabel12.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        jLabel12.setText("Duration");
+
+        jLabel13.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        jLabel13.setText("Title");
+
+        jLabel14.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        jLabel14.setText("Vid ID Code");
+
+        jLabel15.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        jLabel15.setText("Category");
+
+        jTextField1.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+
+        jTextField3.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField3ActionPerformed(evt);
+            }
+        });
+
+        jTextField4.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField4ActionPerformed(evt);
+            }
+        });
+
+        vidIdLabel.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        vidIdLabel.setText("ID goes here(Autogenerated)");
+
+        newVidSaveButton.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        newVidSaveButton.setText("Save");
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(265, 265, 265)
+                .addComponent(jLabel11)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel6Layout.createSequentialGroup()
+                        .addGap(73, 73, 73)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel6Layout.createSequentialGroup()
+                                .addComponent(newVidSaveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(jPanel6Layout.createSequentialGroup()
+                                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                                    .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 126, Short.MAX_VALUE)
+                                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 354, Short.MAX_VALUE)
+                                    .addComponent(jTextField4, javax.swing.GroupLayout.DEFAULT_SIZE, 354, Short.MAX_VALUE)
+                                    .addComponent(vidIdLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+                .addGap(138, 138, 138))
+            .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel6Layout.createSequentialGroup()
+                    .addGap(75, 75, 75)
+                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(659, Short.MAX_VALUE)))
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel11)
+                .addGap(63, 63, 63)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(47, 47, 47)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel12)
+                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(72, 72, 72)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel14)
+                    .addComponent(vidIdLabel))
+                .addGap(55, 55, 55)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel15)
+                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(77, 77, 77)
+                .addComponent(newVidSaveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(154, Short.MAX_VALUE))
+            .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel6Layout.createSequentialGroup()
+                    .addGap(109, 109, 109)
+                    .addComponent(jLabel13)
+                    .addContainerGap(543, Short.MAX_VALUE)))
+        );
+
+        jPanel7.setBackground(new java.awt.Color(255, 239, 213));
+        jPanel7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
+        addedVidsTextArea.setColumns(20);
+        addedVidsTextArea.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        addedVidsTextArea.setRows(8);
+        jScrollPane5.setViewportView(addedVidsTextArea);
+
+        jLabel10.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        jLabel10.setText("Videos you have just added");
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel10)
+                .addGap(296, 296, 296))
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 735, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                .addGap(7, 7, 7)
+                .addComponent(jLabel10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(27, Short.MAX_VALUE))
+        );
+
+        jPanel8.setBackground(new java.awt.Color(255, 239, 213));
+        jPanel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout addVidPanelLayout = new javax.swing.GroupLayout(addVidPanel);
         addVidPanel.setLayout(addVidPanelLayout);
         addVidPanelLayout.setHorizontalGroup(
             addVidPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1678, Short.MAX_VALUE)
+            .addGroup(addVidPanelLayout.createSequentialGroup()
+                .addGap(44, 44, 44)
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
+                .addGroup(addVidPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(43, 43, 43))
         );
         addVidPanelLayout.setVerticalGroup(
             addVidPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 754, Short.MAX_VALUE)
+            .addGroup(addVidPanelLayout.createSequentialGroup()
+                .addContainerGap(36, Short.MAX_VALUE)
+                .addGroup(addVidPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, addVidPanelLayout.createSequentialGroup()
+                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
 
         vidRecordsTabbedPane.addTab("Add video", addVidPanel);
@@ -204,7 +543,7 @@ public class Mainscreen extends javax.swing.JFrame {
         deleteVidPanel.setLayout(deleteVidPanelLayout);
         deleteVidPanelLayout.setHorizontalGroup(
             deleteVidPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1678, Short.MAX_VALUE)
+            .addGap(0, 1826, Short.MAX_VALUE)
         );
         deleteVidPanelLayout.setVerticalGroup(
             deleteVidPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -219,7 +558,7 @@ public class Mainscreen extends javax.swing.JFrame {
         lentVidsPanel.setLayout(lentVidsPanelLayout);
         lentVidsPanelLayout.setHorizontalGroup(
             lentVidsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1678, Short.MAX_VALUE)
+            .addGap(0, 1826, Short.MAX_VALUE)
         );
         lentVidsPanelLayout.setVerticalGroup(
             lentVidsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -253,7 +592,7 @@ public class Mainscreen extends javax.swing.JFrame {
         finacialPanel.setLayout(finacialPanelLayout);
         finacialPanelLayout.setHorizontalGroup(
             finacialPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1678, Short.MAX_VALUE)
+            .addGap(0, 1826, Short.MAX_VALUE)
         );
         finacialPanelLayout.setVerticalGroup(
             finacialPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -268,7 +607,7 @@ public class Mainscreen extends javax.swing.JFrame {
         incomePanel.setLayout(incomePanelLayout);
         incomePanelLayout.setHorizontalGroup(
             incomePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1678, Short.MAX_VALUE)
+            .addGap(0, 1826, Short.MAX_VALUE)
         );
         incomePanelLayout.setVerticalGroup(
             incomePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -283,7 +622,7 @@ public class Mainscreen extends javax.swing.JFrame {
         expencePanel.setLayout(expencePanelLayout);
         expencePanelLayout.setHorizontalGroup(
             expencePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1678, Short.MAX_VALUE)
+            .addGap(0, 1826, Short.MAX_VALUE)
         );
         expencePanelLayout.setVerticalGroup(
             expencePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -433,7 +772,7 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addComponent(exMembersHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 759, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, exMembersPanelLayout.createSequentialGroup()
-                .addContainerGap(115, Short.MAX_VALUE)
+                .addContainerGap(263, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1460, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(103, 103, 103))
         );
@@ -600,7 +939,7 @@ public class Mainscreen extends javax.swing.JFrame {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 391, Short.MAX_VALUE)
+            .addGap(0, 539, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -654,7 +993,7 @@ public class Mainscreen extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1672, Short.MAX_VALUE)
+            .addGap(0, 1820, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -701,6 +1040,38 @@ public class Mainscreen extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void generalButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generalButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_generalButtonActionPerformed
+
+    private void comedyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comedyButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comedyButtonActionPerformed
+
+    private void thrillerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thrillerButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_thrillerButtonActionPerformed
+
+    private void horrorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_horrorButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_horrorButtonActionPerformed
+
+    private void borrowedButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_borrowedButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_borrowedButtonActionPerformed
+
+    private void cartoonButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cartoonButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cartoonButtonActionPerformed
+
+    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField3ActionPerformed
+
+    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField4ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -738,18 +1109,30 @@ public class Mainscreen extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel addVidPanel;
+    private javax.swing.JTextArea addedVidsTextArea;
     private javax.swing.JPanel borrowPanel;
+    private javax.swing.JRadioButton borrowedButton;
+    private javax.swing.JRadioButton cartoonButton;
+    private javax.swing.JRadioButton comedyButton;
     private javax.swing.JPanel deleteVidPanel;
     private javax.swing.JLabel exMembersHeader;
     private javax.swing.JPanel exMembersPanel;
     private javax.swing.JTable exMembersTable;
     private javax.swing.JPanel expencePanel;
     private javax.swing.JPanel finacialPanel;
+    private javax.swing.JRadioButton generalButton;
     private javax.swing.JLabel greetingLabel;
+    private javax.swing.JRadioButton horrorButton;
     private javax.swing.JPanel incomePanel;
     private javax.swing.JPanel issuancePanel;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -757,14 +1140,24 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
     private javax.swing.JPanel lentVidsPanel;
     private javax.swing.JTabbedPane mainTabbedPane;
     private javax.swing.JLabel membersHeader;
@@ -776,13 +1169,17 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JLabel newMembersHeader;
     private javax.swing.JPanel newMembersPanel;
     private javax.swing.JTable newMembersTable;
+    private javax.swing.JButton newVidSaveButton;
     private javax.swing.JPanel owenedVidsPanel;
     private javax.swing.JPanel reportsPanel;
     private javax.swing.JPanel returnPanel;
     private javax.swing.JPanel revenuePanel;
     private javax.swing.JTabbedPane revenueTabbedPane;
+    private javax.swing.JRadioButton thrillerButton;
+    private javax.swing.JLabel vidIdLabel;
     private javax.swing.JTabbedPane vidIssuanceTabbedPane;
     private javax.swing.JPanel vidRecordsPanel;
     private javax.swing.JTabbedPane vidRecordsTabbedPane;
+    private javax.swing.JTable vidRecordsTable;
     // End of variables declaration//GEN-END:variables
 }
