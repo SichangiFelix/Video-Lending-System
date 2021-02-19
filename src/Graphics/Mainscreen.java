@@ -348,6 +348,8 @@ public class Mainscreen extends javax.swing.JFrame {
             }
         ));
         vidRecordsTable.setRowHeight(32);
+        vidRecordsTable.setSelectionBackground(new java.awt.Color(255, 255, 224));
+        vidRecordsTable.setSelectionForeground(new java.awt.Color(0, 0, 0));
         jScrollPane4.setViewportView(vidRecordsTable);
 
         javax.swing.GroupLayout owenedVidsPanelLayout = new javax.swing.GroupLayout(owenedVidsPanel);
@@ -698,6 +700,8 @@ public class Mainscreen extends javax.swing.JFrame {
         membersTable.setRequestFocusEnabled(false);
         membersTable.setRowHeight(32);
         membersTable.setRowMargin(2);
+        membersTable.setSelectionBackground(new java.awt.Color(176, 224, 230));
+        membersTable.setSelectionForeground(new java.awt.Color(0, 0, 0));
         membersTable.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(membersTable);
 
@@ -766,7 +770,10 @@ public class Mainscreen extends javax.swing.JFrame {
         exMembersTable.setRequestFocusEnabled(false);
         exMembersTable.setRowHeight(32);
         exMembersTable.setRowMargin(2);
+        exMembersTable.setSelectionBackground(new java.awt.Color(176, 224, 230));
+        exMembersTable.setSelectionForeground(new java.awt.Color(51, 51, 51));
         exMembersTable.getTableHeader().setReorderingAllowed(false);
+        exMembersTable.setUpdateSelectionOnSort(false);
         jScrollPane2.setViewportView(exMembersTable);
 
         exMembersHeader.setFont(new java.awt.Font("Tempus Sans ITC", 0, 24)); // NOI18N
@@ -834,6 +841,8 @@ public class Mainscreen extends javax.swing.JFrame {
         newMembersTable.setRequestFocusEnabled(false);
         newMembersTable.setRowHeight(32);
         newMembersTable.setRowMargin(2);
+        newMembersTable.setSelectionBackground(new java.awt.Color(176, 224, 230));
+        newMembersTable.setSelectionForeground(new java.awt.Color(0, 0, 0));
         newMembersTable.getTableHeader().setReorderingAllowed(false);
         jScrollPane3.setViewportView(newMembersTable);
 
