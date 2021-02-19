@@ -24,6 +24,7 @@ public class Mainscreen extends javax.swing.JFrame {
         membersTable.getTableHeader().setFont(new Font("Times New Roman",Font.PLAIN,21));
         exMembersTable.getTableHeader().setFont(new Font("Times New Roman",Font.PLAIN,21));
         newMembersTable.getTableHeader().setFont(new Font("Times New Roman",Font.PLAIN,21));
+        cartTable.getTableHeader().setFont(new Font("Times New Roman",Font.PLAIN,21));
         
         //personalised greeting on my profile , initialize the greeting label
         
@@ -42,7 +43,11 @@ public class Mainscreen extends javax.swing.JFrame {
         issuancePanel = new javax.swing.JPanel();
         vidIssuanceTabbedPane = new javax.swing.JTabbedPane();
         borrowPanel = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        jPanel9 = new javax.swing.JPanel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        cartTable = new javax.swing.JTable();
+        jLabel25 = new javax.swing.JLabel();
+        jPanel10 = new javax.swing.JPanel();
         returnPanel = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         vidRecordsPanel = new javax.swing.JPanel();
@@ -56,6 +61,7 @@ public class Mainscreen extends javax.swing.JFrame {
         horrorButton = new javax.swing.JRadioButton();
         borrowedButton = new javax.swing.JRadioButton();
         cartoonButton = new javax.swing.JRadioButton();
+        vidDeleteButton = new javax.swing.JButton();
         jScrollPane4 = new javax.swing.JScrollPane();
         vidRecordsTable = new javax.swing.JTable();
         addVidPanel = new javax.swing.JPanel();
@@ -70,12 +76,13 @@ public class Mainscreen extends javax.swing.JFrame {
         vidIdLabel = new javax.swing.JLabel();
         newVidSaveButton = new javax.swing.JButton();
         genreComboBox = new javax.swing.JComboBox<>();
+        jLabel24 = new javax.swing.JLabel();
+        storageLocationComboBox = new javax.swing.JComboBox<>();
         jPanel7 = new javax.swing.JPanel();
         jScrollPane5 = new javax.swing.JScrollPane();
         addedVidsTextArea = new javax.swing.JTextArea();
         jLabel10 = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
-        deleteVidPanel = new javax.swing.JPanel();
         revenuePanel = new javax.swing.JPanel();
         revenueTabbedPane = new javax.swing.JTabbedPane();
         finacialPanel = new javax.swing.JPanel();
@@ -138,31 +145,95 @@ public class Mainscreen extends javax.swing.JFrame {
         borrowPanel.setBackground(new java.awt.Color(119, 136, 153));
         borrowPanel.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        jButton1.setText("jButton1");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+        jPanel9.setBackground(new java.awt.Color(119, 136, 153));
+        jPanel9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
+        cartTable.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        cartTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Video identification code", "Title", "Duratioin", "Storage location"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, true, true
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
             }
         });
+        cartTable.setRowHeight(42);
+        jScrollPane6.setViewportView(cartTable);
+
+        jLabel25.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        jLabel25.setText("Cart");
+
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 673, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGap(329, 329, 329)
+                .addComponent(jLabel25)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel25)
+                .addGap(26, 26, 26)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(398, Short.MAX_VALUE))
+        );
+
+        jPanel10.setBackground(new java.awt.Color(119, 136, 153));
+        jPanel10.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
+        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
+        jPanel10.setLayout(jPanel10Layout);
+        jPanel10Layout.setHorizontalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1000, Short.MAX_VALUE)
+        );
+        jPanel10Layout.setVerticalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout borrowPanelLayout = new javax.swing.GroupLayout(borrowPanel);
         borrowPanel.setLayout(borrowPanelLayout);
         borrowPanelLayout.setHorizontalGroup(
             borrowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(borrowPanelLayout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addComponent(jButton1)
-                .addContainerGap(1692, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, borrowPanelLayout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(62, 62, 62))
         );
         borrowPanelLayout.setVerticalGroup(
             borrowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(borrowPanelLayout.createSequentialGroup()
-                .addGap(174, 174, 174)
-                .addComponent(jButton1)
-                .addContainerGap(551, Short.MAX_VALUE))
+                .addGap(40, 40, 40)
+                .addGroup(borrowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        vidIssuanceTabbedPane.addTab("Video borrowing", borrowPanel);
+        vidIssuanceTabbedPane.addTab("Video selection", borrowPanel);
 
         returnPanel.setBackground(new java.awt.Color(119, 136, 153));
 
@@ -174,10 +245,10 @@ public class Mainscreen extends javax.swing.JFrame {
         );
         returnPanelLayout.setVerticalGroup(
             returnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 754, Short.MAX_VALUE)
+            .addGap(0, 773, Short.MAX_VALUE)
         );
 
-        vidIssuanceTabbedPane.addTab("Video returns", returnPanel);
+        vidIssuanceTabbedPane.addTab("Lending processing", returnPanel);
 
         jPanel1.setBackground(new java.awt.Color(119, 136, 153));
 
@@ -189,10 +260,10 @@ public class Mainscreen extends javax.swing.JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 754, Short.MAX_VALUE)
+            .addGap(0, 773, Short.MAX_VALUE)
         );
 
-        vidIssuanceTabbedPane.addTab("wdcd", jPanel1);
+        vidIssuanceTabbedPane.addTab("Video return", jPanel1);
 
         javax.swing.GroupLayout issuancePanelLayout = new javax.swing.GroupLayout(issuancePanel);
         issuancePanel.setLayout(issuancePanelLayout);
@@ -275,6 +346,9 @@ public class Mainscreen extends javax.swing.JFrame {
             }
         });
 
+        vidDeleteButton.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        vidDeleteButton.setText("Delete selected");
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
@@ -289,7 +363,8 @@ public class Mainscreen extends javax.swing.JFrame {
                         .addComponent(horrorButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(thrillerButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(cartoonButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(borrowedButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)))
+                        .addComponent(borrowedButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE))
+                    .addComponent(vidDeleteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(139, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
@@ -309,47 +384,59 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addComponent(cartoonButton)
                 .addGap(18, 18, 18)
                 .addComponent(borrowedButton)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(vidDeleteButton)
+                .addGap(117, 117, 117))
         );
 
         vidRecordsTable.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         vidRecordsTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "Video Identofication Code", "Video Title", "Duration"
+                "Video Identofication Code", "Video Title", "Duration", "Storage location"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, true, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         vidRecordsTable.setRowHeight(32);
         vidRecordsTable.setSelectionBackground(new java.awt.Color(255, 255, 224));
         vidRecordsTable.setSelectionForeground(new java.awt.Color(0, 0, 0));
+        vidRecordsTable.setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+        vidRecordsTable.getTableHeader().setReorderingAllowed(false);
         jScrollPane4.setViewportView(vidRecordsTable);
 
         javax.swing.GroupLayout owenedVidsPanelLayout = new javax.swing.GroupLayout(owenedVidsPanel);
@@ -423,14 +510,16 @@ public class Mainscreen extends javax.swing.JFrame {
             }
         });
 
+        jLabel24.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        jLabel24.setText("Storage location");
+
+        storageLocationComboBox.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        storageLocationComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Locatio A", "Locatio B", "Locatio C", "Locatio D", "Locatio E" }));
+
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(265, 265, 265)
-                .addComponent(jLabel11)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel6Layout.createSequentialGroup()
@@ -443,16 +532,22 @@ public class Mainscreen extends javax.swing.JFrame {
                                 .addComponent(newVidSaveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(jPanel6Layout.createSequentialGroup()
-                                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-                                    .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                                    .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 126, Short.MAX_VALUE)
                                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 354, Short.MAX_VALUE)
                                     .addComponent(vidIdLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(genreComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+                                    .addComponent(genreComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(storageLocationComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
                 .addGap(138, 138, 138))
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(265, 265, 265)
+                .addComponent(jLabel11)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel6Layout.createSequentialGroup()
                     .addGap(75, 75, 75)
@@ -478,9 +573,13 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(genreComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel15))
-                .addGap(65, 65, 65)
+                .addGap(47, 47, 47)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel24)
+                    .addComponent(storageLocationComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 131, Short.MAX_VALUE)
                 .addComponent(newVidSaveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(168, Short.MAX_VALUE))
+                .addGap(34, 34, 34))
             .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel6Layout.createSequentialGroup()
                     .addGap(109, 109, 109)
@@ -541,9 +640,9 @@ public class Mainscreen extends javax.swing.JFrame {
         addVidPanelLayout.setHorizontalGroup(
             addVidPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(addVidPanelLayout.createSequentialGroup()
-                .addGap(44, 44, 44)
+                .addGap(43, 43, 43)
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
                 .addGroup(addVidPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -552,32 +651,17 @@ public class Mainscreen extends javax.swing.JFrame {
         addVidPanelLayout.setVerticalGroup(
             addVidPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(addVidPanelLayout.createSequentialGroup()
-                .addContainerGap(34, Short.MAX_VALUE)
+                .addContainerGap(27, Short.MAX_VALUE)
                 .addGroup(addVidPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, addVidPanelLayout.createSequentialGroup()
                         .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(33, Short.MAX_VALUE))
+                    .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
         vidRecordsTabbedPane.addTab("Add video", addVidPanel);
-
-        deleteVidPanel.setBackground(new java.awt.Color(245, 245, 220));
-
-        javax.swing.GroupLayout deleteVidPanelLayout = new javax.swing.GroupLayout(deleteVidPanel);
-        deleteVidPanel.setLayout(deleteVidPanelLayout);
-        deleteVidPanelLayout.setHorizontalGroup(
-            deleteVidPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1826, Short.MAX_VALUE)
-        );
-        deleteVidPanelLayout.setVerticalGroup(
-            deleteVidPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 754, Short.MAX_VALUE)
-        );
-
-        vidRecordsTabbedPane.addTab("Delete video", deleteVidPanel);
 
         javax.swing.GroupLayout vidRecordsPanelLayout = new javax.swing.GroupLayout(vidRecordsPanel);
         vidRecordsPanel.setLayout(vidRecordsPanelLayout);
@@ -696,7 +780,15 @@ public class Mainscreen extends javax.swing.JFrame {
             new String [] {
                 "Membership no", "First Name", "Second Name", "Occupation", "Date joinned", "Residential address"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         membersTable.setRequestFocusEnabled(false);
         membersTable.setRowHeight(32);
         membersTable.setRowMargin(2);
@@ -766,7 +858,15 @@ public class Mainscreen extends javax.swing.JFrame {
             new String [] {
                 "Membership no", "First Name", "Second Name", "Occupation", "Date joinned", "Residential address"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         exMembersTable.setRequestFocusEnabled(false);
         exMembersTable.setRowHeight(32);
         exMembersTable.setRowMargin(2);
@@ -837,7 +937,15 @@ public class Mainscreen extends javax.swing.JFrame {
             new String [] {
                 "Membership no", "First Name", "Second Name", "Occupation", "Date joinned", "Residential address"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         newMembersTable.setRequestFocusEnabled(false);
         newMembersTable.setRowHeight(32);
         newMembersTable.setRowMargin(2);
@@ -877,6 +985,7 @@ public class Mainscreen extends javax.swing.JFrame {
         myProfilePanel.setBackground(new java.awt.Color(176, 224, 230));
 
         jPanel3.setBackground(new java.awt.Color(0, 206, 209));
+        jPanel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         greetingLabel.setFont(new java.awt.Font("MingLiU-ExtB", 0, 24)); // NOI18N
         greetingLabel.setText("Hello \"Username\"");
@@ -1001,6 +1110,7 @@ public class Mainscreen extends javax.swing.JFrame {
         );
 
         jPanel4.setBackground(new java.awt.Color(0, 206, 209));
+        jPanel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         editMemberInfoButton.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         editMemberInfoButton.setText("Edit my information");
@@ -1010,7 +1120,7 @@ public class Mainscreen extends javax.swing.JFrame {
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(113, Short.MAX_VALUE)
+                .addContainerGap(109, Short.MAX_VALUE)
                 .addComponent(editMemberInfoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(99, 99, 99))
         );
@@ -1109,13 +1219,6 @@ public class Mainscreen extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        Splashscreen splash = new Splashscreen();
-        splash.show();
-        dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void generalButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generalButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_generalButtonActionPerformed
@@ -1192,9 +1295,9 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JTextArea addedVidsTextArea;
     private javax.swing.JPanel borrowPanel;
     private javax.swing.JRadioButton borrowedButton;
+    private javax.swing.JTable cartTable;
     private javax.swing.JRadioButton cartoonButton;
     private javax.swing.JRadioButton comedyButton;
-    private javax.swing.JPanel deleteVidPanel;
     private javax.swing.JButton editMemberInfoButton;
     private javax.swing.JLabel exMembersHeader;
     private javax.swing.JPanel exMembersPanel;
@@ -1207,7 +1310,6 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JRadioButton horrorButton;
     private javax.swing.JPanel incomePanel;
     private javax.swing.JPanel issuancePanel;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1224,6 +1326,8 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -1232,6 +1336,7 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -1239,11 +1344,13 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField3;
@@ -1263,7 +1370,9 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JPanel returnPanel;
     private javax.swing.JPanel revenuePanel;
     private javax.swing.JTabbedPane revenueTabbedPane;
+    private javax.swing.JComboBox<String> storageLocationComboBox;
     private javax.swing.JRadioButton thrillerButton;
+    private javax.swing.JButton vidDeleteButton;
     private javax.swing.JLabel vidIdLabel;
     private javax.swing.JTabbedPane vidIssuanceTabbedPane;
     private javax.swing.JPanel vidRecordsPanel;
