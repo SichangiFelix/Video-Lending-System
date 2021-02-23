@@ -11,6 +11,9 @@ import java.awt.Font;
  *
  * @author SICHANGI
  */
+
+import java.sql.*;
+
 public class Mainscreen extends javax.swing.JFrame {
 
     /**
@@ -28,6 +31,8 @@ public class Mainscreen extends javax.swing.JFrame {
         
         //personalised greeting on my profile , initialize the greeting label
         
+        
+        //code for the database connection
     }
 
     /**
@@ -47,7 +52,6 @@ public class Mainscreen extends javax.swing.JFrame {
         jScrollPane6 = new javax.swing.JScrollPane();
         cartTable = new javax.swing.JTable();
         jLabel25 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
         jPanel10 = new javax.swing.JPanel();
         returnPanel = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
@@ -176,13 +180,6 @@ public class Mainscreen extends javax.swing.JFrame {
         jLabel25.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel25.setText("Cart");
 
-        jButton1.setText("jButton1");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
@@ -193,13 +190,8 @@ public class Mainscreen extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 673, Short.MAX_VALUE))
                     .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel9Layout.createSequentialGroup()
-                                .addGap(329, 329, 329)
-                                .addComponent(jLabel25))
-                            .addGroup(jPanel9Layout.createSequentialGroup()
-                                .addGap(224, 224, 224)
-                                .addComponent(jButton1)))
+                        .addGap(329, 329, 329)
+                        .addComponent(jLabel25)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -210,9 +202,7 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addComponent(jLabel25)
                 .addGap(26, 26, 26)
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(127, 127, 127)
-                .addComponent(jButton1)
-                .addContainerGap(242, Short.MAX_VALUE))
+                .addContainerGap(398, Short.MAX_VALUE))
         );
 
         jPanel10.setBackground(new java.awt.Color(119, 136, 153));
@@ -1272,13 +1262,6 @@ public class Mainscreen extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_genreComboBoxActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
-
-//kbjj.hvjh. jv.jh
-// TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -1334,7 +1317,6 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JRadioButton horrorButton;
     private javax.swing.JPanel incomePanel;
     private javax.swing.JPanel issuancePanel;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
