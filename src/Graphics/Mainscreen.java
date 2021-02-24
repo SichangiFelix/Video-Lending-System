@@ -30,6 +30,7 @@ public class Mainscreen extends javax.swing.JFrame {
         newMembersTable.getTableHeader().setFont(new Font("Times New Roman",Font.PLAIN,21));
         cartTable.getTableHeader().setFont(new Font("Times New Roman",Font.PLAIN,21));
         vidCatalogTable.getTableHeader().setFont(new Font("Times New Roman",Font.PLAIN,21));
+        vidConditionTable.getTableHeader().setFont(new Font("Times New Roman",Font.PLAIN,21));
         
         //personalised greeting on my profile , initialize the greeting label
         
@@ -60,7 +61,25 @@ public class Mainscreen extends javax.swing.JFrame {
         jScrollPane7 = new javax.swing.JScrollPane();
         vidCatalogTable = new javax.swing.JTable();
         returnPanel = new javax.swing.JPanel();
+        jPanel11 = new javax.swing.JPanel();
+        jPanel13 = new javax.swing.JPanel();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        membershipTextField = new javax.swing.JTextField();
+        nameTextField = new javax.swing.JTextField();
+        idTextField = new javax.swing.JTextField();
+        jLabel31 = new javax.swing.JLabel();
+        debtLabel = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        vidConditionTable = new javax.swing.JTable();
+        jButton1 = new javax.swing.JButton();
+        jPanel12 = new javax.swing.JPanel();
+        jLabel33 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
+        jPanel14 = new javax.swing.JPanel();
         vidRecordsPanel = new javax.swing.JPanel();
         vidRecordsTabbedPane = new javax.swing.JTabbedPane();
         owenedVidsPanel = new javax.swing.JPanel();
@@ -202,7 +221,7 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 635, Short.MAX_VALUE))
+                        .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 614, Short.MAX_VALUE))
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addGap(329, 329, 329)
                         .addComponent(jLabel25)
@@ -317,37 +336,231 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addGroup(borrowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
 
         vidIssuanceTabbedPane.addTab("Video selection", borrowPanel);
 
         returnPanel.setBackground(new java.awt.Color(119, 136, 153));
 
+        jPanel11.setBackground(new java.awt.Color(119, 136, 153));
+        jPanel11.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
+        jPanel13.setBackground(new java.awt.Color(112, 128, 144));
+
+        jLabel27.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
+        jLabel27.setText("Please enter the member's card details below");
+
+        jLabel28.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        jLabel28.setText("Membership number");
+
+        jLabel29.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        jLabel29.setText("Name");
+
+        jLabel30.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        jLabel30.setText("ID");
+
+        membershipTextField.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+
+        idTextField.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+
+        jLabel31.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        jLabel31.setText("Member's debt");
+
+        debtLabel.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        debtLabel.setText("value appears here");
+
+        jLabel32.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
+        jLabel32.setText("A member's debt to the club should not exceed 2500 to be able to borrow a video");
+
+        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
+        jPanel13.setLayout(jPanel13Layout);
+        jPanel13Layout.setHorizontalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addGap(44, 44, 44)
+                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel31, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel30, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel28, javax.swing.GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE)
+                            .addComponent(jLabel29, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(141, 141, 141)
+                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(membershipTextField)
+                            .addComponent(nameTextField)
+                            .addComponent(idTextField)
+                            .addComponent(debtLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 324, Short.MAX_VALUE)))
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addGap(376, 376, 376)
+                        .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addGap(119, 119, 119)
+                        .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 697, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(89, Short.MAX_VALUE))
+        );
+        jPanel13Layout.setVerticalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel27)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel28)
+                    .addComponent(membershipTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel29)
+                    .addComponent(nameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(31, 31, 31)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel30)
+                    .addComponent(idTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(34, 34, 34)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel31)
+                    .addComponent(debtLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                .addComponent(jLabel32)
+                .addContainerGap())
+        );
+
+        vidConditionTable.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        vidConditionTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Video identification code", "Title", "Video condition", "Info"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, true, true
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        vidConditionTable.setRowHeight(42);
+        jScrollPane8.setViewportView(vidConditionTable);
+
+        jButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton1.setText("Save Lending details");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jScrollPane8, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addContainerGap())
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addGap(352, 352, 352)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel11Layout.setVerticalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27))
+        );
+
+        jPanel12.setBackground(new java.awt.Color(119, 136, 153));
+        jPanel12.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
+        jLabel33.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        jLabel33.setText("Receipt");
+
+        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
+        jPanel12.setLayout(jPanel12Layout);
+        jPanel12Layout.setHorizontalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addGap(339, 339, 339)
+                .addComponent(jLabel33)
+                .addContainerGap(357, Short.MAX_VALUE))
+        );
+        jPanel12Layout.setVerticalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel33)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout returnPanelLayout = new javax.swing.GroupLayout(returnPanel);
         returnPanel.setLayout(returnPanelLayout);
         returnPanelLayout.setHorizontalGroup(
             returnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(returnPanelLayout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(42, 42, 42)
+                .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(19, Short.MAX_VALUE))
         );
         returnPanelLayout.setVerticalGroup(
             returnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(returnPanelLayout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addGroup(returnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         vidIssuanceTabbedPane.addTab("Lending processing", returnPanel);
 
         jPanel1.setBackground(new java.awt.Color(119, 136, 153));
 
+        javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
+        jPanel14.setLayout(jPanel14Layout);
+        jPanel14Layout.setHorizontalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel14Layout.setVerticalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(279, 279, 279)
+                .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(1426, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(155, 155, 155)
+                .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(526, Short.MAX_VALUE))
         );
 
         vidIssuanceTabbedPane.addTab("Video return", jPanel1);
@@ -534,7 +747,7 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addGap(56, 56, 56)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(49, 49, 49)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 1170, Short.MAX_VALUE)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 1149, Short.MAX_VALUE)
                 .addContainerGap())
         );
         owenedVidsPanelLayout.setVerticalGroup(
@@ -544,7 +757,7 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addGroup(owenedVidsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 660, Short.MAX_VALUE)
                     .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addContainerGap(64, Short.MAX_VALUE))
         );
 
         vidRecordsTabbedPane.addTab("Videos in house", owenedVidsPanel);
@@ -729,7 +942,7 @@ public class Mainscreen extends javax.swing.JFrame {
             .addGroup(addVidPanelLayout.createSequentialGroup()
                 .addGap(43, 43, 43)
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
                 .addGroup(addVidPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -738,14 +951,14 @@ public class Mainscreen extends javax.swing.JFrame {
         addVidPanelLayout.setVerticalGroup(
             addVidPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(addVidPanelLayout.createSequentialGroup()
-                .addContainerGap(31, Short.MAX_VALUE)
+                .addContainerGap(40, Short.MAX_VALUE)
                 .addGroup(addVidPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, addVidPanelLayout.createSequentialGroup()
                         .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
         vidRecordsTabbedPane.addTab("Add video", addVidPanel);
@@ -775,11 +988,11 @@ public class Mainscreen extends javax.swing.JFrame {
         finacialPanel.setLayout(finacialPanelLayout);
         finacialPanelLayout.setHorizontalGroup(
             finacialPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1826, Short.MAX_VALUE)
+            .addGap(0, 1805, Short.MAX_VALUE)
         );
         finacialPanelLayout.setVerticalGroup(
             finacialPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 762, Short.MAX_VALUE)
+            .addGap(0, 781, Short.MAX_VALUE)
         );
 
         revenueTabbedPane.addTab("My financials", finacialPanel);
@@ -790,11 +1003,11 @@ public class Mainscreen extends javax.swing.JFrame {
         incomePanel.setLayout(incomePanelLayout);
         incomePanelLayout.setHorizontalGroup(
             incomePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1826, Short.MAX_VALUE)
+            .addGap(0, 1805, Short.MAX_VALUE)
         );
         incomePanelLayout.setVerticalGroup(
             incomePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 762, Short.MAX_VALUE)
+            .addGap(0, 781, Short.MAX_VALUE)
         );
 
         revenueTabbedPane.addTab("Club's income", incomePanel);
@@ -805,11 +1018,11 @@ public class Mainscreen extends javax.swing.JFrame {
         expencePanel.setLayout(expencePanelLayout);
         expencePanelLayout.setHorizontalGroup(
             expencePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1826, Short.MAX_VALUE)
+            .addGap(0, 1805, Short.MAX_VALUE)
         );
         expencePanelLayout.setVerticalGroup(
             expencePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 762, Short.MAX_VALUE)
+            .addGap(0, 781, Short.MAX_VALUE)
         );
 
         revenueTabbedPane.addTab("Club's expenses", expencePanel);
@@ -898,7 +1111,7 @@ public class Mainscreen extends javax.swing.JFrame {
             .addGroup(membersPanelLayout.createSequentialGroup()
                 .addGap(663, 663, 663)
                 .addComponent(membersHeader)
-                .addContainerGap(693, Short.MAX_VALUE))
+                .addContainerGap(672, Short.MAX_VALUE))
         );
         membersPanelLayout.setVerticalGroup(
             membersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -977,7 +1190,7 @@ public class Mainscreen extends javax.swing.JFrame {
             .addGroup(exMembersPanelLayout.createSequentialGroup()
                 .addGap(531, 531, 531)
                 .addComponent(exMembersHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 759, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(536, Short.MAX_VALUE))
+                .addContainerGap(515, Short.MAX_VALUE))
         );
         exMembersPanelLayout.setVerticalGroup(
             exMembersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1055,7 +1268,7 @@ public class Mainscreen extends javax.swing.JFrame {
             .addGroup(newMembersPanelLayout.createSequentialGroup()
                 .addGap(528, 528, 528)
                 .addComponent(newMembersHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 759, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(539, Short.MAX_VALUE))
+                .addContainerGap(518, Short.MAX_VALUE))
         );
         newMembersPanelLayout.setVerticalGroup(
             newMembersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1207,7 +1420,7 @@ public class Mainscreen extends javax.swing.JFrame {
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(109, Short.MAX_VALUE)
+                .addContainerGap(88, Short.MAX_VALUE)
                 .addComponent(editMemberInfoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(99, 99, 99))
         );
@@ -1250,7 +1463,7 @@ public class Mainscreen extends javax.swing.JFrame {
         );
         membershipPanelLayout.setVerticalGroup(
             membershipPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(membershipTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 810, Short.MAX_VALUE)
+            .addComponent(membershipTabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, 829, Short.MAX_VALUE)
         );
 
         mainTabbedPane.addTab("Membership", membershipPanel);
@@ -1266,11 +1479,11 @@ public class Mainscreen extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1820, Short.MAX_VALUE)
+            .addGap(0, 1799, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 756, Short.MAX_VALUE)
+            .addGap(0, 775, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("", jPanel2);
@@ -1292,7 +1505,7 @@ public class Mainscreen extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mainTabbedPane)
+            .addComponent(mainTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 1827, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1345,6 +1558,11 @@ public class Mainscreen extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, "Your selected videos have been successfully submitted to the checkout agent.");
     }//GEN-LAST:event_checkoutButtonActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        //generate a lending invoice and save it with the rest of the receipts
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1389,6 +1607,7 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JRadioButton cartoonButton;
     private javax.swing.JButton checkoutButton;
     private javax.swing.JRadioButton comedyButton;
+    private javax.swing.JLabel debtLabel;
     private javax.swing.JButton editMemberInfoButton;
     private javax.swing.JLabel exMembersHeader;
     private javax.swing.JPanel exMembersPanel;
@@ -1399,8 +1618,10 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> genreComboBox;
     private javax.swing.JLabel greetingLabel;
     private javax.swing.JRadioButton horrorButton;
+    private javax.swing.JTextField idTextField;
     private javax.swing.JPanel incomePanel;
     private javax.swing.JPanel issuancePanel;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1420,7 +1641,14 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -1429,6 +1657,10 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -1444,6 +1676,7 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField3;
@@ -1453,7 +1686,9 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JTable membersTable;
     private javax.swing.JPanel membershipPanel;
     private javax.swing.JTabbedPane membershipTabbedPane;
+    private javax.swing.JTextField membershipTextField;
     private javax.swing.JPanel myProfilePanel;
+    private javax.swing.JTextField nameTextField;
     private javax.swing.JLabel newMembersHeader;
     private javax.swing.JPanel newMembersPanel;
     private javax.swing.JTable newMembersTable;
@@ -1466,6 +1701,7 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> storageLocationComboBox;
     private javax.swing.JRadioButton thrillerButton;
     private javax.swing.JTable vidCatalogTable;
+    private javax.swing.JTable vidConditionTable;
     private javax.swing.JButton vidDeleteButton;
     private javax.swing.JLabel vidIdLabel;
     private javax.swing.JTabbedPane vidIssuanceTabbedPane;
