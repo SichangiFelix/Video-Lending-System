@@ -218,6 +218,7 @@ public class SignUp extends javax.swing.JFrame {
 
         phoneField.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
 
+        jButton1.setBackground(new java.awt.Color(204, 204, 255));
         jButton1.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jButton1.setText("Already a member");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
