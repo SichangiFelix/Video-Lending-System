@@ -13,6 +13,7 @@ import java.awt.Font;
  */
 
 import java.sql.*;
+import javax.swing.JOptionPane;
 
 public class Mainscreen extends javax.swing.JFrame {
 
@@ -48,17 +49,18 @@ public class Mainscreen extends javax.swing.JFrame {
         mainTabbedPane = new javax.swing.JTabbedPane();
         issuancePanel = new javax.swing.JPanel();
         vidIssuanceTabbedPane = new javax.swing.JTabbedPane();
-        returnPanel = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
         borrowPanel = new javax.swing.JPanel();
         jPanel9 = new javax.swing.JPanel();
         jScrollPane6 = new javax.swing.JScrollPane();
         cartTable = new javax.swing.JTable();
         jLabel25 = new javax.swing.JLabel();
+        checkoutButton = new javax.swing.JButton();
         jPanel10 = new javax.swing.JPanel();
         jLabel26 = new javax.swing.JLabel();
         jScrollPane7 = new javax.swing.JScrollPane();
         vidCatalogTable = new javax.swing.JTable();
+        returnPanel = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
         vidRecordsPanel = new javax.swing.JPanel();
         vidRecordsTabbedPane = new javax.swing.JTabbedPane();
         owenedVidsPanel = new javax.swing.JPanel();
@@ -151,36 +153,6 @@ public class Mainscreen extends javax.swing.JFrame {
         vidIssuanceTabbedPane.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(143, 188, 143), 3, true));
         vidIssuanceTabbedPane.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
 
-        returnPanel.setBackground(new java.awt.Color(119, 136, 153));
-
-        javax.swing.GroupLayout returnPanelLayout = new javax.swing.GroupLayout(returnPanel);
-        returnPanel.setLayout(returnPanelLayout);
-        returnPanelLayout.setHorizontalGroup(
-            returnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        returnPanelLayout.setVerticalGroup(
-            returnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        vidIssuanceTabbedPane.addTab("Lending processing", returnPanel);
-
-        jPanel1.setBackground(new java.awt.Color(119, 136, 153));
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        vidIssuanceTabbedPane.addTab("Video return", jPanel1);
-
         borrowPanel.setBackground(new java.awt.Color(119, 136, 153));
         borrowPanel.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
@@ -214,18 +186,32 @@ public class Mainscreen extends javax.swing.JFrame {
         jLabel25.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel25.setText("Cart");
 
+        checkoutButton.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        checkoutButton.setText("Checkout");
+        checkoutButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                checkoutButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
-                .addGap(329, 329, 329)
-                .addComponent(jLabel25)
-                .addContainerGap(294, Short.MAX_VALUE))
-            .addGroup(jPanel9Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane6)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 635, Short.MAX_VALUE))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGap(329, 329, 329)
+                        .addComponent(jLabel25)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGap(268, 268, 268)
+                .addComponent(checkoutButton)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -233,7 +219,9 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel25)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(checkoutButton)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -243,8 +231,39 @@ public class Mainscreen extends javax.swing.JFrame {
         jLabel26.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 24)); // NOI18N
         jLabel26.setText("Video Catalog");
 
+        vidCatalogTable.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         vidCatalogTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null},
@@ -254,6 +273,7 @@ public class Mainscreen extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        vidCatalogTable.setRowHeight(32);
         jScrollPane7.setViewportView(vidCatalogTable);
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
@@ -301,6 +321,36 @@ public class Mainscreen extends javax.swing.JFrame {
         );
 
         vidIssuanceTabbedPane.addTab("Video selection", borrowPanel);
+
+        returnPanel.setBackground(new java.awt.Color(119, 136, 153));
+
+        javax.swing.GroupLayout returnPanelLayout = new javax.swing.GroupLayout(returnPanel);
+        returnPanel.setLayout(returnPanelLayout);
+        returnPanelLayout.setHorizontalGroup(
+            returnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        returnPanelLayout.setVerticalGroup(
+            returnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        vidIssuanceTabbedPane.addTab("Lending processing", returnPanel);
+
+        jPanel1.setBackground(new java.awt.Color(119, 136, 153));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        vidIssuanceTabbedPane.addTab("Video return", jPanel1);
 
         javax.swing.GroupLayout issuancePanelLayout = new javax.swing.GroupLayout(issuancePanel);
         issuancePanel.setLayout(issuancePanelLayout);
@@ -1290,6 +1340,11 @@ public class Mainscreen extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_genreComboBoxActionPerformed
 
+    private void checkoutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkoutButtonActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "Your selected videos have been successfully submitted to the checkout agent.");
+    }//GEN-LAST:event_checkoutButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1332,6 +1387,7 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JRadioButton borrowedButton;
     private javax.swing.JTable cartTable;
     private javax.swing.JRadioButton cartoonButton;
+    private javax.swing.JButton checkoutButton;
     private javax.swing.JRadioButton comedyButton;
     private javax.swing.JButton editMemberInfoButton;
     private javax.swing.JLabel exMembersHeader;
