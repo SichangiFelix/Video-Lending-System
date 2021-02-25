@@ -10,13 +10,13 @@ package database;
  * @author SICHANGI
  */
 import java.sql.*;
+import javax.swing.JOptionPane;
 
 public class Database {
     
     public Database(){
        try{ 
         //Get a connection
-        //Class.forName("com.mysql.jdbc.Driver");  
         Connection mycon = DriverManager.getConnection("jdbc:mysql:localhost:3306/vlsdb","root","sangoro31");
         //create a statement
         Statement myStmt = mycon.createStatement();
@@ -27,8 +27,9 @@ public class Database {
             System.out.println(myRs.getString("fname")+ "," + myRs.getString("sname"));
         }
        }
-       catch(Exeption exc){
-           exc.printStacktrace(); 
+       catch(Exception exc){
+           JOptionPane.showMessageDialog(null,exc);
+           //return null; 
        }
     }
     
