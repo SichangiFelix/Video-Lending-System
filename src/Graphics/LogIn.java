@@ -4,13 +4,15 @@
  * and open the template in the editor.
  */
 package Graphics;
+import java.sql.*;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author SICHANGI
  */
 public class LogIn extends javax.swing.JFrame {
-
+ 
     /**
      * Creates new form LogIn
      */
@@ -133,9 +135,33 @@ public class LogIn extends javax.swing.JFrame {
 
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
         // TODO add your handling code here:
-        Mainscreen main = new Mainscreen();
-        main.setVisible(true);
-        setVisible(false);
+        String u = loginUsernameTextField.getText();
+        String p = loginPassField.getText();
+      try{ 
+        //Get a connection
+        Connection mycon = DriverManager.getConnection("jdbc:mysql://localhost:3306/vlsdb","root","sangoro31");
+        //create a statement
+        Statement myStmt = mycon.createStatement();
+        //execute SQL querry
+       ResultSet myRs = myStmt.executeQuery("SELECT * FROM login;");
+        //process the result set
+        while (myRs.next()){
+            
+            String user = myRs.getString("Username");
+            String pass = myRs.getString("Password");
+            if(user.equals(u) && pass.equals(p)){
+                new Mainscreen().setVisible(true);
+                dispose();
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"You have entered wrong login credentials, please try again");
+            }
+        }
+       }
+       catch(Exception exc){
+           JOptionPane.showMessageDialog(null,exc);
+           //return null; 
+       }
     }//GEN-LAST:event_loginButtonActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
