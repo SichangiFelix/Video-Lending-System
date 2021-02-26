@@ -5,6 +5,8 @@
  */
 package Graphics;
 
+import javax.swing.JOptionPane;
+import java.sql.*;
 /**
  *
  * @author SICHANGI
@@ -398,17 +400,47 @@ public class SignUp extends javax.swing.JFrame {
 
     private void signUpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signUpButtonActionPerformed
         // TODO add your handling code here:
-        Mainscreen main = new Mainscreen();
-        main.show();
+        String pass1 = signupPassField.getText();
+        String pass2 = signupPassConfirmField.getText();
         
-        dispose();
+        if(pass1.equals(pass2)){
+            //write here code to save all data into the members database
+             try{
+                 String query = "INSERT INTO 'members'('F_name','S_name','National_id','Adress','Occupation','Date','Phone','Username','Password') VALUES (?,?,?,?,?,?,?,?,?)";
+                Class.forName("com.mysql.cj.jdbc.Driver");
+                Connection mycon = DriverManager.getConnection("jdbc:mysql://localhost:3306/vlsdb","root","sangoro31");
+                //create a statement
+                PreparedStatement myStmt = mycon.prepareStatement(query);
+                //execute SQL querry
+                myStmt.setString(1,fNameTextField.getText());
+                myStmt.setString(2,sNameTextField.getText());
+                myStmt.setString(3,idTextField.getText());
+                myStmt.setString(4,adressTextField.getText());
+                myStmt.setString(5,occupationTextField.getText());
+                myStmt.setString(6,jDateChooser1.getDateFormatString());
+                myStmt.setString(7,fNameTextField.getText());
+                myStmt.setString(8,signupUsernameTextField.getText());
+                myStmt.setString(9,signupPassConfirmField.getText());
+                myStmt.executeUpdate();
+               //tell the user they have been successfully added
+               JOptionPane.showMessageDialog(null,"You have been succefully registered");
+               //open the login part so that they can loginwith newly set credentials
+               new LogIn().show();
+               dispose();
+            }
+             catch(Exception ex){
+                 
+             }
+        }
+        else{
+            JOptionPane.showMessageDialog(null,"Please ensure that the passwords entered match!");
+        }
+        
     }//GEN-LAST:event_signUpButtonActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        LogIn log = new LogIn();
-        log.show();
-        
+        new LogIn().show();
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
