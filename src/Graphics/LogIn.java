@@ -143,7 +143,7 @@ public class LogIn extends javax.swing.JFrame {
         //create a statement
         Statement myStmt = mycon.createStatement();
         //execute SQL querry
-       ResultSet myRs = myStmt.executeQuery("SELECT * FROM login;");
+       ResultSet myRs = myStmt.executeQuery("SELECT * FROM members;");
         //process the result set
         while (myRs.next()){
             
