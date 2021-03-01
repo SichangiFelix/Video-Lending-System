@@ -71,13 +71,18 @@ public class Mainscreen extends javax.swing.JFrame {
         nameTextField = new javax.swing.JTextField();
         idTextField = new javax.swing.JTextField();
         jLabel31 = new javax.swing.JLabel();
-        debtLabel = new javax.swing.JLabel();
+        invoiceNumberLabel = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
+        debtLabel = new javax.swing.JLabel();
         jScrollPane8 = new javax.swing.JScrollPane();
         vidConditionTable = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
         jPanel12 = new javax.swing.JPanel();
         jLabel33 = new javax.swing.JLabel();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        receiptTextArea = new javax.swing.JTextArea();
+        printButton = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jPanel14 = new javax.swing.JPanel();
         jLabel34 = new javax.swing.JLabel();
@@ -370,11 +375,17 @@ public class Mainscreen extends javax.swing.JFrame {
         jLabel31.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel31.setText("Member's debt");
 
-        debtLabel.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        debtLabel.setText("value appears here");
+        invoiceNumberLabel.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        invoiceNumberLabel.setText("value appears here");
 
         jLabel32.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
         jLabel32.setText("A member's debt to the club should not exceed 2500 to be able to borrow a video");
+
+        jLabel35.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        jLabel35.setText("Lending invoice number");
+
+        debtLabel.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        debtLabel.setText("value appears here");
 
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
         jPanel13.setLayout(jPanel13Layout);
@@ -383,24 +394,28 @@ public class Mainscreen extends javax.swing.JFrame {
             .addGroup(jPanel13Layout.createSequentialGroup()
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel13Layout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel31, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel30, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel28, javax.swing.GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE)
-                            .addComponent(jLabel29, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(141, 141, 141)
-                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(membershipTextField)
-                            .addComponent(nameTextField)
-                            .addComponent(idTextField)
-                            .addComponent(debtLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 324, Short.MAX_VALUE)))
-                    .addGroup(jPanel13Layout.createSequentialGroup()
                         .addGap(376, 376, 376)
                         .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel13Layout.createSequentialGroup()
                         .addGap(119, 119, 119)
-                        .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 697, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 697, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addGap(44, 44, 44)
+                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabel31, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel30, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel28, javax.swing.GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE)
+                                .addComponent(jLabel29, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jLabel35))
+                        .addGap(121, 121, 121)
+                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(invoiceNumberLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(membershipTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 324, Short.MAX_VALUE)
+                                .addComponent(nameTextField)
+                                .addComponent(idTextField))
+                            .addComponent(debtLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(89, Short.MAX_VALUE))
         );
         jPanel13Layout.setVerticalGroup(
@@ -408,7 +423,7 @@ public class Mainscreen extends javax.swing.JFrame {
             .addGroup(jPanel13Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel27)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel28)
                     .addComponent(membershipTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -420,13 +435,17 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel30)
                     .addComponent(idTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(34, 34, 34)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel31)
                     .addComponent(debtLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel35)
+                    .addComponent(invoiceNumberLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
                 .addComponent(jLabel32)
-                .addContainerGap())
+                .addGap(11, 11, 11))
         );
 
         vidConditionTable.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
@@ -496,20 +515,42 @@ public class Mainscreen extends javax.swing.JFrame {
         jLabel33.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel33.setText("Receipt");
 
+        receiptTextArea.setColumns(20);
+        receiptTextArea.setFont(new java.awt.Font("HP Simplified Light", 0, 24)); // NOI18N
+        receiptTextArea.setRows(5);
+        jScrollPane9.setViewportView(receiptTextArea);
+
+        printButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        printButton.setText("Print");
+
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
         jPanel12Layout.setHorizontalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel12Layout.createSequentialGroup()
-                .addGap(339, 339, 339)
-                .addComponent(jLabel33)
-                .addContainerGap(357, Short.MAX_VALUE))
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel12Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane9))
+                    .addGroup(jPanel12Layout.createSequentialGroup()
+                        .addGap(339, 339, 339)
+                        .addComponent(jLabel33)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addGap(306, 306, 306)
+                .addComponent(printButton, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(325, Short.MAX_VALUE))
         );
         jPanel12Layout.setVerticalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel12Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel33)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35)
+                .addComponent(printButton, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -590,7 +631,7 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(51, 51, 51)
                 .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1659,6 +1700,7 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JRadioButton horrorButton;
     private javax.swing.JTextField idTextField;
     private javax.swing.JPanel incomePanel;
+    private javax.swing.JLabel invoiceNumberLabel;
     private javax.swing.JPanel issuancePanel;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
@@ -1689,6 +1731,7 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -1718,6 +1761,7 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
@@ -1736,6 +1780,8 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JTable newMembersTable;
     private javax.swing.JButton newVidSaveButton;
     private javax.swing.JPanel owenedVidsPanel;
+    private javax.swing.JButton printButton;
+    private javax.swing.JTextArea receiptTextArea;
     private javax.swing.JPanel reportsPanel;
     private javax.swing.JPanel returnPanel;
     private javax.swing.JPanel revenuePanel;
