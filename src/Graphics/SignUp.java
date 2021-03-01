@@ -55,9 +55,8 @@ public class SignUp extends javax.swing.JFrame {
         sNameTextField = new javax.swing.JTextField();
         idTextField = new javax.swing.JTextField();
         occupationTextField = new javax.swing.JTextField();
-        adressTextField = new javax.swing.JTextField();
+        streetNameField = new javax.swing.JTextField();
         signupUsernameTextField = new javax.swing.JTextField();
-        infoLabel = new javax.swing.JLabel();
         signUpButton = new javax.swing.JButton();
         signupPassField = new javax.swing.JPasswordField();
         jLabel3 = new javax.swing.JLabel();
@@ -66,6 +65,8 @@ public class SignUp extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         phoneField = new javax.swing.JFormattedTextField();
         jButton1 = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        houseNumberField = new javax.swing.JTextField();
 
         jTextField8.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jTextField8.setForeground(new java.awt.Color(51, 0, 102));
@@ -98,7 +99,7 @@ public class SignUp extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(51, 0, 102));
-        jLabel5.setText("Residential Adress");
+        jLabel5.setText("Street Name");
 
         sNameLabel.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         sNameLabel.setForeground(new java.awt.Color(51, 0, 102));
@@ -178,11 +179,11 @@ public class SignUp extends javax.swing.JFrame {
             }
         });
 
-        adressTextField.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        adressTextField.setForeground(new java.awt.Color(51, 0, 102));
-        adressTextField.addActionListener(new java.awt.event.ActionListener() {
+        streetNameField.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        streetNameField.setForeground(new java.awt.Color(51, 0, 102));
+        streetNameField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                adressTextFieldActionPerformed(evt);
+                streetNameFieldActionPerformed(evt);
             }
         });
 
@@ -193,10 +194,6 @@ public class SignUp extends javax.swing.JFrame {
                 signupUsernameTextFieldActionPerformed(evt);
             }
         });
-
-        infoLabel.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        infoLabel.setForeground(new java.awt.Color(51, 0, 102));
-        infoLabel.setText("Make sure all the fields are filled with correct details");
 
         signUpButton.setBackground(new java.awt.Color(204, 204, 255));
         signUpButton.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
@@ -235,7 +232,6 @@ public class SignUp extends javax.swing.JFrame {
 
         jButton1.setBackground(new java.awt.Color(204, 204, 255));
         jButton1.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("Already a member");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -243,53 +239,17 @@ public class SignUp extends javax.swing.JFrame {
             }
         });
 
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(51, 0, 102));
+        jLabel6.setText("House number");
+
+        houseNumberField.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        houseNumberField.setForeground(new java.awt.Color(51, 0, 102));
+
         javax.swing.GroupLayout signUpPanelLayout = new javax.swing.GroupLayout(signUpPanel);
         signUpPanel.setLayout(signUpPanelLayout);
         signUpPanelLayout.setHorizontalGroup(
             signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(signUpPanelLayout.createSequentialGroup()
-                .addGap(143, 143, 143)
-                .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(signUpPanelLayout.createSequentialGroup()
-                        .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(usernameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(passwordLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3))
-                        .addGap(130, 130, 130)
-                        .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(signupPassField)
-                            .addComponent(signupPassConfirmField, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(signupUsernameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(signUpPanelLayout.createSequentialGroup()
-                        .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(idLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(sNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(occupationLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(fNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4)
-                            .addComponent(dateLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(130, 130, 130)
-                        .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(phoneField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 305, Short.MAX_VALUE)
-                                .addComponent(occupationTextField, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(adressTextField, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(idTextField, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(sNameTextField, javax.swing.GroupLayout.Alignment.LEADING))
-                            .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(fNameTextField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(signUpPanelLayout.createSequentialGroup()
-                        .addGap(314, 314, 314)
-                        .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(maleButton)
-                            .addComponent(femaleButton)))
-                    .addComponent(genderLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(signUpPanelLayout.createSequentialGroup()
-                        .addComponent(signUpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 293, Short.MAX_VALUE)
-                        .addComponent(jButton1)))
-                .addGap(140, 140, 140))
             .addGroup(signUpPanelLayout.createSequentialGroup()
                 .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(signUpPanelLayout.createSequentialGroup()
@@ -298,9 +258,57 @@ public class SignUp extends javax.swing.JFrame {
                         .addGap(33, 33, 33)
                         .addComponent(jLabel1))
                     .addGroup(signUpPanelLayout.createSequentialGroup()
-                        .addGap(229, 229, 229)
-                        .addComponent(infoLabel)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(143, 143, 143)
+                        .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(signUpPanelLayout.createSequentialGroup()
+                                    .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(idLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(sNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(fNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(dateLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGap(130, 130, 130)
+                                    .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addComponent(streetNameField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 305, Short.MAX_VALUE)
+                                            .addComponent(idTextField, javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(sNameTextField, javax.swing.GroupLayout.Alignment.LEADING))
+                                        .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(fNameTextField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(signUpPanelLayout.createSequentialGroup()
+                                    .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(occupationLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel4))
+                                        .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGap(130, 130, 130)
+                                    .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(phoneField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 305, Short.MAX_VALUE)
+                                        .addComponent(occupationTextField, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(houseNumberField))))
+                            .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(signUpPanelLayout.createSequentialGroup()
+                                    .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(usernameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(passwordLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel3))
+                                    .addGap(130, 130, 130)
+                                    .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(signupPassField)
+                                        .addComponent(signupPassConfirmField, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(signupUsernameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, signUpPanelLayout.createSequentialGroup()
+                                    .addGap(314, 314, 314)
+                                    .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(maleButton)
+                                        .addComponent(femaleButton)))
+                                .addComponent(genderLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, signUpPanelLayout.createSequentialGroup()
+                                    .addComponent(jButton1)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(signUpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addContainerGap(141, Short.MAX_VALUE))
         );
         signUpPanelLayout.setVerticalGroup(
             signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -309,13 +317,13 @@ public class SignUp extends javax.swing.JFrame {
                 .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
-                .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(fNameLabel)
-                    .addComponent(fNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(25, 25, 25)
+                .addGap(31, 31, 31)
                 .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(signUpPanelLayout.createSequentialGroup()
+                        .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(fNameLabel)
+                            .addComponent(fNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(25, 25, 25)
                         .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(sNameLabel)
                             .addComponent(sNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -326,8 +334,12 @@ public class SignUp extends javax.swing.JFrame {
                         .addGap(25, 25, 25)
                         .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel5)
-                            .addComponent(adressTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(23, 23, 23)
+                            .addComponent(streetNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(35, 35, 35)
+                        .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel6)
+                            .addComponent(houseNumberField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(37, 37, 37)
                         .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(occupationLabel)
                             .addComponent(occupationTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -335,20 +347,20 @@ public class SignUp extends javax.swing.JFrame {
                         .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel4)
                             .addComponent(phoneField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(47, 47, 47)
+                        .addGap(30, 30, 30)
                         .addComponent(dateLabel))
                     .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(59, 59, 59)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                 .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(genderLabel)
                     .addGroup(signUpPanelLayout.createSequentialGroup()
                         .addComponent(maleButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(femaleButton)))
-                .addGap(34, 34, 34)
-                .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(usernameLabel)
-                    .addComponent(signupUsernameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(37, 37, 37)
+                .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(signupUsernameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(usernameLabel))
                 .addGap(26, 26, 26)
                 .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(signupPassField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -357,13 +369,11 @@ public class SignUp extends javax.swing.JFrame {
                 .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(signupPassConfirmField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(61, 61, 61)
-                .addComponent(infoLabel)
-                .addGap(45, 45, 45)
+                .addGap(72, 72, 72)
                 .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(signUpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1))
-                .addGap(74, 74, 74))
+                .addGap(130, 130, 130))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -400,9 +410,9 @@ public class SignUp extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_occupationTextFieldActionPerformed
 
-    private void adressTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adressTextFieldActionPerformed
+    private void streetNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_streetNameFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_adressTextFieldActionPerformed
+    }//GEN-LAST:event_streetNameFieldActionPerformed
 
     private void signupUsernameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signupUsernameTextFieldActionPerformed
         // TODO add your handling code here:
@@ -429,7 +439,7 @@ public class SignUp extends javax.swing.JFrame {
                 myStmt.setString(1,fNameTextField.getText());
                 myStmt.setString(2,sNameTextField.getText());
                 myStmt.setString(3,idTextField.getText());
-                myStmt.setString(4,adressTextField.getText());
+                myStmt.setString(4,streetNameField.getText());
                 myStmt.setString(5,occupationTextField.getText());
                 myStmt.setString(6,phoneField.getText());
                 
@@ -518,7 +528,6 @@ public class SignUp extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField adressTextField;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup3;
@@ -529,9 +538,9 @@ public class SignUp extends javax.swing.JFrame {
     private javax.swing.JTextField fNameTextField;
     private javax.swing.JRadioButton femaleButton;
     private javax.swing.JLabel genderLabel;
+    private javax.swing.JTextField houseNumberField;
     private javax.swing.JLabel idLabel;
     private javax.swing.JTextField idTextField;
-    private javax.swing.JLabel infoLabel;
     private javax.swing.JButton jButton1;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
@@ -539,6 +548,7 @@ public class SignUp extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JRadioButton maleButton;
     private javax.swing.JLabel occupationLabel;
@@ -552,6 +562,7 @@ public class SignUp extends javax.swing.JFrame {
     private javax.swing.JPasswordField signupPassConfirmField;
     private javax.swing.JPasswordField signupPassField;
     private javax.swing.JTextField signupUsernameTextField;
+    private javax.swing.JTextField streetNameField;
     private javax.swing.JLabel usernameLabel;
     // End of variables declaration//GEN-END:variables
 }

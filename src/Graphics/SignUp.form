@@ -85,61 +85,6 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="143" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="usernameLabel" alignment="0" min="-2" pref="184" max="-2" attributes="0"/>
-                              <Component id="passwordLabel" alignment="0" min="-2" pref="184" max="-2" attributes="0"/>
-                              <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="signupPassField" alignment="0" max="32767" attributes="0"/>
-                              <Component id="signupPassConfirmField" alignment="0" min="-2" pref="304" max="-2" attributes="0"/>
-                              <Component id="signupUsernameTextField" min="-2" pref="304" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel5" min="-2" pref="184" max="-2" attributes="0"/>
-                              <Component id="idLabel" alignment="0" min="-2" pref="184" max="-2" attributes="0"/>
-                              <Component id="sNameLabel" alignment="0" min="-2" pref="184" max="-2" attributes="0"/>
-                              <Component id="occupationLabel" alignment="0" min="-2" pref="184" max="-2" attributes="0"/>
-                              <Component id="fNameLabel" alignment="0" min="-2" pref="184" max="-2" attributes="0"/>
-                              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                              <Component id="dateLabel" alignment="0" min="-2" pref="184" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="phoneField" alignment="0" pref="305" max="32767" attributes="0"/>
-                                  <Component id="occupationTextField" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="adressTextField" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="idTextField" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="sNameTextField" alignment="0" max="32767" attributes="0"/>
-                              </Group>
-                              <Component id="jDateChooser1" min="-2" pref="304" max="-2" attributes="0"/>
-                              <Component id="fNameTextField" alignment="0" min="-2" pref="305" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="314" pref="314" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="maleButton" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="femaleButton" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Component id="genderLabel" alignment="0" min="-2" pref="184" max="-2" attributes="0"/>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="signUpButton" min="-2" pref="115" max="-2" attributes="0"/>
-                          <EmptySpace pref="293" max="32767" attributes="0"/>
-                          <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <EmptySpace min="-2" pref="140" max="-2" attributes="0"/>
-              </Group>
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
@@ -149,11 +94,76 @@
                           <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="229" max="-2" attributes="0"/>
-                          <Component id="infoLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="143" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLabel5" min="-2" pref="184" max="-2" attributes="0"/>
+                                          <Component id="idLabel" alignment="0" min="-2" pref="184" max="-2" attributes="0"/>
+                                          <Component id="sNameLabel" alignment="0" min="-2" pref="184" max="-2" attributes="0"/>
+                                          <Component id="fNameLabel" alignment="0" min="-2" pref="184" max="-2" attributes="0"/>
+                                          <Component id="dateLabel" alignment="0" min="-2" pref="184" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                              <Component id="streetNameField" alignment="0" pref="305" max="32767" attributes="0"/>
+                                              <Component id="idTextField" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="sNameTextField" alignment="0" max="32767" attributes="0"/>
+                                          </Group>
+                                          <Component id="jDateChooser1" min="-2" pref="304" max="-2" attributes="0"/>
+                                          <Component id="fNameTextField" alignment="0" min="-2" pref="305" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                              <Component id="occupationLabel" alignment="0" min="-2" pref="184" max="-2" attributes="0"/>
+                                              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="jLabel6" alignment="1" min="-2" pref="184" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="130" pref="130" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="phoneField" alignment="0" pref="305" max="32767" attributes="0"/>
+                                          <Component id="occupationTextField" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="houseNumberField" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="usernameLabel" alignment="0" min="-2" pref="184" max="-2" attributes="0"/>
+                                          <Component id="passwordLabel" alignment="0" min="-2" pref="184" max="-2" attributes="0"/>
+                                          <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="signupPassField" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="signupPassConfirmField" alignment="0" min="-2" pref="304" max="-2" attributes="0"/>
+                                          <Component id="signupUsernameTextField" min="-2" pref="304" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="314" pref="314" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="maleButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="femaleButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Component id="genderLabel" alignment="0" min="-2" pref="184" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="signUpButton" min="-2" pref="219" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
                       </Group>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="141" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -165,14 +175,14 @@
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel2" min="-2" pref="42" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="48" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="fNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="fNameTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="fNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fNameTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="sNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="sNameTextField" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -185,9 +195,14 @@
                           <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="adressTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="streetNameField" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="houseNumberField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="occupationLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="occupationTextField" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -197,12 +212,12 @@
                               <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="phoneField" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                           <Component id="dateLabel" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Component id="jDateChooser1" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
+                  <EmptySpace pref="43" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="genderLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
@@ -211,10 +226,10 @@
                           <Component id="femaleButton" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="usernameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="signupUsernameTextField" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="usernameLabel" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -226,14 +241,12 @@
                       <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="signupPassConfirmField" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
-                  <Component id="infoLabel" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="signUpButton" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
                       <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -278,7 +291,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="66" green="0" red="33" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Residential Adress"/>
+            <Property name="text" type="java.lang.String" value="Street Name"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="sNameLabel">
@@ -439,7 +452,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="occupationTextFieldActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="adressTextField">
+        <Component class="javax.swing.JTextField" name="streetNameField">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Times New Roman" size="24" style="0"/>
@@ -449,7 +462,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="adressTextFieldActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="streetNameFieldActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="signupUsernameTextField">
@@ -464,17 +477,6 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="signupUsernameTextFieldActionPerformed"/>
           </Events>
-        </Component>
-        <Component class="javax.swing.JLabel" name="infoLabel">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Times New Roman" size="18" style="0"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="66" green="0" red="33" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Make sure all the fields are filled with correct details"/>
-          </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="signUpButton">
           <Properties>
@@ -564,14 +566,32 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Times New Roman" size="24" style="0"/>
             </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="Already a member"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
           </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel6">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Times New Roman" size="24" style="0"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="0" red="33" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="House number"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="houseNumberField">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Times New Roman" size="24" style="0"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="0" red="33" type="rgb"/>
+            </Property>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>
