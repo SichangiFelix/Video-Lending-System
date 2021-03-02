@@ -115,6 +115,7 @@ public class Mainscreen extends javax.swing.JFrame {
         totalLabel = new javax.swing.JLabel();
         paidButton = new javax.swing.JButton();
         addDebtButton = new javax.swing.JButton();
+        viewChargingButton = new javax.swing.JButton();
         vidRecordsPanel = new javax.swing.JPanel();
         vidRecordsTabbedPane = new javax.swing.JTabbedPane();
         owenedVidsPanel = new javax.swing.JPanel();
@@ -150,9 +151,32 @@ public class Mainscreen extends javax.swing.JFrame {
         jPanel8 = new javax.swing.JPanel();
         revenuePanel = new javax.swing.JPanel();
         revenueTabbedPane = new javax.swing.JTabbedPane();
-        finacialPanel = new javax.swing.JPanel();
         incomePanel = new javax.swing.JPanel();
+        jPanel17 = new javax.swing.JPanel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel54 = new javax.swing.JLabel();
+        lentIncomeLabel = new javax.swing.JLabel();
+        overdueIncomeLabel = new javax.swing.JLabel();
+        lostIncomeLabel = new javax.swing.JLabel();
+        totalIncomeLabel = new javax.swing.JLabel();
+        totalMembersDebtLabel = new javax.swing.JLabel();
+        jLabel60 = new javax.swing.JLabel();
         expencePanel = new javax.swing.JPanel();
+        jPanel16 = new javax.swing.JPanel();
+        jLabel61 = new javax.swing.JLabel();
+        jLabel62 = new javax.swing.JLabel();
+        jLabel63 = new javax.swing.JLabel();
+        jLabel64 = new javax.swing.JLabel();
+        adminExpenseLabel = new javax.swing.JLabel();
+        salaryExpenseLabel = new javax.swing.JLabel();
+        miscellaneousExpenseLabel = new javax.swing.JLabel();
+        devExpenseLabel = new javax.swing.JLabel();
+        jLabel69 = new javax.swing.JLabel();
+        viewButton = new javax.swing.JButton();
         membershipPanel = new javax.swing.JPanel();
         membershipTabbedPane = new javax.swing.JTabbedPane();
         membersPanel = new javax.swing.JPanel();
@@ -259,7 +283,7 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 694, Short.MAX_VALUE))
+                        .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 874, Short.MAX_VALUE))
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addGap(329, 329, 329)
                         .addComponent(jLabel25)
@@ -374,7 +398,7 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addGroup(borrowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addContainerGap(67, Short.MAX_VALUE))
         );
 
         vidIssuanceTabbedPane.addTab("Video selection", borrowPanel);
@@ -793,6 +817,14 @@ public class Mainscreen extends javax.swing.JFrame {
             }
         });
 
+        viewChargingButton.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
+        viewChargingButton.setText("View Charging method");
+        viewChargingButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                viewChargingButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
         jPanel15.setLayout(jPanel15Layout);
         jPanel15Layout.setHorizontalGroup(
@@ -804,20 +836,23 @@ public class Mainscreen extends javax.swing.JFrame {
                         .addComponent(jLabel43))
                     .addGroup(jPanel15Layout.createSequentialGroup()
                         .addGap(72, 72, 72)
-                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel44, javax.swing.GroupLayout.DEFAULT_SIZE, 282, Short.MAX_VALUE)
-                            .addComponent(jLabel45, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel46, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel47, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(paidButton, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(71, 71, 71)
                         .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(totalLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(damageLossLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(overdueChargeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(daysChargeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(addDebtButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(viewChargingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel15Layout.createSequentialGroup()
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel44, javax.swing.GroupLayout.DEFAULT_SIZE, 282, Short.MAX_VALUE)
+                                    .addComponent(jLabel45, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel46, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel47, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(paidButton, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(71, 71, 71)
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(totalLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(damageLossLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(overdueChargeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(daysChargeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(addDebtButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addContainerGap(79, Short.MAX_VALUE))
         );
         jPanel15Layout.setVerticalGroup(
@@ -845,6 +880,8 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(paidButton)
                     .addComponent(addDebtButton))
+                .addGap(46, 46, 46)
+                .addComponent(viewChargingButton)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -857,7 +894,7 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(107, Short.MAX_VALUE))
+                .addContainerGap(287, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -866,7 +903,7 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
 
         vidIssuanceTabbedPane.addTab("Video return", jPanel1);
@@ -1053,7 +1090,7 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addGap(56, 56, 56)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(49, 49, 49)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 1229, Short.MAX_VALUE)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 1409, Short.MAX_VALUE)
                 .addContainerGap())
         );
         owenedVidsPanelLayout.setVerticalGroup(
@@ -1063,7 +1100,7 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addGroup(owenedVidsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 660, Short.MAX_VALUE)
                     .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(86, Short.MAX_VALUE))
+                .addContainerGap(94, Short.MAX_VALUE))
         );
 
         vidRecordsTabbedPane.addTab("Videos in house", owenedVidsPanel);
@@ -1248,7 +1285,7 @@ public class Mainscreen extends javax.swing.JFrame {
             .addGroup(addVidPanelLayout.createSequentialGroup()
                 .addGap(43, 43, 43)
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 130, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 310, Short.MAX_VALUE)
                 .addGroup(addVidPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -1257,14 +1294,14 @@ public class Mainscreen extends javax.swing.JFrame {
         addVidPanelLayout.setVerticalGroup(
             addVidPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(addVidPanelLayout.createSequentialGroup()
-                .addContainerGap(51, Short.MAX_VALUE)
+                .addContainerGap(55, Short.MAX_VALUE)
                 .addGroup(addVidPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, addVidPanelLayout.createSequentialGroup()
                         .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(52, Short.MAX_VALUE))
+                .addContainerGap(56, Short.MAX_VALUE))
         );
 
         vidRecordsTabbedPane.addTab("Add video", addVidPanel);
@@ -1288,47 +1325,237 @@ public class Mainscreen extends javax.swing.JFrame {
         revenueTabbedPane.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(143, 188, 143), 3, true));
         revenueTabbedPane.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
 
-        finacialPanel.setBackground(new java.awt.Color(176, 196, 222));
-
-        javax.swing.GroupLayout finacialPanelLayout = new javax.swing.GroupLayout(finacialPanel);
-        finacialPanel.setLayout(finacialPanelLayout);
-        finacialPanelLayout.setHorizontalGroup(
-            finacialPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1885, Short.MAX_VALUE)
-        );
-        finacialPanelLayout.setVerticalGroup(
-            finacialPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 803, Short.MAX_VALUE)
-        );
-
-        revenueTabbedPane.addTab("My financials", finacialPanel);
-
         incomePanel.setBackground(new java.awt.Color(176, 196, 222));
+
+        jPanel17.setBackground(new java.awt.Color(176, 196, 222));
+        jPanel17.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
+        jLabel18.setFont(new java.awt.Font("Sitka Banner", 0, 24)); // NOI18N
+        jLabel18.setText("The club's monthly generated income");
+
+        jLabel20.setFont(new java.awt.Font("Sitka Banner", 0, 24)); // NOI18N
+        jLabel20.setText("Income from videos lent");
+
+        jLabel21.setFont(new java.awt.Font("Sitka Banner", 0, 24)); // NOI18N
+        jLabel21.setText("Income from overdue videos");
+
+        jLabel22.setFont(new java.awt.Font("Sitka Banner", 0, 24)); // NOI18N
+
+        jLabel23.setFont(new java.awt.Font("Sitka Banner", 0, 24)); // NOI18N
+        jLabel23.setText("Total income earned this month");
+
+        jLabel54.setFont(new java.awt.Font("Sitka Banner", 0, 24)); // NOI18N
+        jLabel54.setText("Total income members owe the club");
+
+        lentIncomeLabel.setFont(new java.awt.Font("Sitka Banner", 0, 24)); // NOI18N
+        lentIncomeLabel.setText("value goes here");
+
+        overdueIncomeLabel.setFont(new java.awt.Font("Sitka Banner", 0, 24)); // NOI18N
+        overdueIncomeLabel.setText("value goes here");
+
+        lostIncomeLabel.setFont(new java.awt.Font("Sitka Banner", 0, 24)); // NOI18N
+        lostIncomeLabel.setText("value goes here");
+
+        totalIncomeLabel.setFont(new java.awt.Font("Sitka Banner", 0, 24)); // NOI18N
+        totalIncomeLabel.setText("value goes here");
+
+        totalMembersDebtLabel.setFont(new java.awt.Font("Sitka Banner", 0, 24)); // NOI18N
+        totalMembersDebtLabel.setText("value goes here");
+
+        jLabel60.setFont(new java.awt.Font("Sitka Banner", 0, 24)); // NOI18N
+        jLabel60.setText("Income from lost videos");
+
+        javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
+        jPanel17.setLayout(jPanel17Layout);
+        jPanel17Layout.setHorizontalGroup(
+            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel17Layout.createSequentialGroup()
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel17Layout.createSequentialGroup()
+                        .addGap(84, 84, 84)
+                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(jPanel17Layout.createSequentialGroup()
+                                    .addComponent(jLabel22)
+                                    .addGap(0, 0, Short.MAX_VALUE))
+                                .addComponent(jLabel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel23, javax.swing.GroupLayout.DEFAULT_SIZE, 306, Short.MAX_VALUE)
+                                .addComponent(jLabel60, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(226, 226, 226)
+                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(lentIncomeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(overdueIncomeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 226, Short.MAX_VALUE)
+                            .addComponent(lostIncomeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(totalIncomeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(totalMembersDebtLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(jPanel17Layout.createSequentialGroup()
+                        .addGap(310, 310, 310)
+                        .addComponent(jLabel18)))
+                .addContainerGap(822, Short.MAX_VALUE))
+        );
+        jPanel17Layout.setVerticalGroup(
+            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel17Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel18)
+                .addGap(40, 40, 40)
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel20)
+                    .addComponent(lentIncomeLabel))
+                .addGap(38, 38, 38)
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel21)
+                    .addComponent(overdueIncomeLabel))
+                .addGap(39, 39, 39)
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel22)
+                    .addComponent(lostIncomeLabel)
+                    .addComponent(jLabel60))
+                .addGap(42, 42, 42)
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel23)
+                    .addComponent(totalIncomeLabel))
+                .addGap(38, 38, 38)
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel54)
+                    .addComponent(totalMembersDebtLabel))
+                .addContainerGap(334, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout incomePanelLayout = new javax.swing.GroupLayout(incomePanel);
         incomePanel.setLayout(incomePanelLayout);
         incomePanelLayout.setHorizontalGroup(
             incomePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1885, Short.MAX_VALUE)
+            .addGroup(incomePanelLayout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(48, Short.MAX_VALUE))
         );
         incomePanelLayout.setVerticalGroup(
             incomePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 803, Short.MAX_VALUE)
+            .addGroup(incomePanelLayout.createSequentialGroup()
+                .addGap(39, 39, 39)
+                .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(37, Short.MAX_VALUE))
         );
 
         revenueTabbedPane.addTab("Club's income", incomePanel);
 
         expencePanel.setBackground(new java.awt.Color(176, 196, 222));
 
+        jPanel16.setBackground(new java.awt.Color(176, 196, 222));
+        jPanel16.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
+        jLabel61.setFont(new java.awt.Font("Sitka Banner", 0, 24)); // NOI18N
+        jLabel61.setText("Administration");
+
+        jLabel62.setFont(new java.awt.Font("Sitka Banner", 0, 24)); // NOI18N
+        jLabel62.setText("Salaries");
+
+        jLabel63.setFont(new java.awt.Font("Sitka Banner", 0, 24)); // NOI18N
+        jLabel63.setText("Miscellaneous");
+
+        jLabel64.setFont(new java.awt.Font("Sitka Banner", 0, 24)); // NOI18N
+        jLabel64.setText("Club developement");
+
+        adminExpenseLabel.setFont(new java.awt.Font("Sitka Banner", 0, 24)); // NOI18N
+        adminExpenseLabel.setText("value goes here");
+
+        salaryExpenseLabel.setFont(new java.awt.Font("Sitka Banner", 0, 24)); // NOI18N
+        salaryExpenseLabel.setText("value goes here");
+
+        miscellaneousExpenseLabel.setFont(new java.awt.Font("Sitka Banner", 0, 24)); // NOI18N
+        miscellaneousExpenseLabel.setText("value goes here");
+
+        devExpenseLabel.setFont(new java.awt.Font("Sitka Banner", 0, 24)); // NOI18N
+        devExpenseLabel.setText("value goes here");
+
+        jLabel69.setFont(new java.awt.Font("Sitka Banner", 0, 24)); // NOI18N
+        jLabel69.setText("Clubs monthly expenses");
+
+        viewButton.setFont(new java.awt.Font("Sitka Banner", 0, 24)); // NOI18N
+        viewButton.setText("View criteria");
+        viewButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                viewButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
+        jPanel16.setLayout(jPanel16Layout);
+        jPanel16Layout.setHorizontalGroup(
+            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel16Layout.createSequentialGroup()
+                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel16Layout.createSequentialGroup()
+                        .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel16Layout.createSequentialGroup()
+                                    .addGap(125, 125, 125)
+                                    .addComponent(jLabel63, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel16Layout.createSequentialGroup()
+                                    .addGap(124, 124, 124)
+                                    .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel62, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel61, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 297, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel64, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(jPanel16Layout.createSequentialGroup()
+                                .addGap(124, 124, 124)
+                                .addComponent(viewButton, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(176, 176, 176)
+                        .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(adminExpenseLabel)
+                            .addComponent(salaryExpenseLabel)
+                            .addComponent(miscellaneousExpenseLabel)
+                            .addComponent(devExpenseLabel)))
+                    .addGroup(jPanel16Layout.createSequentialGroup()
+                        .addGap(348, 348, 348)
+                        .addComponent(jLabel69)))
+                .addContainerGap(979, Short.MAX_VALUE))
+        );
+        jPanel16Layout.setVerticalGroup(
+            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel16Layout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addComponent(jLabel69)
+                .addGap(49, 49, 49)
+                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel61)
+                    .addComponent(adminExpenseLabel))
+                .addGap(52, 52, 52)
+                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel62)
+                    .addComponent(salaryExpenseLabel))
+                .addGap(52, 52, 52)
+                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel63)
+                    .addComponent(miscellaneousExpenseLabel))
+                .addGap(46, 46, 46)
+                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel64)
+                    .addComponent(devExpenseLabel))
+                .addGap(52, 52, 52)
+                .addComponent(viewButton, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(259, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout expencePanelLayout = new javax.swing.GroupLayout(expencePanel);
         expencePanel.setLayout(expencePanelLayout);
         expencePanelLayout.setHorizontalGroup(
             expencePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1885, Short.MAX_VALUE)
+            .addGroup(expencePanelLayout.createSequentialGroup()
+                .addGap(41, 41, 41)
+                .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(41, Short.MAX_VALUE))
         );
         expencePanelLayout.setVerticalGroup(
             expencePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 803, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, expencePanelLayout.createSequentialGroup()
+                .addContainerGap(38, Short.MAX_VALUE)
+                .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32))
         );
 
         revenueTabbedPane.addTab("Club's expenses", expencePanel);
@@ -1417,7 +1644,7 @@ public class Mainscreen extends javax.swing.JFrame {
             .addGroup(membersPanelLayout.createSequentialGroup()
                 .addGap(663, 663, 663)
                 .addComponent(membersHeader)
-                .addContainerGap(752, Short.MAX_VALUE))
+                .addContainerGap(932, Short.MAX_VALUE))
         );
         membersPanelLayout.setVerticalGroup(
             membersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1491,21 +1718,21 @@ public class Mainscreen extends javax.swing.JFrame {
             exMembersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(exMembersPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 2035, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(exMembersPanelLayout.createSequentialGroup()
-                .addGap(531, 531, 531)
+                .addGap(529, 529, 529)
                 .addComponent(exMembersHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 759, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(595, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         exMembersPanelLayout.setVerticalGroup(
             exMembersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, exMembersPanelLayout.createSequentialGroup()
-                .addGap(9, 9, 9)
-                .addComponent(exMembersHeader, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(exMembersHeader)
+                .addGap(1, 1, 1)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 692, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32))
+                .addGap(78, 78, 78))
         );
 
         membershipTabbedPane.addTab("Ex Members", exMembersPanel);
@@ -1574,7 +1801,7 @@ public class Mainscreen extends javax.swing.JFrame {
             .addGroup(newMembersPanelLayout.createSequentialGroup()
                 .addGap(528, 528, 528)
                 .addComponent(newMembersHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 759, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(598, Short.MAX_VALUE))
+                .addContainerGap(778, Short.MAX_VALUE))
         );
         newMembersPanelLayout.setVerticalGroup(
             newMembersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1776,7 +2003,7 @@ public class Mainscreen extends javax.swing.JFrame {
         myProfilePanelLayout.setVerticalGroup(
             myProfilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, myProfilePanelLayout.createSequentialGroup()
-                .addContainerGap(43, Short.MAX_VALUE)
+                .addContainerGap(50, Short.MAX_VALUE)
                 .addGroup(myProfilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -1793,7 +2020,7 @@ public class Mainscreen extends javax.swing.JFrame {
         );
         membershipPanelLayout.setVerticalGroup(
             membershipPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(membershipTabbedPane)
+            .addComponent(membershipTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 859, Short.MAX_VALUE)
         );
 
         mainTabbedPane.addTab("Membership", membershipPanel);
@@ -1809,11 +2036,11 @@ public class Mainscreen extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1879, Short.MAX_VALUE)
+            .addGap(0, 2059, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 797, Short.MAX_VALUE)
+            .addGap(0, 805, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("", jPanel2);
@@ -1899,6 +2126,36 @@ public class Mainscreen extends javax.swing.JFrame {
         
     }//GEN-LAST:event_addDebtButtonActionPerformed
 
+    private void viewButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewButtonActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null,"Every end of the month, the revenue collected is allocated as follows:\n" +
+            "27% on  administration\n" +
+            "54% on salaries\n" +
+            "7% for miscellaneous expenses\n" +
+            "The balance is set aside for club development.");
+    }//GEN-LAST:event_viewButtonActionPerformed
+
+    private void viewChargingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewChargingButtonActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null,"If a video is damaged or reported lost, the members is surcharged Ksh.700 for the video.\n" +
+            "The cost of borrowing a video for three days is based on its category as follows;\n" +
+            "The cost of borrowing a video for three days is based on its category as follows:\n" +
+            "Video Category Borrowing rate in Ksh\n" +
+            "Comedy                        70\n" +
+            "General                       50\n" +
+            "Horror                        40\n" +
+            "Thriller                      60\n" +
+            "Cartoon                       80\n" +
+            "A video that has been on loan for more than the three days attracts a fine for every day overdue as follows:\n" +
+            "Video Category Daily fine rate in Ksh\n" +
+            "Comedy                        42\n" +
+            "General                       30\n" +
+            "Horror                        24\n" +
+            "Thriller                      36\n" +
+            "Cartoon                       48");
+                
+    }//GEN-LAST:event_viewChargingButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1938,6 +2195,7 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JButton addDebtButton;
     private javax.swing.JPanel addVidPanel;
     private javax.swing.JTextArea addedVidsTextArea;
+    private javax.swing.JLabel adminExpenseLabel;
     private javax.swing.JPanel borrowPanel;
     private javax.swing.JRadioButton borrowedButton;
     private javax.swing.JTable cartTable;
@@ -1948,13 +2206,13 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JLabel daysChargeLabel;
     private javax.swing.JLabel debtInfoLabel;
     private javax.swing.JLabel debtLabel;
+    private javax.swing.JLabel devExpenseLabel;
     private javax.swing.JButton editMemberInfoButton;
     private javax.swing.JLabel exMembersHeader;
     private javax.swing.JPanel exMembersPanel;
     private javax.swing.JTable exMembersTable;
     private javax.swing.JPanel expencePanel;
     private javax.swing.JLabel fNameInfoLabel;
-    private javax.swing.JPanel finacialPanel;
     private javax.swing.JRadioButton generalButton;
     private javax.swing.JComboBox<String> genreComboBox;
     private javax.swing.JLabel greetingLabel;
@@ -1974,8 +2232,13 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
@@ -2009,7 +2272,14 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel60;
+    private javax.swing.JLabel jLabel61;
+    private javax.swing.JLabel jLabel62;
+    private javax.swing.JLabel jLabel63;
+    private javax.swing.JLabel jLabel64;
+    private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -2020,6 +2290,8 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel15;
+    private javax.swing.JPanel jPanel16;
+    private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -2043,6 +2315,8 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField3;
     private javax.swing.JLabel joinDateInfoLabel;
     private javax.swing.JTextField lendingInvoiceField;
+    private javax.swing.JLabel lentIncomeLabel;
+    private javax.swing.JLabel lostIncomeLabel;
     private javax.swing.JTabbedPane mainTabbedPane;
     private javax.swing.JLabel membersHeader;
     private javax.swing.JPanel membersPanel;
@@ -2051,6 +2325,7 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JPanel membershipPanel;
     private javax.swing.JTabbedPane membershipTabbedPane;
     private javax.swing.JTextField membershipTextField;
+    private javax.swing.JLabel miscellaneousExpenseLabel;
     private javax.swing.JPanel myProfilePanel;
     private javax.swing.JTextField nameTextField;
     private javax.swing.JLabel newMembersHeader;
@@ -2059,6 +2334,7 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JButton newVidSaveButton;
     private javax.swing.JLabel occupationInfoLabel;
     private javax.swing.JLabel overdueChargeLabel;
+    private javax.swing.JLabel overdueIncomeLabel;
     private javax.swing.JPanel owenedVidsPanel;
     private javax.swing.JButton paidButton;
     private javax.swing.JLabel phoneInfoLabel;
@@ -2070,9 +2346,12 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JPanel revenuePanel;
     private javax.swing.JTabbedPane revenueTabbedPane;
     private javax.swing.JLabel sNameInfoLabel;
+    private javax.swing.JLabel salaryExpenseLabel;
     private javax.swing.JComboBox<String> storageLocationComboBox;
     private javax.swing.JRadioButton thrillerButton;
+    private javax.swing.JLabel totalIncomeLabel;
     private javax.swing.JLabel totalLabel;
+    private javax.swing.JLabel totalMembersDebtLabel;
     private javax.swing.JTable vidCatalogTable;
     private javax.swing.JTable vidConditionTable;
     private javax.swing.JButton vidDeleteButton;
@@ -2082,5 +2361,7 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JTabbedPane vidRecordsTabbedPane;
     private javax.swing.JTable vidRecordsTable;
     private javax.swing.JTable vidReturnTable;
+    private javax.swing.JButton viewButton;
+    private javax.swing.JButton viewChargingButton;
     // End of variables declaration//GEN-END:variables
 }
