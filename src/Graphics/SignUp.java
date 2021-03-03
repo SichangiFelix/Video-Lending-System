@@ -432,7 +432,7 @@ public class SignUp extends javax.swing.JFrame {
              try{
                 Class.forName("com.mysql.cj.jdbc.Driver");
                 Connection mycon = DriverManager.getConnection("jdbc:mysql://localhost:3306/vlsdb","root","sangoro31");
-                String query = "INSERT INTO members (F_name,S_name,National_id,Street_no,House_no,Occupation,Phone,Date,Gender,Username,Password) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
+                String query = "INSERT INTO members (F_name,S_name,National_id,Street_name,House_no,Occupation,Phone,Date,Gender,Username,Password) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
                 //create a statement
                 PreparedStatement myStmt = mycon.prepareStatement(query);
                 //execute SQL querry
@@ -444,13 +444,11 @@ public class SignUp extends javax.swing.JFrame {
                 myStmt.setString(6,occupationTextField.getText());
                 myStmt.setString(7,phoneField.getText());
                 
-                /*working on the date
-                Date utilDate = jDateChooser1.getDate();
-                java.sql.Date myDate = new java.sql.Date();
+                //working on the date
                 Date date=(Date)jDateChooser1.getDate();
                 SimpleDateFormat dateFormat=new SimpleDateFormat("dd-MM-yyyy"); 
                 String joiningDate=dateFormat.format(date);
-                myStmt.setString(8,joiningDate);*/
+                myStmt.setString(8,joiningDate);
                 
                 //the gender radio buttons
                 String gender = "";
