@@ -7,7 +7,7 @@ package Graphics;
 
 import javax.swing.JOptionPane;
 import java.sql.*;
-import java.sql.Date;
+import java.util.Date;
 import java.text.SimpleDateFormat;
 /**
  *
@@ -432,7 +432,7 @@ public class SignUp extends javax.swing.JFrame {
              try{
                 Class.forName("com.mysql.cj.jdbc.Driver");
                 Connection mycon = DriverManager.getConnection("jdbc:mysql://localhost:3306/vlsdb","root","sangoro31");
-                String query = "INSERT INTO members (F_name,S_name,National_id,Adress,Occupation,Phone,Gender,Username,Password) VALUES (?,?,?,?,?,?,?,?,?)";
+                String query = "INSERT INTO members (F_name,S_name,National_id,Street_no,House_no,Occupation,Phone,Date,Gender,Username,Password) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
                 //create a statement
                 PreparedStatement myStmt = mycon.prepareStatement(query);
                 //execute SQL querry
@@ -440,14 +440,17 @@ public class SignUp extends javax.swing.JFrame {
                 myStmt.setString(2,sNameTextField.getText());
                 myStmt.setString(3,idTextField.getText());
                 myStmt.setString(4,streetNameField.getText());
-                myStmt.setString(5,occupationTextField.getText());
-                myStmt.setString(6,phoneField.getText());
+                myStmt.setString(5,houseNumberField.getText());
+                myStmt.setString(6,occupationTextField.getText());
+                myStmt.setString(7,phoneField.getText());
                 
-                /*//working on the date
+                /*working on the date
+                Date utilDate = jDateChooser1.getDate();
+                java.sql.Date myDate = new java.sql.Date();
                 Date date=(Date)jDateChooser1.getDate();
                 SimpleDateFormat dateFormat=new SimpleDateFormat("dd-MM-yyyy"); 
                 String joiningDate=dateFormat.format(date);
-                myStmt.setString(6,joiningDate);*/
+                myStmt.setString(8,joiningDate);*/
                 
                 //the gender radio buttons
                 String gender = "";
@@ -458,9 +461,9 @@ public class SignUp extends javax.swing.JFrame {
                     gender=femaleButton.getText();
                 }    
              
-                myStmt.setString(7,gender);
-                myStmt.setString(8,signupUsernameTextField.getText());
-                myStmt.setString(9,signupPassConfirmField.getText());
+                myStmt.setString(9,gender);
+                myStmt.setString(10,signupUsernameTextField.getText());
+                myStmt.setString(11,signupPassConfirmField.getText());
                 myStmt.executeUpdate();
                //tell the user they have been successfully added
                JOptionPane.showMessageDialog(null,"You have been succefully registered");
