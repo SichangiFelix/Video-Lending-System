@@ -67,6 +67,7 @@ public class SignUp extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         houseNumberField = new javax.swing.JTextField();
+        jButton2 = new javax.swing.JButton();
 
         jTextField8.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jTextField8.setForeground(new java.awt.Color(51, 0, 102));
@@ -80,8 +81,6 @@ public class SignUp extends javax.swing.JFrame {
         setTitle("SignUp Form");
         setBackground(new java.awt.Color(143, 188, 143));
         setLocation(new java.awt.Point(400, 10));
-        setMaximumSize(new java.awt.Dimension(950, 1100));
-        setPreferredSize(new java.awt.Dimension(900, 1050));
         setResizable(false);
         setSize(new java.awt.Dimension(900, 1050));
 
@@ -246,6 +245,14 @@ public class SignUp extends javax.swing.JFrame {
         houseNumberField.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         houseNumberField.setForeground(new java.awt.Color(51, 0, 102));
 
+        jButton2.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        jButton2.setText("Clear");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout signUpPanelLayout = new javax.swing.GroupLayout(signUpPanel);
         signUpPanel.setLayout(signUpPanelLayout);
         signUpPanelLayout.setHorizontalGroup(
@@ -304,10 +311,12 @@ public class SignUp extends javax.swing.JFrame {
                                         .addComponent(maleButton)
                                         .addComponent(femaleButton)))
                                 .addComponent(genderLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, signUpPanelLayout.createSequentialGroup()
+                                .addGroup(signUpPanelLayout.createSequentialGroup()
                                     .addComponent(jButton1)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(signUpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                    .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(signUpButton, javax.swing.GroupLayout.DEFAULT_SIZE, 219, Short.MAX_VALUE)))))))
                 .addContainerGap(141, Short.MAX_VALUE))
         );
         signUpPanelLayout.setVerticalGroup(
@@ -350,7 +359,7 @@ public class SignUp extends javax.swing.JFrame {
                         .addGap(30, 30, 30)
                         .addComponent(dateLabel))
                     .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                 .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(genderLabel)
                     .addGroup(signUpPanelLayout.createSequentialGroup()
@@ -373,7 +382,9 @@ public class SignUp extends javax.swing.JFrame {
                 .addGroup(signUpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(signUpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1))
-                .addGap(130, 130, 130))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton2)
+                .addGap(80, 80, 80))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -493,6 +504,21 @@ public class SignUp extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_phoneFieldActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        fNameTextField.setText("");
+        sNameTextField.setText("");
+        idTextField.setText("");
+        streetNameField.setText("");
+        houseNumberField.setText("");
+        occupationTextField.setText("");
+        phoneField.setText("");
+        signupUsernameTextField.setText("");
+        signupPassField.setText("");
+        signupPassConfirmField.setText("");
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -543,6 +569,7 @@ public class SignUp extends javax.swing.JFrame {
     private javax.swing.JLabel idLabel;
     private javax.swing.JTextField idTextField;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
