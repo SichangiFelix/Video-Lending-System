@@ -14,6 +14,7 @@ import java.awt.Font;
 
 import java.sql.*;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 public class Mainscreen extends javax.swing.JFrame {
 
@@ -37,6 +38,21 @@ public class Mainscreen extends javax.swing.JFrame {
         
         
         //code for the database connection
+        //Inputing data into the members table
+        try{
+         Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/vlsdb","root","sangoro31");
+         PreparedStatement ps = con.prepareStatement("select * from members");
+         ResultSet rs  = ps.executeQuery();
+         DefaultTableModel tm = (DefaultTableModel) membersTable.getModel();
+         tm.setRowCount(0);
+         
+         while(rs.next()){
+             Object o[] = {rs.getInt("Membership_number"),rs.getString("F_name"),rs.getString("S_name"),rs.getInt("National_Id"),rs.getString("Street_name"),rs.getInt("House_no"),rs.getString("Occupation"),rs.getInt("Phone"),rs.getString("Date"),rs.getString("Gender")};
+             tm.addRow(o);
+         }
+        }
+        catch(Exception e){   
+        }
     }
 
     /**
@@ -183,6 +199,8 @@ public class Mainscreen extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         membersTable = new javax.swing.JTable();
         membersHeader = new javax.swing.JLabel();
+        removeMemberButton = new javax.swing.JButton();
+        jLabel55 = new javax.swing.JLabel();
         exMembersPanel = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         exMembersTable = new javax.swing.JTable();
@@ -1584,37 +1602,37 @@ public class Mainscreen extends javax.swing.JFrame {
         membersTable.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         membersTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Membership no", "First Name", "Second Name", "Occupation", "Date joinned", "Residential address"
+                "Membership no", "First Name", "Second Name", "National Id", "Street name", "House no", "Occupation", "Phone", "Date", "Gender"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false
+                false, false, false, false, false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -1632,18 +1650,35 @@ public class Mainscreen extends javax.swing.JFrame {
         membersHeader.setFont(new java.awt.Font("Tempus Sans ITC", 0, 24)); // NOI18N
         membersHeader.setText("These are all the members in upepeo video club");
 
+        removeMemberButton.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        removeMemberButton.setText("Remove selected ");
+
+        jLabel55.setFont(new java.awt.Font("Sylfaen", 0, 18)); // NOI18N
+        jLabel55.setText("Only an admin can remove a member from the club ");
+
         javax.swing.GroupLayout membersPanelLayout = new javax.swing.GroupLayout(membersPanel);
         membersPanel.setLayout(membersPanelLayout);
         membersPanelLayout.setHorizontalGroup(
             membersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(membersPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1)
+                .addGroup(membersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(membersPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane1))
+                    .addGroup(membersPanelLayout.createSequentialGroup()
+                        .addGroup(membersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(membersPanelLayout.createSequentialGroup()
+                                .addGap(663, 663, 663)
+                                .addComponent(membersHeader))
+                            .addGroup(membersPanelLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(removeMemberButton, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 657, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(membersPanelLayout.createSequentialGroup()
-                .addGap(663, 663, 663)
-                .addComponent(membersHeader)
-                .addContainerGap(932, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jLabel55, javax.swing.GroupLayout.PREFERRED_SIZE, 524, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         membersPanelLayout.setVerticalGroup(
             membersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1651,8 +1686,12 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addGap(9, 9, 9)
                 .addComponent(membersHeader)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 692, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 611, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37)
+                .addComponent(removeMemberButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addComponent(jLabel55)
+                .addGap(29, 29, 29))
         );
 
         membershipTabbedPane.addTab("Members", membersPanel);
@@ -2272,6 +2311,7 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel60;
     private javax.swing.JLabel jLabel61;
@@ -2339,6 +2379,7 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JLabel phoneInfoLabel;
     private javax.swing.JButton printButton;
     private javax.swing.JTextArea receiptTextArea;
+    private javax.swing.JButton removeMemberButton;
     private javax.swing.JPanel reportsPanel;
     private com.toedter.calendar.JDateChooser returnDateChooser;
     private javax.swing.JPanel returnPanel;

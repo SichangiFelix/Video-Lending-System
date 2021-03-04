@@ -2537,15 +2537,32 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jScrollPane1" max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jScrollPane1" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <EmptySpace min="-2" pref="663" max="-2" attributes="0"/>
+                                              <Component id="membersHeader" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="removeMemberButton" min="-2" pref="265" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace min="0" pref="657" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="663" max="-2" attributes="0"/>
-                              <Component id="membersHeader" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="932" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel55" min="-2" pref="524" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -2555,8 +2572,12 @@
                               <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                               <Component id="membersHeader" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jScrollPane1" min="-2" pref="692" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="jScrollPane1" min="-2" pref="611" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                              <Component id="removeMemberButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace pref="34" max="32767" attributes="0"/>
+                              <Component id="jLabel55" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -2575,17 +2596,41 @@
                               <Font name="Times New Roman" size="24" style="0"/>
                             </Property>
                             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                              <Table columnCount="6" rowCount="24">
+                              <Table columnCount="10" rowCount="24">
                                 <Column editable="false" title="Membership no" type="java.lang.Object"/>
                                 <Column editable="false" title="First Name" type="java.lang.Object"/>
                                 <Column editable="false" title="Second Name" type="java.lang.Object"/>
+                                <Column editable="false" title="National Id" type="java.lang.Object"/>
+                                <Column editable="false" title="Street name" type="java.lang.Object"/>
+                                <Column editable="false" title="House no" type="java.lang.Object"/>
                                 <Column editable="false" title="Occupation" type="java.lang.Object"/>
-                                <Column editable="false" title="Date joinned" type="java.lang.Object"/>
-                                <Column editable="false" title="Residential address" type="java.lang.Object"/>
+                                <Column editable="false" title="Phone" type="java.lang.Object"/>
+                                <Column editable="false" title="Date" type="java.lang.Object"/>
+                                <Column editable="false" title="Gender" type="java.lang.Object"/>
                               </Table>
                             </Property>
                             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                               <TableColumnModel selectionModel="0">
+                                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                  <Title/>
+                                  <Editor/>
+                                  <Renderer/>
+                                </Column>
+                                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                  <Title/>
+                                  <Editor/>
+                                  <Renderer/>
+                                </Column>
+                                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                  <Title/>
+                                  <Editor/>
+                                  <Renderer/>
+                                </Column>
+                                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                  <Title/>
+                                  <Editor/>
+                                  <Renderer/>
+                                </Column>
                                 <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                                   <Title/>
                                   <Editor/>
@@ -2640,6 +2685,22 @@
                           <Font name="Tempus Sans ITC" size="24" style="0"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="These are all the members in upepeo video club"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="removeMemberButton">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Times New Roman" size="24" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Remove selected "/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel55">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Sylfaen" size="18" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Only an admin can remove a member from the club "/>
                       </Properties>
                     </Component>
                   </SubComponents>
