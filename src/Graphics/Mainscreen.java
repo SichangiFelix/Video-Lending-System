@@ -54,6 +54,24 @@ public class Mainscreen extends javax.swing.JFrame {
         catch(Exception e){ 
             JOptionPane.showMessageDialog(null, e);
         }
+        
+        //Inputing data into the videos table
+        //displays all categories at first
+        try{
+         Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/vlsdb","root","sangoro31");
+         PreparedStatement ps = con.prepareStatement("select * from videos");
+         ResultSet rs  = ps.executeQuery();
+         DefaultTableModel tm = (DefaultTableModel)vidRecordsTable.getModel();
+         tm.setRowCount(0);
+         
+         while(rs.next()){
+             Object o[] = {rs.getInt("Vid_Id"),rs.getString("Title"),rs.getString("Duration"),rs.getString("Category"),rs.getString("Storage_location")};
+             tm.addRow(o);
+         }
+        }
+        catch(Exception e){ 
+            JOptionPane.showMessageDialog(null, e);
+        }
     }
 
     /**
@@ -65,6 +83,7 @@ public class Mainscreen extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         mainTabbedPane = new javax.swing.JTabbedPane();
         issuancePanel = new javax.swing.JPanel();
         vidIssuanceTabbedPane = new javax.swing.JTabbedPane();
@@ -145,6 +164,7 @@ public class Mainscreen extends javax.swing.JFrame {
         borrowedButton = new javax.swing.JRadioButton();
         cartoonButton = new javax.swing.JRadioButton();
         vidDeleteButton = new javax.swing.JButton();
+        allCategoryButton = new javax.swing.JRadioButton();
         jScrollPane4 = new javax.swing.JScrollPane();
         vidRecordsTable = new javax.swing.JTable();
         addVidPanel = new javax.swing.JPanel();
@@ -954,6 +974,7 @@ public class Mainscreen extends javax.swing.JFrame {
         jLabel9.setText("Choose a category to display");
 
         generalButton.setBackground(new java.awt.Color(255, 255, 224));
+        buttonGroup1.add(generalButton);
         generalButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         generalButton.setText("General");
         generalButton.addActionListener(new java.awt.event.ActionListener() {
@@ -963,6 +984,7 @@ public class Mainscreen extends javax.swing.JFrame {
         });
 
         comedyButton.setBackground(new java.awt.Color(255, 255, 224));
+        buttonGroup1.add(comedyButton);
         comedyButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         comedyButton.setText("Comedy");
         comedyButton.addActionListener(new java.awt.event.ActionListener() {
@@ -972,6 +994,7 @@ public class Mainscreen extends javax.swing.JFrame {
         });
 
         thrillerButton.setBackground(new java.awt.Color(255, 255, 224));
+        buttonGroup1.add(thrillerButton);
         thrillerButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         thrillerButton.setText("Thriller");
         thrillerButton.addActionListener(new java.awt.event.ActionListener() {
@@ -981,6 +1004,7 @@ public class Mainscreen extends javax.swing.JFrame {
         });
 
         horrorButton.setBackground(new java.awt.Color(255, 255, 224));
+        buttonGroup1.add(horrorButton);
         horrorButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         horrorButton.setText("Horror");
         horrorButton.addActionListener(new java.awt.event.ActionListener() {
@@ -990,6 +1014,7 @@ public class Mainscreen extends javax.swing.JFrame {
         });
 
         borrowedButton.setBackground(new java.awt.Color(255, 255, 224));
+        buttonGroup1.add(borrowedButton);
         borrowedButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         borrowedButton.setText("Borrowed videos");
         borrowedButton.addActionListener(new java.awt.event.ActionListener() {
@@ -999,6 +1024,7 @@ public class Mainscreen extends javax.swing.JFrame {
         });
 
         cartoonButton.setBackground(new java.awt.Color(255, 255, 224));
+        buttonGroup1.add(cartoonButton);
         cartoonButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         cartoonButton.setText("Cartoon");
         cartoonButton.addActionListener(new java.awt.event.ActionListener() {
@@ -1010,6 +1036,16 @@ public class Mainscreen extends javax.swing.JFrame {
         vidDeleteButton.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         vidDeleteButton.setText("Delete selected");
 
+        allCategoryButton.setBackground(new java.awt.Color(255, 255, 224));
+        buttonGroup1.add(allCategoryButton);
+        allCategoryButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        allCategoryButton.setText("All Categories");
+        allCategoryButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                allCategoryButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
@@ -1018,14 +1054,15 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addGap(118, 118, 118)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel9)
+                    .addComponent(vidDeleteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(allCategoryButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(comedyButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(generalButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(horrorButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(thrillerButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(cartoonButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(borrowedButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE))
-                    .addComponent(vidDeleteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(borrowedButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)))
                 .addContainerGap(139, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
@@ -1045,6 +1082,8 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addComponent(cartoonButton)
                 .addGap(18, 18, 18)
                 .addComponent(borrowedButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(allCategoryButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(vidDeleteButton)
                 .addGap(117, 117, 117))
@@ -1053,40 +1092,40 @@ public class Mainscreen extends javax.swing.JFrame {
         vidRecordsTable.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         vidRecordsTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "Video Identofication Code", "Video Title", "Duration", "Storage location"
+                "Video Identofication Code", "Video Title", "Duration", "Category", "Storage location"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, true, false
+                false, false, true, false, true
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -1108,7 +1147,7 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addGap(56, 56, 56)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(49, 49, 49)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 1409, Short.MAX_VALUE)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 1145, Short.MAX_VALUE)
                 .addContainerGap())
         );
         owenedVidsPanelLayout.setVerticalGroup(
@@ -1118,7 +1157,7 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addGroup(owenedVidsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 660, Short.MAX_VALUE)
                     .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(94, Short.MAX_VALUE))
+                .addContainerGap(109, Short.MAX_VALUE))
         );
 
         vidRecordsTabbedPane.addTab("Videos in house", owenedVidsPanel);
@@ -1309,14 +1348,14 @@ public class Mainscreen extends javax.swing.JFrame {
         addVidPanelLayout.setVerticalGroup(
             addVidPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(addVidPanelLayout.createSequentialGroup()
-                .addContainerGap(58, Short.MAX_VALUE)
+                .addContainerGap(61, Short.MAX_VALUE)
                 .addGroup(addVidPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, addVidPanelLayout.createSequentialGroup()
                         .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(58, Short.MAX_VALUE))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
 
         vidRecordsTabbedPane.addTab("Add video", addVidPanel);
@@ -2110,19 +2149,79 @@ public class Mainscreen extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void generalButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generalButtonActionPerformed
-        // TODO add your handling code here:
+        // filtered by general
+        try{
+         Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/vlsdb","root","sangoro31");
+         PreparedStatement ps = con.prepareStatement("select * from videos where Category = 'General'");
+         ResultSet rs  = ps.executeQuery();
+         DefaultTableModel tm = (DefaultTableModel)vidRecordsTable.getModel();
+         tm.setRowCount(0);
+         
+         while(rs.next()){
+             Object o[] = {rs.getInt("Vid_Id"),rs.getString("Title"),rs.getString("Duration"),rs.getString("Category"),rs.getString("Storage_location")};
+             tm.addRow(o);
+         }
+        }
+        catch(Exception e){ 
+            JOptionPane.showMessageDialog(null, e);
+        }
     }//GEN-LAST:event_generalButtonActionPerformed
 
     private void comedyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comedyButtonActionPerformed
-        // TODO add your handling code here:
+        // display filtered results comedy
+         try{
+         Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/vlsdb","root","sangoro31");
+         PreparedStatement ps = con.prepareStatement("select * from videos where Category = 'Comedy'");
+         ResultSet rs  = ps.executeQuery();
+         DefaultTableModel tm = (DefaultTableModel)vidRecordsTable.getModel();
+         tm.setRowCount(0);
+         
+         while(rs.next()){
+             Object o[] = {rs.getInt("Vid_Id"),rs.getString("Title"),rs.getString("Duration"),rs.getString("Category"),rs.getString("Storage_location")};
+             tm.addRow(o);
+         }
+        }
+        catch(Exception e){ 
+            JOptionPane.showMessageDialog(null, e);
+        }
     }//GEN-LAST:event_comedyButtonActionPerformed
 
     private void thrillerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thrillerButtonActionPerformed
-        // TODO add your handling code here:
+        // filtered by comedy
+        try{
+         Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/vlsdb","root","sangoro31");
+         PreparedStatement ps = con.prepareStatement("select * from videos where Category = 'Thriller'");
+         ResultSet rs  = ps.executeQuery();
+         DefaultTableModel tm = (DefaultTableModel)vidRecordsTable.getModel();
+         tm.setRowCount(0);
+         
+         while(rs.next()){
+             Object o[] = {rs.getInt("Vid_Id"),rs.getString("Title"),rs.getString("Duration"),rs.getString("Category"),rs.getString("Storage_location")};
+             tm.addRow(o);
+         }
+        }
+        catch(Exception e){ 
+            JOptionPane.showMessageDialog(null, e);
+        }
     }//GEN-LAST:event_thrillerButtonActionPerformed
 
     private void horrorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_horrorButtonActionPerformed
-        // TODO add your handling code here:
+        // filtered by horror
+        try{
+         Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/vlsdb","root","sangoro31");
+         PreparedStatement ps = con.prepareStatement("select * from videos where Category = 'Horror'");
+         ResultSet rs  = ps.executeQuery();
+         DefaultTableModel tm = (DefaultTableModel)vidRecordsTable.getModel();
+         tm.setRowCount(0);
+         
+         while(rs.next()){
+             Object o[] = {rs.getInt("Vid_Id"),rs.getString("Title"),rs.getString("Duration"),rs.getString("Category"),rs.getString("Storage_location")};
+             tm.addRow(o);
+         }
+        }
+        catch(Exception e){ 
+            JOptionPane.showMessageDialog(null, e);
+        }
     }//GEN-LAST:event_horrorButtonActionPerformed
 
     private void borrowedButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_borrowedButtonActionPerformed
@@ -2130,7 +2229,22 @@ public class Mainscreen extends javax.swing.JFrame {
     }//GEN-LAST:event_borrowedButtonActionPerformed
 
     private void cartoonButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cartoonButtonActionPerformed
-        // TODO add your handling code here:
+        // filtered by cartoon
+        try{
+         Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/vlsdb","root","sangoro31");
+         PreparedStatement ps = con.prepareStatement("select * from videos where Category = 'Cartoon'");
+         ResultSet rs  = ps.executeQuery();
+         DefaultTableModel tm = (DefaultTableModel)vidRecordsTable.getModel();
+         tm.setRowCount(0);
+         
+         while(rs.next()){
+             Object o[] = {rs.getInt("Vid_Id"),rs.getString("Title"),rs.getString("Duration"),rs.getString("Category"),rs.getString("Storage_location")};
+             tm.addRow(o);
+         }
+        }
+        catch(Exception e){ 
+            JOptionPane.showMessageDialog(null, e);
+        }
     }//GEN-LAST:event_cartoonButtonActionPerformed
 
     private void durationInputFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_durationInputFieldActionPerformed
@@ -2217,6 +2331,25 @@ public class Mainscreen extends javax.swing.JFrame {
         durationInputField.setText("");
     }//GEN-LAST:event_clearNewVidInfoActionPerformed
 
+    private void allCategoryButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_allCategoryButtonActionPerformed
+        // display all vids
+         try{
+         Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/vlsdb","root","sangoro31");
+         PreparedStatement ps = con.prepareStatement("select * from videos");
+         ResultSet rs  = ps.executeQuery();
+         DefaultTableModel tm = (DefaultTableModel)vidRecordsTable.getModel();
+         tm.setRowCount(0);
+         
+         while(rs.next()){
+             Object o[] = {rs.getInt("Vid_Id"),rs.getString("Title"),rs.getString("Duration"),rs.getString("Category"),rs.getString("Storage_location")};
+             tm.addRow(o);
+         }
+        }
+        catch(Exception e){ 
+            JOptionPane.showMessageDialog(null, e);
+        }
+    }//GEN-LAST:event_allCategoryButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2257,8 +2390,10 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JPanel addVidPanel;
     private javax.swing.JTextArea addedVidsTextArea;
     private javax.swing.JLabel adminExpenseLabel;
+    private javax.swing.JRadioButton allCategoryButton;
     private javax.swing.JPanel borrowPanel;
     private javax.swing.JRadioButton borrowedButton;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JTable cartTable;
     private javax.swing.JRadioButton cartoonButton;
     private javax.swing.JButton checkoutButton;
