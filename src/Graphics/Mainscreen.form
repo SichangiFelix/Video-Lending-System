@@ -1686,29 +1686,21 @@
                                       <Group type="102" attributes="0">
                                           <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="102" attributes="0">
-                                                  <Component id="newVidSaveButton" min="-2" pref="191" max="-2" attributes="0"/>
-                                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                                  <Component id="jLabel24" pref="200" max="32767" attributes="0"/>
+                                                  <Component id="jLabel15" alignment="0" max="32767" attributes="0"/>
                                               </Group>
-                                              <Group type="102" attributes="0">
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                                          <Component id="jLabel24" max="32767" attributes="0"/>
-                                                          <Component id="jLabel14" alignment="0" pref="200" max="32767" attributes="0"/>
-                                                          <Component id="jLabel15" alignment="0" max="32767" attributes="0"/>
-                                                      </Group>
-                                                      <Component id="jLabel12" min="-2" pref="276" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <EmptySpace pref="50" max="32767" attributes="0"/>
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
-                                                          <Component id="vidIdLabel" alignment="0" pref="354" max="32767" attributes="0"/>
-                                                          <Component id="genreComboBox" alignment="0" max="32767" attributes="0"/>
-                                                          <Component id="storageLocationComboBox" alignment="0" max="32767" attributes="0"/>
-                                                      </Group>
-                                                      <Component id="durationInputField" alignment="1" min="-2" pref="354" max="-2" attributes="0"/>
-                                                  </Group>
+                                              <Component id="jLabel12" min="-2" pref="276" max="-2" attributes="0"/>
+                                              <Component id="newVidSaveButton" alignment="0" min="-2" pref="191" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace pref="50" max="32767" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
+                                                  <Component id="genreComboBox" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="storageLocationComboBox" alignment="0" pref="354" max="32767" attributes="0"/>
                                               </Group>
+                                              <Component id="durationInputField" alignment="1" min="-2" pref="354" max="-2" attributes="0"/>
+                                              <Component id="clearNewVidInfo" alignment="0" min="-2" pref="179" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -1740,12 +1732,7 @@
                                       <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
                                       <Component id="durationInputField" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="vidIdLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="genreComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1756,8 +1743,11 @@
                                       <Component id="storageLocationComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace pref="131" max="32767" attributes="0"/>
-                                  <Component id="newVidSaveButton" min="-2" pref="38" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="newVidSaveButton" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                      <Component id="clearNewVidInfo" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
                               </Group>
                               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
@@ -1794,14 +1784,6 @@
                             <Property name="text" type="java.lang.String" value="Title"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JLabel" name="jLabel14">
-                          <Properties>
-                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                              <Font name="Times New Roman" size="24" style="0"/>
-                            </Property>
-                            <Property name="text" type="java.lang.String" value="Vid ID Code"/>
-                          </Properties>
-                        </Component>
                         <Component class="javax.swing.JLabel" name="jLabel15">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -1826,14 +1808,6 @@
                           <Events>
                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="durationInputFieldActionPerformed"/>
                           </Events>
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="vidIdLabel">
-                          <Properties>
-                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                              <Font name="Times New Roman" size="24" style="0"/>
-                            </Property>
-                            <Property name="text" type="java.lang.String" value="ID goes here(Autogenerated)"/>
-                          </Properties>
                         </Component>
                         <Component class="javax.swing.JButton" name="newVidSaveButton">
                           <Properties>
@@ -1882,18 +1856,30 @@
                               <Font name="Times New Roman" size="24" style="0"/>
                             </Property>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                              <StringArray count="5">
-                                <StringItem index="0" value="Locatio A"/>
-                                <StringItem index="1" value="Locatio B"/>
-                                <StringItem index="2" value="Locatio C"/>
-                                <StringItem index="3" value="Locatio D"/>
-                                <StringItem index="4" value="Locatio E"/>
+                              <StringArray count="6">
+                                <StringItem index="0" value="Horror shelve"/>
+                                <StringItem index="1" value="Comedy shelve"/>
+                                <StringItem index="2" value="General shelve"/>
+                                <StringItem index="3" value="Thriller shelve"/>
+                                <StringItem index="4" value="Cartoon shelve"/>
+                                <StringItem index="5" value=" "/>
                               </StringArray>
                             </Property>
                           </Properties>
                           <AuxValues>
                             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                           </AuxValues>
+                        </Component>
+                        <Component class="javax.swing.JButton" name="clearNewVidInfo">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Times New Roman" size="24" style="0"/>
+                            </Property>
+                            <Property name="text" type="java.lang.String" value="Clear"/>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="clearNewVidInfoActionPerformed"/>
+                          </Events>
                         </Component>
                       </SubComponents>
                     </Container>
