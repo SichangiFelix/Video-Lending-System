@@ -155,7 +155,7 @@ public class LogIn extends javax.swing.JFrame {
                 break;
             }
             else{
-                JOptionPane.showMessageDialog(null,"You have entered wrong login credentials, please try again");
+                //JOptionPane.showMessageDialog(null,"You have entered wrong login credentials, please try again");
             }
         }
        }
