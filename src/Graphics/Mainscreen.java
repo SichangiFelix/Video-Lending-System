@@ -15,6 +15,7 @@ import java.awt.Font;
 import java.sql.*;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
 
 public class Mainscreen extends javax.swing.JFrame {
 
@@ -32,6 +33,7 @@ public class Mainscreen extends javax.swing.JFrame {
         vidCatalogTable.getTableHeader().setFont(new Font("Times New Roman",Font.PLAIN,21));
         vidConditionTable.getTableHeader().setFont(new Font("Times New Roman",Font.PLAIN,21));
         vidReturnTable.getTableHeader().setFont(new Font("Times New Roman",Font.PLAIN,21));
+        cartTable.getTableHeader().setFont(new Font("Times New Roman",Font.PLAIN,21));
         
         //personalised greeting on my profile , initialize the greeting label
         
@@ -94,12 +96,13 @@ public class Mainscreen extends javax.swing.JFrame {
         jPanel9 = new javax.swing.JPanel();
         jLabel25 = new javax.swing.JLabel();
         checkoutButton = new javax.swing.JButton();
-        jScrollPane11 = new javax.swing.JScrollPane();
-        cartTextArea = new javax.swing.JTextArea();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        cartTable = new javax.swing.JTable();
         jPanel10 = new javax.swing.JPanel();
         jLabel26 = new javax.swing.JLabel();
         jScrollPane7 = new javax.swing.JScrollPane();
         vidCatalogTable = new javax.swing.JTable();
+        addToCartButton = new javax.swing.JButton();
         returnPanel = new javax.swing.JPanel();
         jPanel11 = new javax.swing.JPanel();
         jPanel13 = new javax.swing.JPanel();
@@ -292,36 +295,54 @@ public class Mainscreen extends javax.swing.JFrame {
             }
         });
 
-        cartTextArea.setColumns(20);
-        cartTextArea.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 24)); // NOI18N
-        cartTextArea.setRows(5);
-        jScrollPane11.setViewportView(cartTextArea);
+        cartTable.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        cartTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Vid ID", "Title", "Duration", "Category", "Story Location"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, true, true
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        cartTable.setRowHeight(40);
+        jScrollPane6.setViewportView(cartTable);
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane11, javax.swing.GroupLayout.DEFAULT_SIZE, 614, Short.MAX_VALUE)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 614, Short.MAX_VALUE))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addGap(292, 292, 292)
+                                .addComponent(jLabel25))
+                            .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addGap(255, 255, 255)
+                                .addComponent(checkoutButton)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(checkoutButton)
-                .addGap(249, 249, 249))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel25)
-                .addGap(297, 297, 297))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addContainerGap()
                 .addComponent(jLabel25)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(checkoutButton)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -382,6 +403,14 @@ public class Mainscreen extends javax.swing.JFrame {
         });
         jScrollPane7.setViewportView(vidCatalogTable);
 
+        addToCartButton.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
+        addToCartButton.setText("Add to Cart");
+        addToCartButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addToCartButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
         jPanel10Layout.setHorizontalGroup(
@@ -396,6 +425,10 @@ public class Mainscreen extends javax.swing.JFrame {
                         .addComponent(jLabel26)
                         .addGap(0, 440, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(addToCartButton, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -404,7 +437,9 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addComponent(jLabel26)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 579, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(132, Short.MAX_VALUE))
+                .addGap(33, 33, 33)
+                .addComponent(addToCartButton)
+                .addContainerGap(66, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout borrowPanelLayout = new javax.swing.GroupLayout(borrowPanel);
@@ -599,7 +634,6 @@ public class Mainscreen extends javax.swing.JFrame {
         receiptTextArea.setColumns(4);
         receiptTextArea.setFont(new java.awt.Font("HP Simplified Light", 0, 24)); // NOI18N
         receiptTextArea.setRows(5);
-        receiptTextArea.setText("These are the vids you have selected");
         jScrollPane9.setViewportView(receiptTextArea);
 
         printButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -2126,7 +2160,9 @@ public class Mainscreen extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mainTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 1827, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(mainTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 1827, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 30, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2240,7 +2276,7 @@ public class Mainscreen extends javax.swing.JFrame {
     private void durationInputFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_durationInputFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_durationInputFieldActionPerformed
-
+        
     private void newVidSaveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newVidSaveButtonActionPerformed
         // TODO add your handling code here:
         try{
@@ -2270,8 +2306,11 @@ public class Mainscreen extends javax.swing.JFrame {
     }//GEN-LAST:event_genreComboBoxActionPerformed
 
     private void checkoutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkoutButtonActionPerformed
-        // TODO add your handling code here:
+        // some confirmation of submission
         JOptionPane.showMessageDialog(null, "Your selected videos have been successfully submitted to the checkout agent.");
+        //clearing the table after submission
+        DefaultTableModel mod = (DefaultTableModel) cartTable.getModel();
+        mod.setRowCount(0);
     }//GEN-LAST:event_checkoutButtonActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -2341,12 +2380,26 @@ public class Mainscreen extends javax.swing.JFrame {
     }//GEN-LAST:event_allCategoryButtonActionPerformed
 
     private void vidCatalogTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_vidCatalogTableMouseClicked
-        // 
-        DefaultTableModel model = (DefaultTableModel) vidCatalogTable.getModel();
-        int rowNum = vidCatalogTable.getSelectedRow();
-        cartTextArea.setText(model.getValueAt(rowNum,0).toString()  +model.getValueAt(rowNum,1).toString());
-        
+ 
     }//GEN-LAST:event_vidCatalogTableMouseClicked
+
+    private void addToCartButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addToCartButtonActionPerformed
+        // adding selected videos to the cart table
+        TableModel model = vidCatalogTable.getModel();
+        int indexs[] = vidCatalogTable.getSelectedRows();
+        Object[] row = new Object[5]; 
+        DefaultTableModel model2 = (DefaultTableModel) cartTable.getModel();
+        
+        for(int i = 0; i < indexs.length; i++){
+            row[0] = model.getValueAt(indexs[i],0);
+            row[1] = model.getValueAt(indexs[i],1);
+            row[2] = model.getValueAt(indexs[i],2);
+            row[3] = model.getValueAt(indexs[i],3);
+            row[4] = model.getValueAt(indexs[i],4);
+            
+            model2.addRow(row);
+        }
+    }//GEN-LAST:event_addToCartButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2385,6 +2438,7 @@ public class Mainscreen extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addDebtButton;
+    private javax.swing.JButton addToCartButton;
     private javax.swing.JPanel addVidPanel;
     private javax.swing.JTextArea addedVidsTextArea;
     private javax.swing.JLabel adminExpenseLabel;
@@ -2392,7 +2446,7 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JPanel borrowPanel;
     private javax.swing.JRadioButton borrowedButton;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JTextArea cartTextArea;
+    private javax.swing.JTable cartTable;
     private javax.swing.JRadioButton cartoonButton;
     private javax.swing.JButton checkoutButton;
     private javax.swing.JButton clearNewVidInfo;
@@ -2498,11 +2552,11 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
-    private javax.swing.JScrollPane jScrollPane11;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
