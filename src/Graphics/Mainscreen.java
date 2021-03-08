@@ -29,7 +29,6 @@ public class Mainscreen extends javax.swing.JFrame {
         membersTable.getTableHeader().setFont(new Font("Times New Roman",Font.PLAIN,21));
         exMembersTable.getTableHeader().setFont(new Font("Times New Roman",Font.PLAIN,21));
         newMembersTable.getTableHeader().setFont(new Font("Times New Roman",Font.PLAIN,21));
-        cartTable.getTableHeader().setFont(new Font("Times New Roman",Font.PLAIN,21));
         vidCatalogTable.getTableHeader().setFont(new Font("Times New Roman",Font.PLAIN,21));
         vidConditionTable.getTableHeader().setFont(new Font("Times New Roman",Font.PLAIN,21));
         vidReturnTable.getTableHeader().setFont(new Font("Times New Roman",Font.PLAIN,21));
@@ -93,10 +92,10 @@ public class Mainscreen extends javax.swing.JFrame {
         vidIssuanceTabbedPane = new javax.swing.JTabbedPane();
         borrowPanel = new javax.swing.JPanel();
         jPanel9 = new javax.swing.JPanel();
-        jScrollPane6 = new javax.swing.JScrollPane();
-        cartTable = new javax.swing.JTable();
         jLabel25 = new javax.swing.JLabel();
         checkoutButton = new javax.swing.JButton();
+        jScrollPane11 = new javax.swing.JScrollPane();
+        cartTextArea = new javax.swing.JTextArea();
         jPanel10 = new javax.swing.JPanel();
         jLabel26 = new javax.swing.JLabel();
         jScrollPane7 = new javax.swing.JScrollPane();
@@ -282,30 +281,6 @@ public class Mainscreen extends javax.swing.JFrame {
         jPanel9.setBackground(new java.awt.Color(119, 136, 153));
         jPanel9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
-        cartTable.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        cartTable.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Video identification code", "Title", "Duratioin", "Storage location"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, true, true
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        cartTable.setRowHeight(42);
-        jScrollPane6.setViewportView(cartTable);
-
         jLabel25.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel25.setText("Cart");
 
@@ -317,33 +292,36 @@ public class Mainscreen extends javax.swing.JFrame {
             }
         });
 
+        cartTextArea.setColumns(20);
+        cartTextArea.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 24)); // NOI18N
+        cartTextArea.setRows(5);
+        jScrollPane11.setViewportView(cartTextArea);
+
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 614, Short.MAX_VALUE))
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addGap(329, 329, 329)
-                        .addComponent(jLabel25)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap()
+                .addComponent(jScrollPane11, javax.swing.GroupLayout.DEFAULT_SIZE, 614, Short.MAX_VALUE)
                 .addContainerGap())
-            .addGroup(jPanel9Layout.createSequentialGroup()
-                .addGap(268, 268, 268)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(checkoutButton)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(249, 249, 249))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel25)
+                .addGap(297, 297, 297))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(20, 20, 20)
                 .addComponent(jLabel25)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(checkoutButton)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -397,6 +375,11 @@ public class Mainscreen extends javax.swing.JFrame {
             }
         ));
         vidCatalogTable.setRowHeight(32);
+        vidCatalogTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                vidCatalogTableMouseClicked(evt);
+            }
+        });
         jScrollPane7.setViewportView(vidCatalogTable);
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
@@ -613,9 +596,10 @@ public class Mainscreen extends javax.swing.JFrame {
         jLabel33.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel33.setText("Receipt");
 
-        receiptTextArea.setColumns(20);
+        receiptTextArea.setColumns(4);
         receiptTextArea.setFont(new java.awt.Font("HP Simplified Light", 0, 24)); // NOI18N
         receiptTextArea.setRows(5);
+        receiptTextArea.setText("These are the vids you have selected");
         jScrollPane9.setViewportView(receiptTextArea);
 
         printButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -2356,6 +2340,14 @@ public class Mainscreen extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_allCategoryButtonActionPerformed
 
+    private void vidCatalogTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_vidCatalogTableMouseClicked
+        // 
+        DefaultTableModel model = (DefaultTableModel) vidCatalogTable.getModel();
+        int rowNum = vidCatalogTable.getSelectedRow();
+        cartTextArea.setText(model.getValueAt(rowNum,0).toString()  +model.getValueAt(rowNum,1).toString());
+        
+    }//GEN-LAST:event_vidCatalogTableMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -2400,7 +2392,7 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JPanel borrowPanel;
     private javax.swing.JRadioButton borrowedButton;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JTable cartTable;
+    private javax.swing.JTextArea cartTextArea;
     private javax.swing.JRadioButton cartoonButton;
     private javax.swing.JButton checkoutButton;
     private javax.swing.JButton clearNewVidInfo;
@@ -2506,11 +2498,11 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
+    private javax.swing.JScrollPane jScrollPane11;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
