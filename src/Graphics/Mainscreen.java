@@ -62,11 +62,15 @@ public class Mainscreen extends javax.swing.JFrame {
          PreparedStatement ps = con.prepareStatement("select * from videos");
          ResultSet rs  = ps.executeQuery();
          DefaultTableModel tm = (DefaultTableModel)vidRecordsTable.getModel();
+         DefaultTableModel tm2 = (DefaultTableModel)vidCatalogTable.getModel();
          tm.setRowCount(0);
+         tm2.setRowCount(0);
          
          while(rs.next()){
              Object o[] = {rs.getInt("Vid_Id"),rs.getString("Title"),rs.getString("Duration"),rs.getString("Category"),rs.getString("Storage_location")};
+             
              tm.addRow(o);
+             tm2.addRow(o);
          }
         }
         catch(Exception e){ 
@@ -321,7 +325,7 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 874, Short.MAX_VALUE))
+                        .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 614, Short.MAX_VALUE))
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addGap(329, 329, 329)
                         .addComponent(jLabel25)
@@ -353,43 +357,43 @@ public class Mainscreen extends javax.swing.JFrame {
         vidCatalogTable.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         vidCatalogTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Vid ID", "Title", "Duration", "Category", "Storage location"
             }
         ));
         vidCatalogTable.setRowHeight(32);
@@ -400,12 +404,14 @@ public class Mainscreen extends javax.swing.JFrame {
         jPanel10Layout.setHorizontalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel10Layout.createSequentialGroup()
-                .addGap(436, 436, 436)
-                .addComponent(jLabel26)
-                .addContainerGap(455, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane7)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane7))
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addGap(436, 436, 436)
+                        .addComponent(jLabel26)
+                        .addGap(0, 440, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel10Layout.setVerticalGroup(
@@ -414,8 +420,8 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel26)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 629, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 579, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(132, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout borrowPanelLayout = new javax.swing.GroupLayout(borrowPanel);
@@ -433,10 +439,10 @@ public class Mainscreen extends javax.swing.JFrame {
             borrowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(borrowPanelLayout.createSequentialGroup()
                 .addGap(40, 40, 40)
-                .addGroup(borrowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(borrowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(67, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         vidIssuanceTabbedPane.addTab("Video selection", borrowPanel);
@@ -1272,7 +1278,7 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel24)
                     .addComponent(storageLocationComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 131, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 133, Short.MAX_VALUE)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(newVidSaveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(clearNewVidInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -2187,7 +2193,7 @@ public class Mainscreen extends javax.swing.JFrame {
     }//GEN-LAST:event_comedyButtonActionPerformed
 
     private void thrillerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thrillerButtonActionPerformed
-        // filtered by comedy
+        // filtered by thriller
         try{
          Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/vlsdb","root","sangoro31");
          PreparedStatement ps = con.prepareStatement("select * from videos where Category = 'Thriller'");
