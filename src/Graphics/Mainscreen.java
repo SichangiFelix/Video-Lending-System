@@ -98,6 +98,7 @@ public class Mainscreen extends javax.swing.JFrame {
         checkoutButton = new javax.swing.JButton();
         jScrollPane6 = new javax.swing.JScrollPane();
         cartTable = new javax.swing.JTable();
+        clearCartButton = new javax.swing.JButton();
         jPanel10 = new javax.swing.JPanel();
         jLabel26 = new javax.swing.JLabel();
         jScrollPane7 = new javax.swing.JScrollPane();
@@ -315,6 +316,14 @@ public class Mainscreen extends javax.swing.JFrame {
         cartTable.setRowHeight(40);
         jScrollPane6.setViewportView(cartTable);
 
+        clearCartButton.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        clearCartButton.setText("Clear Cart");
+        clearCartButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clearCartButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
@@ -325,14 +334,14 @@ public class Mainscreen extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 614, Short.MAX_VALUE))
                     .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel9Layout.createSequentialGroup()
-                                .addGap(292, 292, 292)
-                                .addComponent(jLabel25))
-                            .addGroup(jPanel9Layout.createSequentialGroup()
-                                .addGap(255, 255, 255)
-                                .addComponent(checkoutButton)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(292, 292, 292)
+                        .addComponent(jLabel25)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(clearCartButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(checkoutButton)))
                 .addContainerGap())
         );
         jPanel9Layout.setVerticalGroup(
@@ -342,8 +351,10 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addComponent(jLabel25)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(checkoutButton)
+                .addGap(31, 31, 31)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(clearCartButton)
+                    .addComponent(checkoutButton))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -2390,16 +2401,27 @@ public class Mainscreen extends javax.swing.JFrame {
         Object[] row = new Object[5]; 
         DefaultTableModel model2 = (DefaultTableModel) cartTable.getModel();
         
-        for(int i = 0; i < indexs.length; i++){
-            row[0] = model.getValueAt(indexs[i],0);
-            row[1] = model.getValueAt(indexs[i],1);
-            row[2] = model.getValueAt(indexs[i],2);
-            row[3] = model.getValueAt(indexs[i],3);
-            row[4] = model.getValueAt(indexs[i],4);
-            
-            model2.addRow(row);
+        if(indexs.length < 6){ //setting the limit
+            for(int i = 0; i < indexs.length; i++){
+                row[0] = model.getValueAt(indexs[i],0);
+                row[1] = model.getValueAt(indexs[i],1);
+                row[2] = model.getValueAt(indexs[i],2);
+                row[3] = model.getValueAt(indexs[i],3);
+                row[4] = model.getValueAt(indexs[i],4);
+
+                model2.addRow(row);
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(null,"You can only borrow 5 videos at an instance");
         }
     }//GEN-LAST:event_addToCartButtonActionPerformed
+
+    private void clearCartButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearCartButtonActionPerformed
+        // aids in clearing the cart mid-adding
+        DefaultTableModel mod = (DefaultTableModel) cartTable.getModel();
+        mod.setRowCount(0);
+    }//GEN-LAST:event_clearCartButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2449,6 +2471,7 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JTable cartTable;
     private javax.swing.JRadioButton cartoonButton;
     private javax.swing.JButton checkoutButton;
+    private javax.swing.JButton clearCartButton;
     private javax.swing.JButton clearNewVidInfo;
     private javax.swing.JRadioButton comedyButton;
     private javax.swing.JLabel damageLossLabel;
