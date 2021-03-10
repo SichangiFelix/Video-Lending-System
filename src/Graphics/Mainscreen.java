@@ -123,6 +123,8 @@ public class Mainscreen extends javax.swing.JFrame {
         jLabel32 = new javax.swing.JLabel();
         jLabel35 = new javax.swing.JLabel();
         debtLabel = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jDateChooser1 = new com.toedter.calendar.JDateChooser();
         jScrollPane8 = new javax.swing.JScrollPane();
         vidConditionTable = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
@@ -516,13 +518,16 @@ public class Mainscreen extends javax.swing.JFrame {
         invoiceNumberLabel.setText("value appears here");
 
         jLabel32.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
-        jLabel32.setText("A member's debt to the club should not exceed 2500 to be able to borrow a video");
+        jLabel32.setText("A member's debt to the club should not exceed ksh 2500 to be able to borrow a video");
 
         jLabel35.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel35.setText("Lending invoice number");
 
         debtLabel.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         debtLabel.setText("value appears here");
+
+        jLabel14.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        jLabel14.setText("Date");
 
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
         jPanel13.setLayout(jPanel13Layout);
@@ -534,9 +539,6 @@ public class Mainscreen extends javax.swing.JFrame {
                         .addGap(376, 376, 376)
                         .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel13Layout.createSequentialGroup()
-                        .addGap(119, 119, 119)
-                        .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 697, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel13Layout.createSequentialGroup()
                         .addGap(44, 44, 44)
                         .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -544,16 +546,24 @@ public class Mainscreen extends javax.swing.JFrame {
                                 .addComponent(jLabel30, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel28, javax.swing.GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE)
                                 .addComponent(jLabel29, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(jLabel35))
+                            .addComponent(jLabel35)
+                            .addComponent(jLabel14))
                         .addGap(121, 121, 121)
                         .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(invoiceNumberLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(membershipTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 324, Short.MAX_VALUE)
-                                .addComponent(nameTextField)
-                                .addComponent(idTextField))
-                            .addComponent(debtLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(debtLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 417, Short.MAX_VALUE)
+                            .addGroup(jPanel13Layout.createSequentialGroup()
+                                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(invoiceNumberLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 324, Short.MAX_VALUE)
+                                    .addComponent(membershipTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 324, Short.MAX_VALUE)
+                                    .addComponent(nameTextField)
+                                    .addComponent(idTextField)
+                                    .addComponent(jDateChooser1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(0, 0, Short.MAX_VALUE)))))
                 .addContainerGap(89, Short.MAX_VALUE))
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addGap(74, 74, 74)
+                .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 731, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -580,9 +590,12 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel35)
                     .addComponent(invoiceNumberLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
-                .addComponent(jLabel32)
-                .addGap(11, 11, 11))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel14))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel32))
         );
 
         vidConditionTable.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
@@ -630,7 +643,7 @@ public class Mainscreen extends javax.swing.JFrame {
                     .addComponent(jScrollPane8, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
             .addGroup(jPanel11Layout.createSequentialGroup()
-                .addGap(352, 352, 352)
+                .addGap(350, 350, 350)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -638,12 +651,12 @@ public class Mainscreen extends javax.swing.JFrame {
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel11Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addComponent(jPanel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27))
+                .addContainerGap())
         );
 
         jPanel12.setBackground(new java.awt.Color(119, 136, 153));
@@ -688,7 +701,7 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35)
                 .addComponent(printButton, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(269, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout returnPanelLayout = new javax.swing.GroupLayout(returnPanel);
@@ -700,7 +713,7 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(42, 42, 42)
                 .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
         returnPanelLayout.setVerticalGroup(
             returnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -709,7 +722,7 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addGroup(returnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(71, Short.MAX_VALUE))
         );
 
         vidIssuanceTabbedPane.addTab("Lending processing", returnPanel);
@@ -986,7 +999,7 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
 
         vidIssuanceTabbedPane.addTab("Video return", jPanel1);
@@ -2508,11 +2521,13 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JLabel invoiceNumberLabel;
     private javax.swing.JPanel issuancePanel;
     private javax.swing.JButton jButton1;
+    private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
