@@ -14,6 +14,7 @@ import java.awt.Font;
 
 import java.sql.*;
 import javax.swing.JOptionPane;
+import javax.swing.UIManager;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 
@@ -37,6 +38,9 @@ public class Mainscreen extends javax.swing.JFrame {
         
         //personalised greeting on my profile , initialize the greeting label
         
+        //modification of font size for the JOptionPanes in code
+        UIManager.put("OptionPane.messageFont", new Font("Times New Roman",Font.PLAIN,18));
+        UIManager.put("OptionPane.buttonFont", new Font("Times New Roman",Font.PLAIN,14));
         
         //code for the database connection
         //Inputing data into the members table
@@ -263,7 +267,7 @@ public class Mainscreen extends javax.swing.JFrame {
         editMemberInfoButton = new javax.swing.JButton();
         reportsPanel = new javax.swing.JPanel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel2 = new javax.swing.JPanel();
+        jPanel18 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Upepeo Video Lending system");
@@ -332,17 +336,18 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 614, Short.MAX_VALUE))
+                        .addComponent(jScrollPane6))
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addGap(292, 292, 292)
                         .addComponent(jLabel25)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(clearCartButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(checkoutButton)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGap(114, 114, 114)
+                .addComponent(clearCartButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 143, Short.MAX_VALUE)
+                .addComponent(checkoutButton)
+                .addGap(129, 129, 129))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -496,6 +501,11 @@ public class Mainscreen extends javax.swing.JFrame {
         jLabel30.setText("ID");
 
         membershipTextField.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        membershipTextField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                membershipTextFieldKeyTyped(evt);
+            }
+        });
 
         idTextField.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
 
@@ -2141,18 +2151,18 @@ public class Mainscreen extends javax.swing.JFrame {
         jTabbedPane1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(143, 188, 143), 3, true));
         jTabbedPane1.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 2059, Short.MAX_VALUE)
+        javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
+        jPanel18.setLayout(jPanel18Layout);
+        jPanel18Layout.setHorizontalGroup(
+            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1799, Short.MAX_VALUE)
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 805, Short.MAX_VALUE)
+        jPanel18Layout.setVerticalGroup(
+            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 820, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("", jPanel2);
+        jTabbedPane1.addTab("tab1", jPanel18);
 
         javax.swing.GroupLayout reportsPanelLayout = new javax.swing.GroupLayout(reportsPanel);
         reportsPanel.setLayout(reportsPanelLayout);
@@ -2171,9 +2181,7 @@ public class Mainscreen extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(mainTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 1827, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 30, Short.MAX_VALUE))
+            .addComponent(mainTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 1827, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2423,6 +2431,10 @@ public class Mainscreen extends javax.swing.JFrame {
         mod.setRowCount(0);
     }//GEN-LAST:event_clearCartButtonActionPerformed
 
+    private void membershipTextFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_membershipTextFieldKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_membershipTextFieldKeyTyped
+
     /**
      * @param args the command line arguments
      */
@@ -2565,7 +2577,7 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel17;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
