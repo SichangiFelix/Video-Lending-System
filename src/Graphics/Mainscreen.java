@@ -13,6 +13,7 @@ import java.awt.Font;
  */
 
 import java.sql.*;
+import java.awt.*;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import javax.swing.table.DefaultTableModel;
@@ -25,7 +26,12 @@ public class Mainscreen extends javax.swing.JFrame {
      */
     public Mainscreen() {
         initComponents();
-        
+        /*
+        //setting a different icon
+        Image icon = Toolkit.getDefaultToolkit().getImage("D:\\icon.png");    
+        f.setIconImage(icon);
+        */
+
         //edditing of the tables haeder font size
         vidRecordsTable.getTableHeader().setFont(new Font("Times New Roman",Font.PLAIN,21));
         membersTable.getTableHeader().setFont(new Font("Times New Roman",Font.PLAIN,21));
