@@ -474,6 +474,7 @@ public class SignUp extends javax.swing.JFrame {
                 myStmt.setString(10,signupUsernameTextField.getText());
                 myStmt.setString(11,signupPassConfirmField.getText());
                 myStmt.executeUpdate();
+                myStmt.close();
                //tell the user they have been successfully added
                JOptionPane.showMessageDialog(null,"You have been succefully registered");
                //open the login part so that they can loginwith newly set credentials
