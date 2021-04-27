@@ -16,12 +16,6 @@ public class Admin extends javax.swing.JFrame {
      */
     public Admin() {
         initComponents();
-        
-          //code to enable all buttons with admin functionality
-          vidDeleteButton.setEnabled(true);
-          newVidSaveButton.setEnabled(true);
-          clearNewVidInfo.setEnabled(true);
-          removeMemberButton.setEnabled(true);
     }
 
     /**
