@@ -14,6 +14,7 @@ import java.awt.Font;
 
 import java.sql.*;
 import java.awt.*;
+import java.text.SimpleDateFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -435,12 +436,13 @@ public class Mainscreen extends javax.swing.JFrame {
                     .addComponent(jLabel59, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel58, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField1)
-                    .addComponent(jTextField2)
-                    .addComponent(jTextField5)
-                    .addComponent(jTextField4)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
+                        .addComponent(jTextField2)
+                        .addComponent(jTextField5)
+                        .addComponent(jTextField4))
+                    .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -458,33 +460,41 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(clearCartButton)
                     .addComponent(checkoutButton))
-                .addGap(60, 60, 60)
-                .addComponent(jLabel57)
-                .addGap(31, 31, 31)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addComponent(jLabel58)
-                        .addGap(30, 30, 30)
-                        .addComponent(jLabel59)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel65)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel66)
-                        .addGap(26, 26, 26)
-                        .addComponent(jLabel68))
+                        .addGap(60, 60, 60)
+                        .addComponent(jLabel57)
+                        .addGap(37, 37, 37)
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel58)
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(32, 32, 32)
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel59)
+                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(27, 27, 27)
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel65)
+                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(31, 31, 31)
+                        .addComponent(jLabel66))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                        .addGap(122, 122, 122)
+                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(20, 20, 20)
-                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel67)
-                .addContainerGap(61, Short.MAX_VALUE))
+                        .addGap(27, 27, 27)
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addComponent(jLabel67)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                                .addComponent(jLabel68)
+                                .addGap(45, 45, 45))))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(45, 45, 45))))
         );
 
         jPanel10.setBackground(new java.awt.Color(119, 136, 153));
@@ -587,7 +597,7 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 579, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(33, 33, 33)
                 .addComponent(addToCartButton)
-                .addContainerGap(112, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout borrowPanelLayout = new javax.swing.GroupLayout(borrowPanel);
@@ -627,7 +637,7 @@ public class Mainscreen extends javax.swing.JFrame {
         jLabel28.setText("Membership number");
 
         jLabel29.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        jLabel29.setText("Name");
+        jLabel29.setText("First Name");
 
         jLabel30.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel30.setText("ID");
@@ -854,7 +864,7 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addGroup(returnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(68, Short.MAX_VALUE))
+                .addContainerGap(90, Short.MAX_VALUE))
         );
 
         vidIssuanceTabbedPane.addTab("Lending processing", returnPanel);
@@ -1131,7 +1141,7 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(69, Short.MAX_VALUE))
+                .addContainerGap(91, Short.MAX_VALUE))
         );
 
         vidIssuanceTabbedPane.addTab("Video return", jPanel1);
@@ -1225,6 +1235,12 @@ public class Mainscreen extends javax.swing.JFrame {
 
         vidDeleteButton.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         vidDeleteButton.setText("Delete selected");
+        vidDeleteButton.setEnabled(false);
+        vidDeleteButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                vidDeleteButtonActionPerformed(evt);
+            }
+        });
 
         allCategoryButton.setBackground(new java.awt.Color(255, 255, 224));
         buttonGroup1.add(allCategoryButton);
@@ -1347,7 +1363,7 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addGroup(owenedVidsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 660, Short.MAX_VALUE)
                     .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(135, Short.MAX_VALUE))
+                .addContainerGap(157, Short.MAX_VALUE))
         );
 
         vidRecordsTabbedPane.addTab("Videos in house", owenedVidsPanel);
@@ -1380,6 +1396,7 @@ public class Mainscreen extends javax.swing.JFrame {
 
         newVidSaveButton.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         newVidSaveButton.setText("Save");
+        newVidSaveButton.setEnabled(false);
         newVidSaveButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 newVidSaveButtonActionPerformed(evt);
@@ -1402,6 +1419,7 @@ public class Mainscreen extends javax.swing.JFrame {
 
         clearNewVidInfo.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         clearNewVidInfo.setText("Clear");
+        clearNewVidInfo.setEnabled(false);
         clearNewVidInfo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 clearNewVidInfoActionPerformed(evt);
@@ -1538,14 +1556,14 @@ public class Mainscreen extends javax.swing.JFrame {
         addVidPanelLayout.setVerticalGroup(
             addVidPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(addVidPanelLayout.createSequentialGroup()
-                .addContainerGap(76, Short.MAX_VALUE)
+                .addContainerGap(87, Short.MAX_VALUE)
                 .addGroup(addVidPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, addVidPanelLayout.createSequentialGroup()
                         .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(76, Short.MAX_VALUE))
+                .addContainerGap(87, Short.MAX_VALUE))
         );
 
         vidRecordsTabbedPane.addTab("Add video", addVidPanel);
@@ -1685,7 +1703,7 @@ public class Mainscreen extends javax.swing.JFrame {
             .addGroup(incomePanelLayout.createSequentialGroup()
                 .addGap(39, 39, 39)
                 .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(78, Short.MAX_VALUE))
+                .addContainerGap(100, Short.MAX_VALUE))
         );
 
         revenueTabbedPane.addTab("Club's income", incomePanel);
@@ -1796,7 +1814,7 @@ public class Mainscreen extends javax.swing.JFrame {
         expencePanelLayout.setVerticalGroup(
             expencePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, expencePanelLayout.createSequentialGroup()
-                .addContainerGap(79, Short.MAX_VALUE)
+                .addContainerGap(101, Short.MAX_VALUE)
                 .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(32, 32, 32))
         );
@@ -1878,6 +1896,7 @@ public class Mainscreen extends javax.swing.JFrame {
 
         removeMemberButton.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         removeMemberButton.setText("Remove selected ");
+        removeMemberButton.setEnabled(false);
 
         jLabel55.setFont(new java.awt.Font("Sylfaen", 0, 18)); // NOI18N
         jLabel55.setText("Only an admin can remove a member from the club ");
@@ -1915,7 +1934,7 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 611, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(37, 37, 37)
                 .addComponent(removeMemberButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 85, Short.MAX_VALUE)
                 .addComponent(jLabel55)
                 .addGap(29, 29, 29))
         );
@@ -1992,7 +2011,7 @@ public class Mainscreen extends javax.swing.JFrame {
         exMembersPanelLayout.setVerticalGroup(
             exMembersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, exMembersPanelLayout.createSequentialGroup()
-                .addContainerGap(48, Short.MAX_VALUE)
+                .addContainerGap(70, Short.MAX_VALUE)
                 .addComponent(exMembersHeader)
                 .addGap(30, 30, 30)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 692, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2293,7 +2312,7 @@ public class Mainscreen extends javax.swing.JFrame {
         myProfilePanelLayout.setVerticalGroup(
             myProfilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, myProfilePanelLayout.createSequentialGroup()
-                .addContainerGap(91, Short.MAX_VALUE)
+                .addContainerGap(113, Short.MAX_VALUE)
                 .addGroup(myProfilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -2444,7 +2463,7 @@ public class Mainscreen extends javax.swing.JFrame {
                         .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel79)
                             .addComponent(jButton7))))
-                .addContainerGap(169, Short.MAX_VALUE))
+                .addContainerGap(191, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Reports to be printed", jPanel18);
@@ -2636,26 +2655,36 @@ public class Mainscreen extends javax.swing.JFrame {
     }//GEN-LAST:event_checkoutButtonActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        /*try {
-            //printing a receipt on the text area
-            String memberNo = membershipTextField.getText();
-            String name = nameTextField.getText();
-            String id = idTextField.getText();
-            //String date = lendingDateChooser.
-            
-            /*getting condition from the table
-            DefaultTableModel dt = (DefaultTableModel) conditionInputTable.getModel();
-            Connection mycon = DriverManager.getConnection("jdbc:mysql://localhost:3306/vlsdb","root","sangoro31");
-            String query = "INSERT INTO member_vids (Membership_numberF,Vid_idF,Date_borrowed,Date_returned,Vid_take_condition,Vid_return_condition,take_description,return_description) VALUES(?,?,?,?,?,?,?,?)";
+        
+        Connection mycon;
+        try {
+            mycon = DriverManager.getConnection("jdbc:mysql://localhost:3306/vlsdb","root","sangoro31");
+            String query = "INSERT INTO member_vids (Membership_numberF,Vid_idF,first_name,Date_borrowed,Vid_take_condition,take_description) VALUES (?,?,?,?,?,?)";
+            //create a statement
             PreparedStatement myStmt = mycon.prepareStatement(query);
-            for(int i=0; i<dt.getRowCount(); i++){
-                st.executeUpdate("");
-            }
             
-            //generate a lending invoice and save it with the rest of the receipts
+            myStmt.setString(1,membershipTextField.getText());
+            myStmt.setString(2,idTextField.getText());
+            myStmt.setString(3,nameTextField.getText());
+            
+            java.util.Date date=(java.util.Date)lendingDateChooser.getDate();
+            SimpleDateFormat dateFormat=new SimpleDateFormat("dd-MM-yyyy"); 
+            String lendingDate=dateFormat.format(date);
+            myStmt.setString(4,lendingDate);
+            
+            DefaultTableModel model =(DefaultTableModel) conditionInputTable.getModel();
+            myStmt.setString(5,model.getValueAt(0,2).toString());
+            myStmt.setString(6,model.getValueAt(0,3).toString());
+            
+            //clearing the fields after successfully saving all the data
+            membershipTextField.setText("");
+            nameTextField.setText("");
+            idTextField.setText("");
+            model.setRowCount(0);
+            
         } catch (SQLException ex) {
             Logger.getLogger(Mainscreen.class.getName()).log(Level.SEVERE, null, ex);
-        }*/
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void addDebtButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addDebtButtonActionPerformed
@@ -2768,6 +2797,10 @@ public class Mainscreen extends javax.swing.JFrame {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void vidDeleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vidDeleteButtonActionPerformed
+
+    }//GEN-LAST:event_vidDeleteButtonActionPerformed
 
     /**
      * @param args the command line arguments
