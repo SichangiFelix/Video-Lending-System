@@ -440,9 +440,14 @@ public class SignUp extends javax.swing.JFrame {
         
         if(pass1.equals(pass2)){
             //write here code to save all data into the members database
+            
+            String currentDir = System.getProperty("user.dir");
              try{
                 Class.forName("com.mysql.cj.jdbc.Driver");
-                Connection mycon = DriverManager.getConnection("jdbc:mysql://localhost:3306/vlsdb","root","sangoro31");
+                
+                //attempt to create a .exe with the db
+                //
+                Connection mycon = DriverManager.getConnection("jdbc:mysql:" +currentDir +"/vlsdb","root","sangoro31");
                 String query = "INSERT INTO members (F_name,S_name,National_id,Street_name,House_no,Occupation,Phone,Date,Gender,Username,Password) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
                 //create a statement
                 PreparedStatement myStmt = mycon.prepareStatement(query);
