@@ -34,7 +34,9 @@ public class Mainscreen extends javax.swing.JFrame {
         Image icon = Toolkit.getDefaultToolkit().getImage("D:\\icon.png");    
         f.setIconImage(icon);
         */
-       
+        
+         //code to enable all buttons with admin functionality
+        
         //edditing of the tables haeder font size
         vidRecordsTable.getTableHeader().setFont(new Font("Times New Roman",Font.PLAIN,21));
         membersTable.getTableHeader().setFont(new Font("Times New Roman",Font.PLAIN,21));
@@ -71,8 +73,12 @@ public class Mainscreen extends javax.swing.JFrame {
         
         //Inputing data into the videos table
         //displays all categories at first
+        
+        String currentDir = System.getProperty("user.dir");
         try{
-         Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/vlsdb","root","sangoro31");
+            //attempt for exe with database
+            //original code removed is -- jdbc:mysql://localhost:3306/vlsdb","root","sangoro31" 
+         Connection con = DriverManager.getConnection("jdbc:mysql:" +currentDir+ "/vlsdb","root","sangoro31");
          PreparedStatement ps = con.prepareStatement("select * from videos");
          ResultSet rs  = ps.executeQuery();
          DefaultTableModel tm = (DefaultTableModel)vidRecordsTable.getModel();
