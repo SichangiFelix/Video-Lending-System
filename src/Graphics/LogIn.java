@@ -148,10 +148,9 @@ public class LogIn extends javax.swing.JFrame {
         String u = loginUsernameTextField.getText();
         String p = loginPassField.getText();
         
-        String currentDir = System.getProperty("user.dir");
       try{ 
         //Get a connection
-        Connection mycon = DriverManager.getConnection("jdbc:mysql:" +currentDir+ "/vlsdb","root","sangoro31");
+        Connection mycon = DriverManager.getConnection("jdbc:mysql://localhost:3306/vlsdb","root","sangoro31");
         //create a statement
         Statement myStmt = mycon.createStatement();
         //execute SQL querry
