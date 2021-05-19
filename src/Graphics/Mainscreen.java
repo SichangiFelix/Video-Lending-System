@@ -74,11 +74,8 @@ public class Mainscreen extends javax.swing.JFrame {
         //Inputing data into the videos table
         //displays all categories at first
         
-        String currentDir = System.getProperty("user.dir");
         try{
-            //attempt for exe with database
-            //original code removed is -- jdbc:mysql://localhost:3306/vlsdb","root","sangoro31" 
-         Connection con = DriverManager.getConnection("jdbc:mysql:" +currentDir+ "/vlsdb","root","sangoro31");
+         Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/vlsdb","root","sangoro31");
          PreparedStatement ps = con.prepareStatement("select * from videos");
          ResultSet rs  = ps.executeQuery();
          DefaultTableModel tm = (DefaultTableModel)vidRecordsTable.getModel();
