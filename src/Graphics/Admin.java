@@ -35,7 +35,7 @@ public class Admin extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        adminLoginButton = new javax.swing.JButton();
         adminPasswordField = new javax.swing.JPasswordField();
 
         jMenu1.setText("File");
@@ -61,11 +61,11 @@ public class Admin extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel3.setText("Administrator login");
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButton1.setText("Log in");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        adminLoginButton.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        adminLoginButton.setText("Log in");
+        adminLoginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                adminLoginButtonActionPerformed(evt);
             }
         });
 
@@ -89,7 +89,7 @@ public class Admin extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jTextField1)
                             .addComponent(adminPasswordField)
-                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE))))
+                            .addComponent(adminLoginButton, javax.swing.GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE))))
                 .addContainerGap(48, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -106,8 +106,8 @@ public class Admin extends javax.swing.JFrame {
                     .addComponent(jLabel2)
                     .addComponent(adminPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(46, 46, 46)
-                .addComponent(jButton1)
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addComponent(adminLoginButton)
+                .addContainerGap(33, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -124,20 +124,23 @@ public class Admin extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    public boolean adminIsLoggedIn ;
+    
+    private void adminLoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminLoginButtonActionPerformed
 
         String u = adminPasswordField.getText();
         
-         if(u.equals("administrator1") || u.equals("administrator2")){
+         if(u.equals("admin") || u.equals("administrator2")){ //this is to enable you log in without the database
                 new Mainscreen().setVisible(true);
                 dispose();
+                adminIsLoggedIn = true;
         
          }
          else{
                 System.out.println("You have entered a wrong admin password!");    
          }
         
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_adminLoginButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -175,8 +178,8 @@ public class Admin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton adminLoginButton;
     private javax.swing.JPasswordField adminPasswordField;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
