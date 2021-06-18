@@ -22,7 +22,7 @@ import javax.swing.UIManager;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 
-public class Mainscreen extends javax.swing.JFrame {
+public class Mainscreen extends javax.swing.JFrame{
 
     /**
      * Creates new form Mainscreen
@@ -92,6 +92,16 @@ public class Mainscreen extends javax.swing.JFrame {
         }
         catch(Exception e){ 
             JOptionPane.showMessageDialog(null, e);
+        }
+        
+        //initializing admin functions
+        Admin admin1 = new Admin();
+        if (admin1.adminIsLoggedIn){
+            vidDeleteButton.setEnabled(true);
+            clearNewVidInfo.setEnabled(true);
+            newVidSaveButton.setEnabled(true);
+        }else{
+            //nothing runs and all disable buttons remain in that state.
         }
     }
 
@@ -411,46 +421,43 @@ public class Mainscreen extends javax.swing.JFrame {
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane6))
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addGap(292, 292, 292)
-                        .addComponent(jLabel25)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                .addGap(114, 114, 114)
-                .addComponent(clearCartButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 147, Short.MAX_VALUE)
-                .addComponent(checkoutButton)
-                .addGap(129, 129, 129))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel9Layout.createSequentialGroup()
-                        .addComponent(jLabel68)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel67, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE))
-                    .addComponent(jLabel66, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel65, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel59, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel58, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
-                        .addComponent(jTextField2)
-                        .addComponent(jTextField5)
-                        .addComponent(jTextField4))
-                    .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel57)
                 .addGap(264, 264, 264))
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGap(292, 292, 292)
+                .addComponent(jLabel25)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane6)
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel9Layout.createSequentialGroup()
+                                .addComponent(jLabel68)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel67, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE))
+                            .addComponent(jLabel66, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel65, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel59, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel58, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
+                                .addComponent(jTextField2)
+                                .addComponent(jTextField5)
+                                .addComponent(jTextField4))
+                            .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap())
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGap(114, 114, 114)
+                .addComponent(clearCartButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 151, Short.MAX_VALUE)
+                .addComponent(checkoutButton)
+                .addGap(121, 121, 121))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -490,7 +497,7 @@ public class Mainscreen extends javax.swing.JFrame {
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel9Layout.createSequentialGroup()
                                 .addComponent(jLabel67)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addContainerGap(77, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
                                 .addComponent(jLabel68)
                                 .addGap(45, 45, 45))))
@@ -739,7 +746,7 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(lendingDateChooser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel14))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 102, Short.MAX_VALUE)
                 .addComponent(jLabel32))
         );
 
@@ -846,7 +853,7 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35)
                 .addComponent(printButton, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(298, Short.MAX_VALUE))
+                .addContainerGap(350, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout returnPanelLayout = new javax.swing.GroupLayout(returnPanel);
@@ -867,7 +874,7 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addGroup(returnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(90, Short.MAX_VALUE))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         vidIssuanceTabbedPane.addTab("Lending processing", returnPanel);
@@ -1012,7 +1019,7 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel40)
                     .addComponent(jLabel52))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
                 .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -1135,16 +1142,16 @@ public class Mainscreen extends javax.swing.JFrame {
                 .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(287, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(31, 31, 31)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(91, Short.MAX_VALUE))
+                    .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
 
         vidIssuanceTabbedPane.addTab("Video return", jPanel1);
@@ -1238,7 +1245,6 @@ public class Mainscreen extends javax.swing.JFrame {
 
         vidDeleteButton.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         vidDeleteButton.setText("Delete selected");
-        vidDeleteButton.setEnabled(false);
         vidDeleteButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 vidDeleteButtonActionPerformed(evt);
@@ -1399,7 +1405,6 @@ public class Mainscreen extends javax.swing.JFrame {
 
         newVidSaveButton.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         newVidSaveButton.setText("Save");
-        newVidSaveButton.setEnabled(false);
         newVidSaveButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 newVidSaveButtonActionPerformed(evt);
@@ -1422,7 +1427,6 @@ public class Mainscreen extends javax.swing.JFrame {
 
         clearNewVidInfo.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         clearNewVidInfo.setText("Clear");
-        clearNewVidInfo.setEnabled(false);
         clearNewVidInfo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 clearNewVidInfoActionPerformed(evt);
@@ -1899,7 +1903,7 @@ public class Mainscreen extends javax.swing.JFrame {
 
         removeMemberButton.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         removeMemberButton.setText("Remove selected ");
-        removeMemberButton.setEnabled(false);
+        removeMemberButton.setDefaultCapable(false);
 
         jLabel55.setFont(new java.awt.Font("Sylfaen", 0, 18)); // NOI18N
         jLabel55.setText("Only an admin can remove a member from the club ");
@@ -2365,10 +2369,10 @@ public class Mainscreen extends javax.swing.JFrame {
         jLabel77.setText("Most viewed genre ");
 
         jLabel78.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel78.setText("wce");
+        jLabel78.setText("Income Collected");
 
         jLabel79.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel79.setText("jLabel79");
+        jLabel79.setText("Income Usage");
 
         jButton2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButton2.setText("Print");
@@ -2588,7 +2592,6 @@ public class Mainscreen extends javax.swing.JFrame {
          ResultSet rs  = ps.executeQuery();
          DefaultTableModel tm = (DefaultTableModel)vidRecordsTable.getModel();
          tm.setRowCount(0);
-         
          while(rs.next()){
              Object o[] = {rs.getInt("Vid_Id"),rs.getString("Title"),rs.getString("Duration"),rs.getString("Category"),rs.getString("Storage_location")};
              tm.addRow(o);
@@ -3017,7 +3020,7 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JLabel newMembersHeader;
     private javax.swing.JPanel newMembersPanel;
     private javax.swing.JTable newMembersTable;
-    private javax.swing.JButton newVidSaveButton;
+    public javax.swing.JButton newVidSaveButton;
     private javax.swing.JLabel occupationInfoLabel;
     private javax.swing.JLabel overdueChargeLabel;
     private javax.swing.JLabel overdueIncomeLabel;
@@ -3041,7 +3044,7 @@ public class Mainscreen extends javax.swing.JFrame {
     private javax.swing.JLabel totalLabel;
     private javax.swing.JLabel totalMembersDebtLabel;
     private javax.swing.JTable vidCatalogTable;
-    private javax.swing.JButton vidDeleteButton;
+    public javax.swing.JButton vidDeleteButton;
     private javax.swing.JTabbedPane vidIssuanceTabbedPane;
     private javax.swing.JPanel vidRecordsPanel;
     private javax.swing.JTabbedPane vidRecordsTabbedPane;
