@@ -160,7 +160,9 @@ public class LogIn extends javax.swing.JFrame {
             
             String user = myRs.getString("Username");
             String pass = myRs.getString("Password");
-            if(user.equals(u) && pass.equals(p)){
+            
+            if(user.equals(p) && pass.equals(p)){
+            
                 new Mainscreen().setVisible(true);
                 dispose();
                 break;
